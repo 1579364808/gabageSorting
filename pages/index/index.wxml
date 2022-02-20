@@ -1,0 +1,16 @@
+<!--index.wxml-->
+
+<van-search
+  value="苹果"
+  label="垃圾"
+  shape="round"
+  background="#4fc08d"
+  placeholder="请输入搜索关键词"
+  use-action-slot="true"
+  bind:search="onSearch"
+>
+
+<view slot="search" bind:tap="onClick">搜索</view>
+</van-search>
+<!-- 显示搜索物品的类别 -->
+<text   wx:if="{{category}}">{{category}}</text>
