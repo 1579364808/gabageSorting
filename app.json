@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/camera/camera"
+        "pages/camera/camera",
+        "pages/detail/detail"
     ],
     "window": {
         "backgroundTextStyle": "light",

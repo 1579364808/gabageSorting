@@ -1,0 +1,3 @@
+<!--pages/detail/detail.wxml-->
+<!-- 显示搜索物品的类别 -->
+<text   wx:if="{{category}}">{{gabageName}}:{{category}}</text>

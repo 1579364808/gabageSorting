@@ -14,6 +14,4 @@
 </van-search>
 
 <van-button round type="info" bind:click="onClick">拍照识别</van-button>
-<image src="{{src}}" wx:if="{{src}}"></image>
-<!-- 显示搜索物品的类别 -->
-<text   wx:if="{{category}}">{{category}}</text>
+

@@ -1,52 +1,76 @@
 // pages/camera/camera.js
+
+
 Page({
     data: {
-        src: null
+        token: null,
     },
+    onLoad(event) {
+        wx.getStorage({
+            key: "baidutoken"
+        }).then(res => {
+            console.log(res)
+            this.setData({
+                token: res.data.token
+            })
+        })
+
+    },
+
     //点击拍照
     shoot() {
+
+        let path = null //图片路径
         let camera = wx.createCameraContext()
         camera.takePhoto({
             quality: 'high',
         }).then(res => {
-            //照片路径
-            this.setData({
-                src: res.tempImagePath
+            path = res.tempImagePath
+            let fs = wx.getFileSystemManager() //获取文件管理系统
+            let image = fs.readFileSync(path, 'base64') //将图片转换成base64
+            // console.log(image)
+            wx.showLoading({
+                title: '正在识别中',
             })
-            //上传识别
-            this.upload(res.tempImagePath)
+            //请求
+            this.rq(image, this.data.token)
         }).catch(err => {
-            console.log(err.detail)
-        }).finally(() => {
-
-
-            //拍照完成切换到主页
-            wx.navigateTo({
-                url: `../index/index?src=${this.data.src}`,
-            })
-
+            console.log(err)
         })
+
+
+
     },
-    //图片上传函数
-    upload(path) {
-        let name = "image" + Date.now()
-        wx.cloud.uploadFile({
-            cloudPath: name, // 上传至云端的路径
-            filePath: path, // 小程序临时文件路径
-        }).then(res => {
-            //获取文件ID 
-            let id = res.fileID
-            //调用云函数进行图像识别
-            wx.cloud.callFunction({
-                name: "imageVerify",
-                data: {
-                    fileId: id
-                }
-            }).then(res=>{
-                console.log(res)
-            })
-        })
+    rq(image, token) {
+        let that = this
 
+        wx.request({
+
+            //进行post请求
+            method: 'post',
+            url: 'https://aip.baidubce.com/rest/2.0/image-classify/v2/advanced_general', //仅为示例，并非真实的接口地址
+            //请求的参数
+            data: {
+                access_token: token, //百度的accessToken
+                image: image,
+                baike_num: 5 //百科信息结果数
+            },
+            header: {
+                'content-type': 'application/x-www-form-urlencoded'
+            },
+            success(res) {
+                let gabageName = res.data.result[0].keyword
+                console.log(gabageName)
+                //拍照完回到主页
+                wx.navigateTo({
+                    url: `../detail/detail?gabageName=${gabageName}`,
+                })
+                wx.hideLoading()
+            }
+
+        })
     }
+
+
 
 })
