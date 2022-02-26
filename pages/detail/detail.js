@@ -1,4 +1,3 @@
-
 const db = wx.cloud.database();
 const gabage = db.collection('gabage')
 const reCorderManager = wx.getRecorderManager()
@@ -40,14 +39,14 @@ Page({
             }
         }).catch(err=>{
             wx.showModal({
-                title:'出错了',
+                title:'请重新识别或搜索',
                 content: `无法为“${this.data.gabageName}”分类`,
                 showCancel:false, 
             }).then(res=>{
                 if (res.confirm) {
-                   wx.navigateTo({
-                     url: '../index/index',
-                   })
+                    wx.navigateBack({
+                        delta:2
+                    })
                   }
             })
         })

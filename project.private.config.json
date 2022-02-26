@@ -11,15 +11,7 @@
             "list": []
         },
         "miniprogram": {
-            "list": [
-                {
-                    "name": "camera",
-                    "pathName": "pages/camera/camera",
-                    "query": "",
-                    "scene": null,
-                    "launchMode": "default"
-                }
-            ]
+            "list": []
         }
     }
 }

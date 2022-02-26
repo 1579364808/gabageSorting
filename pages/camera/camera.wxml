@@ -1,3 +1,2 @@
 <!--pages/camera/camera.wxml-->
-<camera device-position="back" flash="off"  class="camera"  	binderror="handleError"></camera>
-<van-button round type="info" bindtap="shoot">拍照</van-button>
+<text>pages/camera/camera.wxml</text>

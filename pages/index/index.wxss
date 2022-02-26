@@ -1,1 +1,25 @@
-/**index.wxss**/
+.radioContainer{
+    width:450rpx ;
+    /* border: gray solid 3rpx; */
+    border-radius:  30rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    padding-left: 40rpx;
+    margin: 20rpx 20rpx;
+    
+}
+#container{
+    /* border: red solid 10rpx; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+}
+#container button{
+    font-weight: bold;
+    width: 250rpx;
+    border-radius: 30rpx;
+    background-color: rgb(9, 209, 35);
+    color: white;
+}

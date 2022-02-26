@@ -1,17 +1,27 @@
 <!--index.wxml-->
 
-<van-search
-  value="苹果"
-  label="垃圾"
-  shape="round"
-  background="#4fc08d"
-  placeholder="请输入搜索关键词"
-  use-action-slot="true"
-  bind:search="onSearch"
->
-
-<view slot="search" bind:tap="onClick">搜索</view>
+<van-search value="苹果" label="垃圾" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="onSearch">
 </van-search>
+<van-uploader bind:after-read="onClick">
+  <van-button icon="photo" type="primary" round>拍照识别</van-button>
+</van-uploader>
+<!-- 图片识别成功后选择一个物品 -->
+<page-container show="{{showRadio}}" round>
+  <view id="container">
+    <text style="font-weight: bolder;font-size: larger;">请选择一个物品</text>
+    <view style="border: gray solid 5rpx;border-radius: 35rpx;margin-top: 25rpx;margin-bottom: 25rpx;padding: 50rpx;background-color: ivory;">
+      <radio-group  bindchange ="ridio_event">
+        <view wx:for="{{gabages}}" wx:key="{{item.id}}" class="radioContainer" style="margin: 100rpx,50rpx;">
+          <radio value="{{item.name}}" style="font-weight: bold;" bind>{{item.name}}</radio>
+        </view>
+      </radio-group>
+    </view>
 
-<van-button round type="info" bind:click="onClick">拍照识别</van-button>
+    <button bindtap="confirm" disabled="{{buttonDisable}}">确定</button>
+  </view>
+</page-container>
 
+
+
+
+<!-- <van-button round type="info" bind:click="onClick">拍照识别</van-button> -->
