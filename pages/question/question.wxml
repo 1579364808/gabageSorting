@@ -2,15 +2,18 @@
 
 
 <form bindsubmit="onSubmit">
-    <view>问题:</view>
+    <view style="font-size: larger;">问题:</view>
     <input placeholder="请输入问题" name="question" type="text" />
-    <view>选项</view>
-    A: <input name="A" type="text" display="inline" />
-    B:<input name="B" type="text" />
-    C：<input name="C" type="text" />
-    D:<input name="D" type="text" />
-    <view>正确答案</view>
+    <view>选项:</view>
+    <view> A: <input name="A" type="text" display="inline" /> </view>
+    <view> B:<input name="B" type="text" /></view>
+    <view> C：<input name="C" type="text" /></view>
+    <view> D:<input name="D" type="text" /></view>
+    <view>正确答案:</view>
     <input placeholder="请输入数字0-3" name="res" type="number" maxlength="1" bindinput="onInput" />
-    <button form-type="submit">提交</button>
-    <button form-type="reset">清空</button>
+    <view class="containner">
+        <button form-type="submit">提交</button>
+        <button form-type="reset">清空</button>
+    </view>
+
 </form>

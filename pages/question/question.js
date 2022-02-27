@@ -2,7 +2,6 @@
 const db = wx.cloud.database()
 const questions = db.collection('questions')
 
-
 Page({
     onSubmit(event) {
         console.log(event.detail.value)
@@ -34,16 +33,18 @@ Page({
 
             }
         })
+        
+    questions.count().then(res=>{
+        let cnt = res.total
         questions.add({
             data: {
                 question: item.question.trim(),
                 options: [item.A.trim(), item.B.trim(), item.C.trim(), item.D.trim()],
-                res: item.res.trim()
+                res: item.res.trim(),
+                onlyId: cnt
             }
         })
-
-
-
+    })
     },
     onInput(event) {
         console.log(event)
