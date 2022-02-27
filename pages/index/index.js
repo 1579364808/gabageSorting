@@ -28,12 +28,10 @@ Page({
         })
 
     },
-
     onSearch(event) {
         wx.navigateTo({
             url: `../detail/detail?gabageName=${event.detail}`,
         })
-
     },
     onClick(event) {
         let fs = wx.getFileSystemManager() //获取文件管理系统
