@@ -3,9 +3,13 @@ const db = wx.cloud.database()
 const questions = db.collection('questions')
 
 Page({
+    data: {
+        value: ""
+    },
     onSubmit(event) {
         console.log(event.detail.value)
         let item = event.detail.value
+
         for (let key in item) {
             // console.log(key)
             if (item[key] === null || item[key] === "") {
@@ -17,6 +21,9 @@ Page({
                 return
             }
         }
+        this.setData({
+            value: ""
+        })
         let old;
         questions.get().then(res => {
             old = res.data
@@ -32,7 +39,7 @@ Page({
                 }
 
             }
-            questions.count().then(res=>{
+            questions.count().then(res => {
                 let cnt = res.total
                 questions.add({
                     data: {
@@ -41,10 +48,13 @@ Page({
                         res: item.res.trim(),
                         onlyId: cnt
                     }
+                }).then(res=>{
+                    wx.showToast({
+                      title: '添加成功',
+                    })
                 })
             })
         })
-        
 
     },
     onInput(event) {
