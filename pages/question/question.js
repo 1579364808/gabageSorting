@@ -9,7 +9,6 @@ Page({
     onSubmit(event) {
         console.log(event.detail.value)
         let item = event.detail.value
-
         for (let key in item) {
             // console.log(key)
             if (item[key] === null || item[key] === "") {
@@ -24,37 +23,35 @@ Page({
         this.setData({
             value: ""
         })
-        let old;
-        questions.get().then(res => {
-            old = res.data
-            console.log(old)
-            for (let i = 0; i < old.length; i++) {
-                if (old[i].options[0] === item.A && old[i].options[1] === item.B && old[i].options[2] === item.C && old[i].options[3] === item.D && old[i].question === item.question) {
-                    wx.showModal({
-                        showCancel: false,
-                        title: '添加失败',
-                        content: '当前存在相同题目',
-                    })
-                    return
-                }
-
+        let temp = [item.A.trim(), item.B.trim(), item.C.trim(), item.D.trim()];
+        questions.where({
+            options: temp,
+            question: item.question
+        }).get().then(res => {
+            if (res.data.length !== 0) {
+                wx.showModal({
+                    showCancel: false,
+                    title: '添加失败',
+                    content: '当前存在相同题目',
+                })
+                return
             }
-
-            let cnt = old.length
-            questions.add({
-                data: {
-                    question: item.question.trim(),
-                    options: [item.A.trim(), item.B.trim(), item.C.trim(), item.D.trim()],
-                    res: item.res.trim(),
-                    onlyId: cnt
-                }
-            }).then(res => {
-                wx.showToast({
-                    title: '添加成功',
+            questions.count().then(res => {
+                let cnt = res.total
+                questions.add({
+                    data: {
+                        question: item.question.trim(),
+                        options: temp,
+                        res: item.res.trim(),
+                        onlyId: cnt
+                    }
+                }).then(res => {
+                    wx.showToast({
+                        title: '添加成功',
+                    })
                 })
             })
         })
-
     },
     onInput(event) {
         console.log(event)
