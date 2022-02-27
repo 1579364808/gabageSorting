@@ -1,0 +1,16 @@
+<!--pages/question/question.wxml-->
+
+
+<form bindsubmit="onSubmit">
+    <view>问题:</view>
+    <input placeholder="请输入问题" name="question" type="text" />
+    <view>选项</view>
+    A: <input name="A" type="text" display="inline" />
+    B:<input name="B" type="text" />
+    C：<input name="C" type="text" />
+    D:<input name="D" type="text" />
+    <view>正确答案</view>
+    <input placeholder="请输入数字0-3" name="res" type="number" min="0" max="3" maxlength="1" bindinput="onInput" />
+    <button form-type="submit">提交</button>
+    <button form-type="reset">清空</button>
+</form>

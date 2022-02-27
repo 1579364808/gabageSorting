@@ -2,7 +2,8 @@
     "pages": [
         "pages/index/index",
         "pages/camera/camera",
-        "pages/detail/detail"
+        "pages/detail/detail",
+        "pages/question/question"
     ],
     "window": {
         "backgroundTextStyle": "light",

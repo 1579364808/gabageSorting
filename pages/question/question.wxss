@@ -1,0 +1,6 @@
+/* pages/question/question.wxss */
+input{
+    border: gray solid 2rpx;
+    height: 75rpx;
+    border-radius: 25rpx;
+}

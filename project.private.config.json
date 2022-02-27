@@ -11,7 +11,15 @@
             "list": []
         },
         "miniprogram": {
-            "list": []
+            "list": [
+                {
+                    "name": "添加题库",
+                    "pathName": "pages/question/question",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                }
+            ]
         }
     }
 }
