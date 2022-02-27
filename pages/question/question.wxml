@@ -10,7 +10,7 @@
     C：<input name="C" type="text" />
     D:<input name="D" type="text" />
     <view>正确答案</view>
-    <input placeholder="请输入数字0-3" name="res" type="number" min="0" max="3" maxlength="1" bindinput="onInput" />
+    <input placeholder="请输入数字0-3" name="res" type="number" maxlength="1" bindinput="onInput" />
     <button form-type="submit">提交</button>
     <button form-type="reset">清空</button>
 </form>
