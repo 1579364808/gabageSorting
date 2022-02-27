@@ -24,9 +24,10 @@ Page({
             value: ""
         })
         let temp = [item.A.trim(), item.B.trim(), item.C.trim(), item.D.trim()];
+        let question = item.question.trim();
         questions.where({
             options: temp,
-            question: item.question
+            question: question
         }).get().then(res => {
             if (res.data.length !== 0) {
                 wx.showModal({
@@ -40,7 +41,7 @@ Page({
                 let cnt = res.total
                 questions.add({
                     data: {
-                        question: item.question.trim(),
+                        question: question,
                         options: temp,
                         res: item.res.trim(),
                         onlyId: cnt
