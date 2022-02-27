@@ -40,7 +40,7 @@ Page({
 
             }
 
-            let cnt = old.length - 1
+            let cnt = old.length
             questions.add({
                 data: {
                     question: item.question.trim(),
