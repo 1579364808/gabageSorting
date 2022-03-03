@@ -3,7 +3,8 @@
         "pages/index/index",
         "pages/camera/camera",
         "pages/detail/detail",
-        "pages/question/question"
+        "pages/question/question",
+        "pages/reserch01/reserch01"
     ],
     "window": {
         "backgroundTextStyle": "light",

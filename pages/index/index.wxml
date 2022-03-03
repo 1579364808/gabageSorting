@@ -1,6 +1,6 @@
 <!--index.wxml-->
 
-<van-search value="苹果" label="垃圾" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="onSearch">
+<van-search value="苹果" label="垃圾" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="onSearch" >
 </van-search>
 <van-uploader bind:after-read="onClick">
   <van-button icon="photo" type="primary" round>拍照识别</van-button>
@@ -20,6 +20,7 @@
     <button bindtap="confirm" disabled="{{buttonDisable}}">确定</button>
   </view>
 </page-container>
+
 
 
 

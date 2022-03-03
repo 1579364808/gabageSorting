@@ -1,3 +1,8 @@
+
+ .root{
+    display: flex;
+    padding:15rpx;
+}
 .input{
     flex: 1;
     border:1px solid gray;
