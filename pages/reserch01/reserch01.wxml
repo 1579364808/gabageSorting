@@ -1,8 +1,7 @@
-<!--pages/detail/detail.wxml-->
-<!-- 显示搜索物品的类别 -->
-<text   wx:if="{{category}}">{{gabageName}}:{{category}}</text>
 
-<!-- 模糊搜索结果展示 -->
+<van-search  shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="getKey">
+</van-search>
+
 <view wx:if="{{list&&list.length>0}}">
     搜素结果如下
     <view wx:for="{{list}}" wx:key='index'>
