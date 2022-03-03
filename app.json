@@ -3,7 +3,7 @@
         "pages/index/index",
         "pages/detail/detail",
         "pages/answer/answer",
-        "pages/reserch01/reserch01"
+        "pages/reserch01/reserch01",
         "pages/question/question",
         "pages/exam/exam"
     ],
