@@ -1,0 +1,6 @@
+<!--pages/answer/answer.wxml-->
+<van-grid column-num="3" border="{{ false }}">
+  <van-grid-item icon="records" text="刷题" link-type="navigateTo" url="/pages/exam/exam" />
+  <van-grid-item icon="todo-list-o" text="错题本" />
+  <van-grid-item icon="star-o" text="收藏" />
+</van-grid>

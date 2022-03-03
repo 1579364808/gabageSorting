@@ -16,19 +16,22 @@
                     "name": "添加题库",
                     "pathName": "pages/question/question",
                     "query": "",
+                    "launchMode": "default",
                     "scene": null
                 },
+                {
+                    "name": "答题",
+                    "pathName": "pages/answer/answer",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                },    
                 {
                     "name": "",
                     "pathName": "pages/index/index",
                     "query": "",
                     "scene": null
                 },
-                {
-                    "name": "",
-                    "pathName": "pages/index/index",
-                    "query": "",
-                    "scene": null
                 }
             ]
         }

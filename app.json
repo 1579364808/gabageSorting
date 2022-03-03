@@ -1,10 +1,11 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/camera/camera",
         "pages/detail/detail",
-        "pages/question/question",
+        "pages/answer/answer",
         "pages/reserch01/reserch01"
+        "pages/question/question",
+        "pages/exam/exam"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -13,7 +14,6 @@
         "navigationBarTextStyle": "black"
     },
     "usingComponents": {
-        "van-search": "@vant/weapp/search/index",
         "van-button":"@vant/weapp/button/index"
       },
     "sitemapLocation": "sitemap.json"
