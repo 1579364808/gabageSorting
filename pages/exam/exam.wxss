@@ -1,1 +1,43 @@
 /* pages/exam/exam.wxss */
+.onClick {
+    background-color: gray;
+    border: gray solid 5rpx;
+    border-radius: 35rpx;
+    margin: 10rpx 50rpx;
+    text-align: center;
+    width: 300rpx;
+
+}
+
+.flase {
+    color: red;
+}
+
+.normal {
+    border: gray solid 5rpx;
+    border-radius: 35rpx;
+    margin: 10rpx 50rpx;
+    text-align: center;
+    width: 300rpx;
+}
+
+#operation {
+    width: 750rpx;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#containner {
+    height: 750rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: red solid 2rpx;
+
+}
+
+#submmit {
+    display: flex;
+    justify-content: center;
+}

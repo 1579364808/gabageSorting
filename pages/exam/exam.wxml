@@ -1,2 +1,37 @@
 <!--pages/exam/exam.wxml-->
-<text>pages/exam/exam.wxml</text>
+<view id="containner" style="font-size: larger;">
+    <!-- 题目说明 -->
+    <view>
+        <text style="color: green;">{{currentIndex+1}}</text>
+        <text>/10</text>
+        <text> 【单选题】</text>
+    </view>
+    <!-- 问题 -->
+    <view>
+        <text>{{question}}</text>
+    </view>
+    <!-- 选项 -->
+    <view style="display: flex;align-items: center;flex-direction: column;">
+        <view class="{{Class[0]}}" id="0" bindtap="select">
+            <text>A.{{options[0]}}</text>
+        </view>
+        <view class="{{Class[1]}}" id="1" bindtap="select">
+            <text>B.{{options[1]}}</text>
+        </view>
+        <view class="{{Class[2]}}" id="2" bindtap="select">
+            <text>C.{{options[2]}}</text>
+        </view>
+        <view class="{{Class[3]}}" id="3" bindtap="select">
+            <text>D.{{options[3]}}</text>
+        </view>
+    </view>
+    <!-- 操作 -->
+    <view id="operation">
+        <van-button icon="arrow-left" type="primary" bind:click="goPrev">上一题</van-button>
+        <van-button icon="arrow" type="primary" bind:click="goNext">下一题</van-button>
+    </view>
+
+</view>
+<view wx:if="{{currentIndex==9}}" id="submmit">
+    <van-button round type="info" size="large" color="green" style="width: 250rpx;" bind:click="onSubmmit">提交</van-button>
+</view>

@@ -5,10 +5,10 @@ Page({
 
     data: {
         gabageName: null,
-        category: null
+        category: null,
+        list:null
     },
     onLoad: function (event) {
-
         console.log(event.gabageName)
         this.setData({
                 gabageName: event.gabageName

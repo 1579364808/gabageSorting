@@ -1,4 +1,4 @@
-// pages/answer/answer.js
+// pages/guide/guide.js
 Page({
 
     /**

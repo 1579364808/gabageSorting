@@ -2,10 +2,13 @@
     "pages": [
         "pages/index/index",
         "pages/detail/detail",
-        "pages/answer/answer",
+        "pages/test/test",
         "pages/reserch01/reserch01",
         "pages/question/question",
-        "pages/exam/exam"
+        "pages/exam/exam",
+        "pages/exam_detail/exam_detail",
+        "pages/mine/mine",
+        "pages/guide/guide"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -14,7 +17,36 @@
         "navigationBarTextStyle": "black"
     },
     "usingComponents": {
-        "van-button":"@vant/weapp/button/index"
-      },
+        "van-button": "@vant/weapp/button/index"
+    },
+    "tabBar": {
+        "selectedColor": "#000000",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "./icons/home.png",
+                "selectedIconPath": "./icons/home_selected.png"
+            },
+            {
+                "pagePath": "pages/test/test",
+                "text": "答题",
+                "iconPath": "./icons/test.png",
+                "selectedIconPath": "./icons/test_selected.png"
+            },
+            {
+                "pagePath": "pages/guide/guide",
+                "text": "指南",
+                "iconPath": "./icons/guide.png",
+                "selectedIconPath": "./icons/guide_selected.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "./icons/mine.png",
+                "selectedIconPath": "./icons/mine_selected.png"
+            }
+        ]
+    },
     "sitemapLocation": "sitemap.json"
 }

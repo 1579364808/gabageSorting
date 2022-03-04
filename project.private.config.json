@@ -23,14 +23,21 @@
                     "name": "答题",
                     "pathName": "pages/answer/answer",
                     "query": "",
-                    "scene": null,
-                    "launchMode": "default"
-                },    
+                    "launchMode": "default",
+                    "scene": null
+                },
                 {
                     "name": "",
                     "pathName": "pages/index/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "登录",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
                 }
             ]
         }

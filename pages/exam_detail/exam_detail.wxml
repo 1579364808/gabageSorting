@@ -1,0 +1,11 @@
+<view wx:for="{{set}}">
+
+    <view>{{item.whole_question.question}}</view>
+    <view>A.{{item.whole_question.options[0]}}</view>
+    <view>B.{{item.whole_question.options[1]}}</view>
+    <view>C.{{item.whole_question.options[2]}}</view>
+    <view>D{{item.whole_question.options[3]}}</view>
+
+    <text>我的答案：{{item.user_answer}}</text>
+    <text>正确答案：{{item.whole_question.res}}</text>
+</view>

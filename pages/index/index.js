@@ -9,6 +9,7 @@ Page({
         buttonDisable:false,
     },
     onLoad(event) {
+         // ---------------------------------------------------------
         this.setData({
             showDialog: false,
             selectedItem:null,
@@ -26,6 +27,8 @@ Page({
                 }
             })
         })
+   
+
 
     },
     onSearch(event) {
@@ -51,9 +54,7 @@ Page({
     //识别请求
     rq(image, token) {
         let that = this
-
         wx.request({
-
             //进行post请求
             method: 'post',
             url: 'https://aip.baidubce.com/rest/2.0/image-classify/v2/advanced_general', //仅为示例，并非真实的接口地址
