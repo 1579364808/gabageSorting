@@ -1,6 +1,6 @@
 // pages/question/question.js
 const db = wx.cloud.database()
-const questions = db.collection('questions')
+const single = db.collection('single')
 
 Page({
     data: {
@@ -25,7 +25,7 @@ Page({
         })
         let temp = [item.A.trim(), item.B.trim(), item.C.trim(), item.D.trim()];
         let question = item.question.trim();
-        questions.where({
+        single.where({
             options: temp,
             question: question
         }).get().then(res => {
@@ -37,9 +37,9 @@ Page({
                 })
                 return
             }
-            questions.count().then(res => {
+            single.count().then(res => {
                 let cnt = res.total
-                questions.add({
+                single.add({
                     data: {
                         question: question,
                         options: temp,

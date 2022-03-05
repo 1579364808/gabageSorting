@@ -18,7 +18,7 @@ Page({
                 name: "questionPool",
                 data: {
                     type: "selectRecord",
-                    page: 2, //第几页
+                    page: 10, //第几页
                     size: 10 //每页的条数
                 }
             })
