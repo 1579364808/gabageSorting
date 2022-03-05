@@ -5,6 +5,8 @@
         "pages/test/test",
         "pages/reserch01/reserch01",
         "pages/question/question",
+        "pages/question1/question1",
+        "pages/question2/question2",
         "pages/exam/exam",
         "pages/exam_detail/exam_detail",
         "pages/mine/mine",

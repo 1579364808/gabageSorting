@@ -1,0 +1,14 @@
+<!--pages/question2/question2.wxml--
+
+<!--pages/question1/question1.wxml-->
+<form bindsubmit="onSubmit">
+    <view style="font-size: larger;">问题:</view>
+    <input placeholder="请输入问题" name="question" type="text" value="{{value}}"/>
+    <view>正确答案:</view>
+    <input placeholder="0代表正确，1代表错误" name="res" type="number" maxlength="1" bindinput="onInput"value="{{value}}" />
+    <view class="containner">
+        <button form-type="submit">提交</button>
+        <button form-type="reset">清空</button>
+    </view>
+
+</form>

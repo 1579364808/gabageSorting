@@ -13,7 +13,7 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "添加题库",
+                    "name": "添加单选",
                     "pathName": "pages/question/question",
                     "query": "",
                     "launchMode": "default",
@@ -35,6 +35,20 @@
                 {
                     "name": "登录",
                     "pathName": "pages/login/login",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "添加多选",
+                    "pathName": "pages/question1/question1",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "判断",
+                    "pathName": "pages/question2/question2",
                     "query": "",
                     "scene": null,
                     "launchMode": "default"
