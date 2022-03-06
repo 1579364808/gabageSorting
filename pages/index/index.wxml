@@ -3,7 +3,7 @@
 <van-search value="苹果" label="垃圾" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="onSearch" >
 </van-search>
 <van-uploader bind:after-read="onClick">
-  <van-button icon="photo" type="primary" round>拍照识别</van-button>
+  <van-button icon="photo" color="#4fbf8d" type="primary" round >拍照识别</van-button>
 </van-uploader>
 <!-- 图片识别成功后选择一个物品 -->
 <page-container show="{{showRadio}}" round>

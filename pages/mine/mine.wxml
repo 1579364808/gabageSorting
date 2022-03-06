@@ -2,3 +2,8 @@
 <view>
     <button bindtap="login"> 登录</button>
 </view>
+
+<!-- 水波纹 -->
+<view class="header">
+  <image class="wave" src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/bg_wave.gif"></image>
+</view>

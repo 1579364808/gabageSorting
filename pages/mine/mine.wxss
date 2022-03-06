@@ -1,1 +1,16 @@
-/* pages/mine/mine.wxss */
+.header {
+    position: relative;
+    height:400rpx;
+    background: linear-gradient(to bottom,#4fbf8d, #4fbf8d);
+  }
+  
+  .wave {
+    position: absolute;
+    left: 0;
+    bottom: -5rpx;
+    width: 100%;
+    mix-blend-mode: screen;
+    height: 120rpx;
+  }
+  
+  
