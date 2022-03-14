@@ -19,6 +19,7 @@
 
     <button bindtap="confirm" disabled="{{buttonDisable}}">确定</button>
   </view>
+  
 </page-container>
 
 

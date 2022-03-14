@@ -3,7 +3,7 @@ Page({
 
     },
     onLoad(options) {
-
+      this.login()
     },
     login(){
         wx.getUserProfile({
