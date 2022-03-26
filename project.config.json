@@ -5,7 +5,7 @@
     },
     "setting": {
         "urlCheck": true,
-        "es6": true,
+        "es6": false,
         "enhance": true,
         "postcss": true,
         "preloadBackgroundData": false,
@@ -20,7 +20,7 @@
         "checkInvalidKey": true,
         "checkSiteMap": true,
         "uploadWithSourceMap": true,
-        "compileHotReLoad": true,
+        "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
         "useMultiFrameRuntime": true,
         "useApiHook": true,
@@ -32,13 +32,8 @@
         },
         "useIsolateContext": false,
         "userConfirmedBundleSwitch": false,
-        "packNpmManually": true,
-        "packNpmRelationList": [
-            {
-                "packageJsonPath": "./package.json",
-                "miniprogramNpmDistDir": "./"
-            }
-        ],
+        "packNpmManually": false,
+        "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
         "minifyWXML": true,
@@ -48,7 +43,6 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.22.0",
-    "appid": "wxa5a8425bc40b7f7c",
     "projectname": "gabageSorting",
     "debugOptions": {
         "hidedInDevtools": []
@@ -61,6 +55,7 @@
     "isGameTourist": false,
     "cloudfunctionRoot": "cloud/",
     "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+    "appid": "wxa5a8425bc40b7f7c",
     "condition": {
         "search": {
             "list": []

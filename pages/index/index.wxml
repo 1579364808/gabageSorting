@@ -2,9 +2,13 @@
 
 <van-search value="苹果" label="垃圾" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="onSearch" >
 </van-search>
-<van-uploader bind:after-read="onClick">
+<van-uploader bind:after-read="img_recog_onClick">
   <van-button icon="photo" color="#4fbf8d" type="primary" round >拍照识别</van-button>
 </van-uploader>
+
+<button bindtouchstart="beginRecord" bindtouchend="endRecord" style="width: 300rpx;border-radius: 30rpx;font-size: small;background-color: #4fbf8d;color: white;">语音识别</button>
+
+
 <!-- 图片识别成功后选择一个物品 -->
 <page-container show="{{showRadio}}" round>
   <view id="container">
@@ -16,8 +20,7 @@
         </view>
       </radio-group>
     </view>
-
-    <button bindtap="confirm" disabled="{{buttonDisable}}">确定</button>
+    <button bindtap="pick_confirm" disabled="{{buttonDisable}}">确定</button>
   </view>
   
 </page-container>
