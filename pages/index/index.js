@@ -10,7 +10,6 @@ Page({
         buttonDisable: false,
     },
     onLoad(event) {
-        // ---------------------------------------------------------
         this.setData({
             showDialog: false,
             selectedItem: null,

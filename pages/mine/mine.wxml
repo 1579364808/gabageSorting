@@ -1,9 +1,11 @@
-<!--pages/mine/mine.wxml-->
-<view>
-    <button bindtap="login"> 登录</button>
-</view>
-
-<!-- 水波纹 -->
 <view class="header">
+
+
+
+  <view id="login" bindtap="login">
+    <image src="{{gravatar}}" id="gravatar"></image>
+    <text style="color: white;font-size: small;">{{nickName}}</text>
+  </view>
+  <!-- 水波纹 -->
   <image class="wave" src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/bg_wave.gif"></image>
 </view>

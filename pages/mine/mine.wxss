@@ -3,7 +3,23 @@
     height:400rpx;
     background: linear-gradient(to bottom,#4fbf8d, #4fbf8d);
   }
-  
+  #login{
+    display: flex;
+    flex-direction: column;
+    /* 居中 */
+    justify-content:center;
+    align-items:center;
+    position: relative;
+    top: 120rpx;
+  }
+  #gravatar{
+    width: 150rpx;
+    height: 150rpx;
+    border: #4fbf8d 1rpx solid;
+    background-color:white ;
+    border-radius: 50%;
+
+  }
   .wave {
     position: absolute;
     left: 0;
