@@ -1,2 +1,90 @@
-<!--pages/guide/guide.wxml-->
-<text>pages/guide/guide.wxml</text>
+<view class="content">
+      <view class='left'>
+        <view class="{{flag==0?'select':'normal'}}" id='0' bindtap='switchNav'>干垃圾</view>
+        <view class="{{flag==1?'select':'normal'}}" id='1' bindtap='switchNav'>湿垃圾</view>
+        <view class="{{flag==2?'select':'normal'}}" id='2' bindtap='switchNav'>可回收物</view>
+        <view class="{{flag==3?'select':'normal'}}" id='3' bindtap='switchNav'>有害垃圾</view>
+      </view>
+      <view class='right' >
+        <view class='category'>
+          <swiper current='{{currentTab}}' style='height:500px'>
+            <swiper-item id='0'>
+                <view class="container1">
+                        <view>
+                         <image src="../../icons/ResidualWaste.png"></image>
+                        </view>
+                        <view class="text_container1">
+                            <view class="text_1" >
+                                <text decode="{{true}}" space="{{true}}" style="font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;干垃圾</text>                           
+                                是指除有害垃圾、可回收物、湿垃圾以外的其他生活废弃物。
+                                <view>
+                                    <text style="font-weight:bold">投放要求:</text>  
+	                                      1. 尽量沥干水分难以辨识类别的生活垃圾投入干垃圾容器内
+                                          2. 需要显示的条目内容
+                                </view>  
+                            </view>
+                        </view>
+                </view>
+            </swiper-item>
+            <swiper-item id='1' >
+                <view class="container2">
+                        <view>
+                         <image src="../../icons/HouseholdfoodWaste.jpg"></image>
+                        </view>
+                        <view class="text_container2">
+                            <view class="text_2" >
+                                <text decode="{{true}}" space="{{true}}" style="font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;湿垃圾</text>                           
+                                是指易腐的生物质废弃物。包括剩菜剩饭、瓜皮果核、花卉绿植、肉类碎骨、过期食品、餐厨垃圾等。
+                                <view>
+                                    <text style="font-weight:bold">投放要求:</text>  
+	                                      1. 纯流质的食物垃圾，如牛奶等，应直接倒进下水口
+                                          2. 有包装物的湿垃圾应将包装物取出后分类投放,包装物请投放到对应的可回收物容器或干垃圾容器
+                                </view>  
+                            </view>
+                        </view>
+                </view>
+            </swiper-item>
+            <swiper-item id='2' >
+                <view class="container3">
+                        <view>
+                         <image src="../../icons/RecycleableWaste.jpg"></image>
+                        </view>
+                        <view class="text_container3">
+                            <view class="text_3" >
+                                <text decode="{{true}}" space="{{true}}" style="font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可回收物</text>                           
+                                是指适宜回收和可循环再利用的废弃物。主要包括废玻璃、废金属、废塑料、废纸张、废织物等。
+                                <view>
+                                    <text style="font-weight:bold">投放要求:</text>  
+	                                      1. 轻投轻放
+                                          2. 清洁干燥，避免污染·废纸尽量平整
+                                          3. 立体包装请清空内容物，清洁后压扁投放
+                                          4. 有尖锐边角的,应包裹后投放
+                                </view>  
+                            </view>
+                        </view>
+                </view>
+            </swiper-item>
+            <swiper-item id='3'>
+                <view class="container4">
+                        <view>
+                         <image src="../../icons/HazardouAwaste.jpg"></image>
+                        </view>
+                        <view class="text_container4">
+                            <view class="text_4" >
+                                <text decode="{{true}}" space="{{true}}" style="font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有害垃圾</text>                           
+                                是指对人体健康或者自然环境造成直接或者潜在危害的零星废弃物，单位集中产生的除外。主要包括废电池、废灯管、废药品、废油漆桶等。
+                                <view>
+                                    <text style="font-weight:bold">投放要求:</text>  
+	                                      1. 充电电池、纽扣电池、蓄电池投放时请注意轻放
+                                          2. 油漆桶、杀虫剂如有残留请密闭后投放
+                                          3. 荧光灯、节能灯易破损请连带包装或包裹后轻放
+                                          4. 废药品及其包装连带包装一并投放
+                                </view>  
+                            </view>
+                        </view>
+                </view>
+            </swiper-item>
+          </swiper>
+        </view>
+      </view>
+    </view>
