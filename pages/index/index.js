@@ -81,10 +81,10 @@ Page({
                 }
             })
 
-            显示加载
-            wx.showLoading({
-                title: '正在识别中',
-            })
+        //    // 显示加载
+        //     wx.showLoading({
+        //         title: '正在识别中',
+        //     })
         })
 
     },

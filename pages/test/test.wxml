@@ -1,6 +1,10 @@
 <!--pages/test/test.wxml-->
-<van-grid column-num="3" border="{{ false }}">
-  <van-grid-item icon="records" text="刷题" link-type="navigateTo" url="/pages/exam/exam" />
-  <van-grid-item icon="todo-list-o" text="错题本" />
-  <van-grid-item icon="star-o" text="收藏" />
-</van-grid>
+<view class="{{ font }}">
+  <image src='/icons/test1.png' ></image>
+  <view class='test' style="font-size: {{fontSize}}pt">刷题</view>
+  <navigator url="/pages/exam/exam">
+  <view class='imgsize'>
+  <image class="img" src='/icons/test2.png'></image>
+  </view>
+   </navigator> 
+</view>
