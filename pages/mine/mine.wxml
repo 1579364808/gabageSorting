@@ -1,7 +1,4 @@
 <view class="header">
-
-
-
   <view id="login" bindtap="login">
     <image src="{{gravatar}}" id="gravatar"></image>
     <text style="color: white;font-size: small;">{{nickName}}</text>

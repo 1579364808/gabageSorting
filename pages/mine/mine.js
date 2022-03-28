@@ -21,7 +21,8 @@ Page({
     if (userInfo != "" && userInfo != null) {
       this.setData({
         gravatar: userInfo.avatarUrl,
-        nickName: userInfo.nickName
+        nickName: userInfo.nickName,
+        isLogin: true
       })
     }
 

@@ -1,0 +1,28 @@
+var letter=function (id) {
+   switch(id){
+       case 0:return 'A';
+       case 1:return 'B';
+       case 2:return 'C';
+       case 3:return 'D';
+   }
+  };
+
+  var option = function(curIndex){
+      if(curIndex<10){
+          return 'choice_option'
+      }else{
+          return 'judge_option'
+      }
+  }
+  var sub_containner = function(curIndex){
+    if(curIndex<10){
+        return 'choice_containner'
+    }else{
+        return 'judge_containner'
+    }
+  }
+module.exports = {
+    letter:letter,
+    option:option,
+    sub_containner:sub_containner
+};

@@ -1,43 +1,135 @@
 /* pages/exam/exam.wxss */
-.onClick {
-    background-color: gray;
-    border: gray solid 5rpx;
-    border-radius: 35rpx;
-    margin: 10rpx 50rpx;
-    text-align: center;
-    width: 300rpx;
+#Page {
+    background-color: #4fbf8d;
+    height: 1400rpx;
+}
+
+#containner {
+    height: 1000rpx;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 200rpx;
+    background-color: white;
+    border-radius: 50rpx;
+}
+
+#title {
+    position: relative;
+    left: 80rpx;
+    top: 70rpx;
+}
+
+
+.choice_containner {
+    height: 900rpx;
+    position: relative;
 
 }
 
-.flase {
-    color: red;
+.judge_containner {
+    position: relative;
+    height: 900rpx;
 }
 
-.normal {
-    border: gray solid 5rpx;
-    border-radius: 35rpx;
-    margin: 10rpx 50rpx;
-    text-align: center;
-    width: 300rpx;
+#question {
+    width: 650rpx;
+    height: 160rpx;
+    position: relative;
+    top: 120rpx;
+    left: 50rpx;
+}
+
+.choice_option {
+    position: relative;
+    top: 160rpx;
+    left: 100rpx;
+    width: 600rpx;
+    height: 420rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.choice_option view {
+    display: flex;
+    align-items: center;
+}
+
+.judge_option {
+    display: flex;
+    justify-content: space-around;
+}
+
+.judge_option view {
+    position: relative;
+    top: 200rpx;
 }
 
 #operation {
     width: 750rpx;
     display: flex;
     justify-content: space-around;
-
+    position: absolute;
+    bottom: 100rpx;
 }
 
-#containner {
-    height: 750rpx;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: red solid 2rpx;
 
-}
 
-#submmit {
+
+
+
+
+.choice_normal {
+    width: 75rpx;
+    height: 75rpx;
+    border: solid black 1rpx;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-right: 30rpx;
+    font-size: smaller;
+}
+
+.choice_onClick {
+    width: 75rpx;
+    height: 75rpx;
+    border: solid black 1rpx;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30rpx;
+    font-size: smaller;
+    background-color: #4fbf8d;
+    color: white;
+
+}
+
+.judge_normal {
+    width: 250rpx;
+    height: 120rpx;
+    border: solid black 1rpx;
+    border-radius: 35rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30rpx;
+
+}
+.judge_onClick {
+    width: 250rpx;
+    height: 120rpx;
+    border: solid black 1rpx;
+    border-radius: 35rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30rpx;
+
+    background-color: #4fbf8d;
+    color: white;
+
 }

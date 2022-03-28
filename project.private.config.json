@@ -47,6 +47,13 @@
                     "pathName": "pages/question2/question2",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "答案界面",
+                    "pathName": "pages/exam_detail/exam_detail",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
                 }
             ]
         }
