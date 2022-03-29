@@ -7,8 +7,8 @@
       </view>
       <view class='right' >
         <view class='category'>
-          <swiper current='{{currentTab}}' style='height:500px'>
-            <swiper-item id='0'>
+          <swiper current='{{currentTab}}' style='height:2000rpx'>
+            <swiper-item id='0' catchtouchmove="stopTouchMove">
                 <view class="container1">
                         <view>
                          <image src="../../icons/ResidualWaste.png"></image>
@@ -25,8 +25,13 @@
                             </view>
                         </view>
                 </view>
+                <view class="box">
+                    <view wx:for="{{list0}}" class="item">
+                            <view>{{item.name}}</view>
+                        </view>
+                 </view>
             </swiper-item>
-            <swiper-item id='1' >
+            <swiper-item id='1' catchtouchmove="stopTouchMove">
                 <view class="container2">
                         <view>
                          <image src="../../icons/HouseholdfoodWaste.jpg"></image>
@@ -43,8 +48,13 @@
                             </view>
                         </view>
                 </view>
+                <view class="box">
+                    <view wx:for="{{list1}}" class="item">
+                            <view>{{item.name}}</view>
+                        </view>
+                 </view>
             </swiper-item>
-            <swiper-item id='2' >
+            <swiper-item id='2' catchtouchmove="stopTouchMove">
                 <view class="container3">
                         <view>
                          <image src="../../icons/RecycleableWaste.jpg"></image>
@@ -63,8 +73,13 @@
                             </view>
                         </view>
                 </view>
+                <view class="box">
+                    <view wx:for="{{list2}}" class="item">
+                            <view>{{item.name}}</view>
+                        </view>
+                 </view>
             </swiper-item>
-            <swiper-item id='3'>
+            <swiper-item id='3' catchtouchmove="stopTouchMove">
                 <view class="container4">
                         <view>
                          <image src="../../icons/HazardouAwaste.jpg"></image>
@@ -83,8 +98,13 @@
                             </view>
                         </view>
                 </view>
+                <view class="box">
+                    <view wx:for="{{list3}}" class="item">
+                            <view>{{item.name}}</view>
+                        </view>
+                 </view>
             </swiper-item>
           </swiper>
         </view>
-      </view>
+    </view>
     </view>

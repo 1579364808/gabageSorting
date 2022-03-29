@@ -25,6 +25,7 @@
   .right {
     width: 70%;
     margin: 0px;
+    /* height: 5000rpx; */
     /* background-color: red; */
   }
   image{
@@ -125,6 +126,22 @@
   height:auto;
   margin-bottom:30rpx  ;
 }
+ .category{
+  height: auto;
+  /* background-color: rgb(15, 201, 15);  */
+ }
 .text_4{
     margin: 20rpx;
+}
+.box{
+  margin:30rpx  ;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(201, 127, 15); */
+}
+.item{
+  color: grey;
+  margin: 20rpx;
+  border-bottom: 1px solid rgb(180, 173, 173);
 }
