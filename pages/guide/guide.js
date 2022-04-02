@@ -4,7 +4,12 @@ let page=0
 Page({
     data: {
       flag: 0,
-      currentTab: 0
+      currentTab: 0,
+      list0:[],
+      list1:[],
+      list2:[],
+      list3:[]
+
     },
     switchNav: function(e) {
       var page = this;
@@ -19,119 +24,102 @@ Page({
       page.setData({
         flag: id
       });
-      /////
-      if(e.target.id==0)
-      {
-        db.collection("gabage")
-        .where({
-          category:"干垃圾"
-        })
-        .skip(20)
-        .get()
-        .then(res=>{
-            console.log("请求成功",res);
-            this.setData({
-              list0:res.data
-            })
-        })
-        .catch(err=>{
-            console.log("请求失败",err);
-        })
-      }
-      if(e.target.id==1)
-      {
-       
-        db.collection("gabage")
-        .where({
-          category:"湿垃圾"
-        })
-        .skip(20)
-        .get()
-        .then(res=>{
-            console.log("请求成功",res);
-            this.setData({
-              list1:res.data
-            })
-        })
-        .catch(err=>{
-            console.log("请求失败",err);
-        })
-      }
-      if(e.target.id==2)
-      {
-        db.collection("gabage")
-        .where({
-          category:"可回收垃圾"
-        })
-        .skip(20)
-        .get()
-        .then(res=>{
-            console.log("请求成功",res);
-            this.setData({
-              list2:res.data
-            })
-        })
-        .catch(err=>{
-            console.log("请求失败",err);
-        })
-      }
-      if(e.target.id==3)
-      {
-        db.collection("gabage")
-        .where({
-          category:"有害垃圾"
-        })
-        .skip(20)
-        .get()
-        .then(res=>{
-            console.log("请求成功",res);
-            this.setData({
-              list3:res.data
-            })
-        })
-        .catch(err=>{
-            console.log("请求失败",err);
-        })
-      }
-      
     },
     catchTouchMove: function (res) {
       return false
     },
-    // getList(){
-    //   console.log("长度",this.data.list0.length);
-    //   let len=this.data.list0.length
-    //     db.collection("gabage")
-    //     .where({
-    //       category:"干垃圾"
-    //     })
-    //     // .limit()
-    //     .skip(len)
-    //     .get()
-    //     .then(res=>{
-    //         console.log("请求成功",res);
-    //         if(res.data.length>20){
-    //               wx.showToast({
-    //                 title: '没有更多数据啦',
-    //               })
-    //         }
-    //         this.setData({
-    //           list0:this.data.list0.concat(res.data)
-    //         })
-    //     })
-    //     .catch(err=>{
-    //         console.log("请求失败",err);
-    //     })
-    // },
-    // onReachBottom:function(){
-    //   console.log("onReachBottom");
-    //   if(page<=1)
-    //   {
-    //       page++ 
-    //       this.getList()
-    //   }
-     
-    // }
-
+    onLoad(){
+       this.getList()
+       this.getList1()
+       this.getList2()
+       this.getList3()
+    },
+    getList(){
+      let len=this.data.list0.length
+        db.collection("gabage")
+        .where({
+          category:"干垃圾"
+        })
+        .skip(len)
+        .get()
+        .then(res=>{
+            console.log("请求成功",res);
+            // this.setData({
+            //   list0:res.data
+            // })
+            this.setData({
+                 list0:this.data.list0.concat(res.data),
+            })
+        })
+        .catch(err=>{
+            console.log("请求失败",err);
+        })
+      
+    },
+    getList1(){
+      let len=this.data.list1.length
+      db.collection("gabage")
+      .where({
+        category:"湿垃圾"
+      })
+      .skip(len)
+      .get()
+      .then(res=>{
+          console.log("请求成功",res);
+          this.setData({
+            list1:this.data.list1.concat(res.data),
+          })
+      })
+      .catch(err=>{
+          console.log("请求失败",err);
+      })
+  },
+  getList2(){
+    let len=this.data.list2.length
+    db.collection("gabage")
+    .where({
+      category:"可回收垃圾"
+    })
+    .skip(len)
+    .get()
+    .then(res=>{
+        console.log("请求成功",res);
+        this.setData({
+          list2:this.data.list2.concat(res.data),
+        })
+    })
+    .catch(err=>{
+        console.log("请求失败",err);
+    })
+  },
+  getList3(){
+    let len=this.data.list3.length
+    db.collection("gabage")
+        .where({
+          category:"有害垃圾"
+        })
+        .skip(len)
+        .get()
+        .then(res=>{
+            console.log("请求成功",res);
+            this.setData({
+              list3:this.data.list3.concat(res.data),
+            })
+        })
+        .catch(err=>{
+            console.log("请求失败",err);
+        })
+      },
+      scrolltolower(){
+        if(page<=7)
+        {
+            page++ 
+            console.log('dfdsv ',page)
+            this.getList()
+            this.getList1()
+            this.getList2()
+            this.getList3()
+        }
+      }
   })
   

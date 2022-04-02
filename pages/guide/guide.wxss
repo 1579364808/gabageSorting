@@ -25,8 +25,8 @@
   .right {
     width: 70%;
     margin: 0px;
-    /* height: 5000rpx; */
-    /* background-color: red; */
+    height: auto;
+    /* background-color: rgb(0, 255, 21); */
   }
   image{
     width: 150rpx;
@@ -134,8 +134,11 @@
     margin: 20rpx;
 }
 .box{
-  margin:30rpx  ;
-  height: auto;
+  /* margin:30rpx  ; */
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 40rpx;
+  /* height: auto; */
   display: flex;
   flex-direction: column;
   /* background-color: rgb(201, 127, 15); */
@@ -144,4 +147,7 @@
   color: grey;
   margin: 20rpx;
   border-bottom: 1px solid rgb(180, 173, 173);
+}
+.Container{
+  height: 1460rpx;
 }

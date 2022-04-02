@@ -5,9 +5,10 @@
         <view class="{{flag==2?'select':'normal'}}" id='2' bindtap='switchNav'>可回收物</view>
         <view class="{{flag==3?'select':'normal'}}" id='3' bindtap='switchNav'>有害垃圾</view>
       </view>
+      
       <view class='right' >
         <view class='category'>
-          <swiper current='{{currentTab}}' style='height:2000rpx'>
+          <swiper current='{{currentTab}}' class='Container'>
             <swiper-item id='0' catchtouchmove="stopTouchMove">
                 <view class="container1">
                         <view>
@@ -25,11 +26,16 @@
                             </view>
                         </view>
                 </view>
-                <view class="box">
-                    <view wx:for="{{list0}}" class="item">
-                            <view>{{item.name}}</view>
+                <view class="mbox">
+                    <scroll-view scroll-y="true" style="height: 786rpx;margin-bottom:20rpx "
+                    bindscrolltolower="scrolltolower">
+                        <view class="box">
+                            <view wx:for="{{list0}}" class="item">
+                                    <view>{{item.name}}</view>
+                                </view>
                         </view>
-                 </view>
+                    </scroll-view>
+                </view>
             </swiper-item>
             <swiper-item id='1' catchtouchmove="stopTouchMove">
                 <view class="container2">
@@ -48,11 +54,15 @@
                             </view>
                         </view>
                 </view>
-                <view class="box">
-                    <view wx:for="{{list1}}" class="item">
-                            <view>{{item.name}}</view>
+                <view class="mbox">
+                    <scroll-view scroll-y="true" style="height: 612rpx;margin-bottom:20rpx ;">
+                        <view class="box">
+                            <view wx:for="{{list1}}" class="item">
+                                    <view>{{item.name}}</view>
+                                </view>
                         </view>
-                 </view>
+                    </scroll-view>
+                </view>
             </swiper-item>
             <swiper-item id='2' catchtouchmove="stopTouchMove">
                 <view class="container3">
@@ -73,11 +83,15 @@
                             </view>
                         </view>
                 </view>
-                <view class="box">
-                    <view wx:for="{{list2}}" class="item">
-                            <view>{{item.name}}</view>
-                        </view>
-                 </view>
+                <view class="mbox">
+                    <scroll-view scroll-y="true" style="height: 656rpx;margin-bottom:20rpx ;">
+                    <view class="box">
+                        <view wx:for="{{list2}}" class="item">
+                                <view>{{item.name}}</view>
+                            </view>
+                    </view>
+                </scroll-view>
+                </view>
             </swiper-item>
             <swiper-item id='3' catchtouchmove="stopTouchMove">
                 <view class="container4">
@@ -98,11 +112,15 @@
                             </view>
                         </view>
                 </view>
-                <view class="box">
-                    <view wx:for="{{list3}}" class="item">
-                            <view>{{item.name}}</view>
+                <view class="mbox">
+                    <scroll-view scroll-y="true" style="height: 526rpx;margin-bottom:20rpx ;">
+                        <view class="box">
+                            <view wx:for="{{list3}}" class="item">
+                                    <view>{{item.name}}</view>
+                                </view>
                         </view>
-                 </view>
+                   </scroll-view>
+                </view>
             </swiper-item>
           </swiper>
         </view>
