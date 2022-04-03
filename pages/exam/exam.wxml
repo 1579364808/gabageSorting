@@ -36,3 +36,6 @@
         <van-button icon="arrow" type="primary" bind:click="onSubmmit" wx:if="{{currentIndex==14}}">提交</van-button>
     </view>
 </view>
+<view class="myBox">
+		<image src="" mode="aspectFill"></image>
+	</view>

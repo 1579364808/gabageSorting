@@ -23,4 +23,19 @@
     background-color: rgb(9, 209, 35);
     color: white;
 }
-
+.item .main{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+.item .main image{
+    width:400rpx;
+    height: 400rpx;
+}
+.text{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}

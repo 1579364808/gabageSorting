@@ -90,6 +90,7 @@ Page({
             })
         })
     },
+    
     // //语音识别请求
     audio_rq(audio,token,fileSize) {
         let that = this
@@ -119,6 +120,7 @@ Page({
         })
 
     },
+    
     //图片识别    
     img_recog_onClick(event) {
 
