@@ -7,5 +7,6 @@
     "van-picker": "@vant/weapp/picker/index",
     "van-popup": "@vant/weapp/popup/index",
     "van-search": "@vant/weapp/search/index"
-  }
+  },
+  "navigationBarTitleText": "垃圾识别"
 }

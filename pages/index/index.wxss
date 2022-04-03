@@ -1,6 +1,5 @@
 .radioContainer{
     width:450rpx ;
-    /* border: gray solid 3rpx; */
     border-radius:  30rpx;
     padding-top: 10rpx;
     padding-bottom: 10rpx;
@@ -9,7 +8,7 @@
     
 }
 #container{
-    /* border: red solid 10rpx; */
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,9 +17,10 @@
 }
 #container button{
     font-weight: bold;
+    font-size: large;
     width: 250rpx;
     border-radius: 30rpx;
-    background-color: rgb(9, 209, 35);
+    background-color: #4fbf8d;
     color: white;
 }
 .item .main{
