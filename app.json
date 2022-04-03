@@ -10,7 +10,8 @@
         "pages/exam/exam",
         "pages/exam_detail/exam_detail",
         "pages/mine/mine",
-        "pages/guide/guide"
+        "pages/guide/guide",
+        "pages/mine1/mine1"
     ],
     "window": {
         "backgroundTextStyle": "light",

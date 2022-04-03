@@ -6,3 +6,39 @@
   <!-- 水波纹 -->
   <image class="wave" src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/bg_wave.gif"></image>
 </view>
+<!--Layout布局_页面小按钮-->
+<view class="tubiao">
+<!--设置列元素间距-->
+<van-row custom-class="icons">
+  <van-col span="8" custom-class="icons_col">
+    <image src="/icons/false.png"></image>
+    <view>错题本</view>
+  </van-col>
+  <van-col span="8" custom-class="icons_col">
+    <image src="/icons/collection.png"></image>
+    <view>收藏夹</view>
+  </van-col>
+  <van-col span="8" custom-class="icons_col">
+    <image src="/icons/introduce.png"></image>
+    <view>关于我们</view>
+  </van-col>
+  
+  <van-col span="8" custom-class="icons_col">
+   <image src="/icons/contact.png"></image> 
+<navigator url="/" >  <view>联系客服</view></navigator>
+  </van-col>
+
+  <van-col span="8" custom-class="icons_col">
+    <image src="/icons/help.png"></image>
+    <view>帮助与反馈</view>
+  </van-col>
+  <van-col span="8" custom-class="icons_col">
+    <image src="/icons/share.png"></image>
+    <view>分享</view>
+  </van-col>
+  <van-col span="8" custom-class="icons_col">
+    <image src="/icons/test4.png"></image>
+    <view>测试记录</view>
+  </van-col>
+</van-row>
+</view>

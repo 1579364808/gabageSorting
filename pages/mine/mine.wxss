@@ -31,4 +31,19 @@
     height: 120rpx;
   }
   
-  
+  .tubiao{
+    width: 100%;
+  }
+  .icons{
+    width: 100%;
+    text-align: center;
+    margin:30rpx auto;
+  }
+  .icons_col{
+    height: 170rpx;
+      
+  }
+  .icons_col image{
+    width: 80rpx;
+    height: 80rpx;
+  }
