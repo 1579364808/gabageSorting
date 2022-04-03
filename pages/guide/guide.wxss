@@ -1,1 +1,153 @@
-/* pages/guide/guide.wxss */
+.content {
+    display: flex;
+    font-size: 34rpx;
+  }
+  .left {
+    width: 30%;
+    height: auto;
+    background-color: #F4F4F4;
+  }
+  .left view {
+    text-align: center;
+    height: 90rpx;
+    line-height: 90rpx;
+  }
+  .select {
+    background-color: #ffffff;
+    border-left: 2px solid #36AE66;
+    font-weight: bold;
+    color: #36AE66;
+  }
+  .normal {
+    background-color: #F4F4F4;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .right {
+    width: 70%;
+    margin: 0px;
+    height: auto;
+    /* background-color: rgb(0, 255, 21); */
+  }
+  image{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 8%;
+   margin-top: 40rpx;
+    margin-bottom: 20rpx;
+}
+
+
+  /* 干垃圾 */
+  .container1{
+      width: 480rpx;
+      height: auto;
+      background-color: rgb(170, 182, 139);
+      margin: 10rpx 30rpx 30rpx 30rpx;
+      border-radius: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+  }
+  .text_container1{
+    /* background-color: rgb(201, 127, 15); */
+    width: 470rpx;
+    height:auto;
+    margin-bottom:30rpx ;
+  }
+  .text_1{
+      margin: 20rpx;
+  }
+
+  /* 湿垃圾 */
+
+  .container2{
+    width: 480rpx;
+    height: auto;
+    background-color: rgb(199, 187, 133);
+    margin: 10rpx 30rpx 30rpx 30rpx;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.text_container2{
+  /* background-color: rgb(201, 127, 15); */
+  width: 470rpx;
+  height:auto;
+  margin-bottom:30rpx  ;
+}
+.text_2{
+    margin: 20rpx;
+}
+
+/* 可回垃圾 */
+.container3{
+    width: 480rpx;
+    height: auto;
+    background-color: rgb(152, 204, 207);
+    margin: 10rpx 30rpx 30rpx 30rpx;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.text_container3{
+  /* background-color: rgb(201, 127, 15); */
+  width: 470rpx;
+  height:auto;
+  margin-bottom:30rpx  ;
+}
+.text_3{
+    margin: 20rpx;
+}
+
+/* 有害垃圾 */
+.container4{
+    width: 480rpx;
+    height: auto;
+    background-color: rgb(219, 177, 143);
+    margin: 10rpx 30rpx 30rpx 30rpx;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.text_container4{
+  /* background-color: rgb(201, 127, 15); */
+  width: 470rpx;
+  height:auto;
+  margin-bottom:30rpx  ;
+}
+ .category{
+  height: auto;
+  /* background-color: rgb(15, 201, 15);  */
+ }
+.text_4{
+    margin: 20rpx;
+}
+.box{
+  /* margin:30rpx  ; */
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 40rpx;
+  /* height: auto; */
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(201, 127, 15); */
+}
+.item{
+  color: grey;
+  margin: 20rpx;
+  border-bottom: 1px solid rgb(180, 173, 173);
+}
+.Container{
+  height: 1460rpx;
+}
