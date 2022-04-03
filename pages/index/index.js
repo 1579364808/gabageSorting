@@ -61,6 +61,9 @@ Page({
             format: 'pcm'
         }
         recorderManager.start(options);
+        wx.showLoading({
+            title: '录音中',
+        })
 
     },
     endRecord(event) {
@@ -80,13 +83,12 @@ Page({
                     this.audio_rq(audio,token,len)
                 }
             })
-
-        //    // 显示加载
-        //     wx.showLoading({
-        //         title: '正在识别中',
-        //     })
+            wx.hideLoading()
+           // 显示加载
+            wx.showLoading({
+                title: '正在识别中',
+            })
         })
-
     },
     // //语音识别请求
     audio_rq(audio,token,fileSize) {
@@ -111,6 +113,7 @@ Page({
                 'content-type': 'application/json'
             },
             success(res) {
+                wx.hideLoading()
                 console.log(res);
             }
         })

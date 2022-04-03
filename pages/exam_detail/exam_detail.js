@@ -2,18 +2,16 @@
 Page({
     data: {
         list: [],
-        userAns:[]
+        archives:[]
     },
     onLoad() {
         wx.getStorage({
                 key: "record"
             })
             .then(res => {
-                console.log(res)
-                
                 this.setData({
                     list:res.data.list,
-                    userAns:res.data.userAns
+                    archives:res.data.archives
                 })
             })
     }

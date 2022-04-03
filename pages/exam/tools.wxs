@@ -21,6 +21,8 @@ var letter=function (id) {
         return 'judge_containner'
     }
   }
+
+  
 module.exports = {
     letter:letter,
     option:option,

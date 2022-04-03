@@ -105,29 +105,6 @@ class Judge {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Page({
     data: {
         list: [], //云函数获取的题目集    分三段   单选题0-4   多选题5-9   判断题10-14
@@ -307,7 +284,7 @@ Page({
             key: "record",
             data: {
                 list: list,
-                userAns: userAns
+                archives: userAns.archives
             }
         })
 

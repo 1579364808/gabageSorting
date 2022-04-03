@@ -1,1 +1,57 @@
 /* pages/exam_detail/exam_detail.wxss */
+
+.type{
+    position: relative;
+    left: 300rpx;
+    font-size: x-large;
+    margin-bottom: 50rpx;
+}
+.option_containner{
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  border-top: solid #E2E1E6 4rpx;
+}
+.option_item{
+    position: relative;
+    border-bottom: solid #E2E1E6 4rpx;
+    padding: 30rpx 60rpx;
+    font-size: large;
+    display: flex;
+    align-items: center;
+}
+.option_item image{
+width: 80rpx;
+height: 80rpx;
+margin-right: 50rpx;
+}
+.ans{
+    display: flex;
+    justify-content:space-around;
+    border: solid 2rpx;
+    height: 130rpx;
+    border-radius: 35rpx;
+    background-color: rgb(235,255,240);
+    margin-left: 50rpx;
+    margin-right:50rpx ;
+    margin-bottom: 100rpx;
+}
+.ans view{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.question{
+    font-size: large;
+    margin: 20rpx 40rpx;
+}
+.judge_containner{
+    display: flex;
+    justify-content: space-around;
+}
+.judge_containner image{
+
+    width: 200rpx;
+    height: 200rpx;
+
+   
+}

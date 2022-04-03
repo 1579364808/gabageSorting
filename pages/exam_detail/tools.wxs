@@ -1,0 +1,72 @@
+var letter = {
+    '0': 'A',
+    '1': 'B',
+    '2': 'C',
+    '3': 'D'
+}
+
+var ans = function (res, curIndex) {
+    if (curIndex < 5) {
+        return letter[res];
+    } else if (curIndex < 10) {
+        var temp = [];
+        for (var i = 0; i < res.length; i++) {
+            if (res[i] != null) {
+                temp.push(letter[res[i]])
+            }
+        }
+        return temp
+    } else {
+        if (res == 0) {
+            return '对'
+        }
+        return '错'
+    }
+}
+var alterImage = function (id,res,userAns,curIndex){
+    if(curIndex<5){
+        if(id==userAns&&id==res){
+            return '../../icons/right_green.png'
+        }else if(id==userAns&&id!=res){
+            return '../../icons/wrong.png'
+        }else if(id==res&&id!=userAns){
+            return '../../icons/right_red.png'
+        }else{
+            return'../../icons/normal.png'
+        }
+    }else if(curIndex>=5&&curIndex<10){
+            for (var i = 0; i < res.length; i++) {
+               if(id==userAns[id]&&id==res[i]){
+                return '../../icons/right_green.png'
+               }else if(id==res[i]){
+                return '../../icons/right_red.png' 
+               }
+            }
+            if(id==userAns[id]){
+                return '../../icons/wrong.png'
+            }else{
+                return '../../icons/normal.png'
+            }
+    }
+}
+var judge_image = function(id,res,userAns){
+    if(id==userAns&&id==res&&id==0){
+        return '../../icons/judge_r_green.png'
+    }else if(id==userAns&&id!=res&&id==0){
+        return '../../icons/judge_r_red.png'
+    }else if(id==0){
+        return '../../icons/judge_right.png'
+    }
+    else if(id==userAns&&id==res&&id==1){
+        return '../../icons/judge_w_green.png'
+    }else if(id==userAns&&id!=res&&id==1){
+        return '../../icons/judge_w_red.png'
+    }else if(id==1){
+        return '../../icons/judge_wrong.png'
+    }
+}
+module.exports = {
+    ans: ans,
+    alterImage:alterImage,
+    judge_image:judge_image
+};

@@ -1,11 +1,30 @@
-<view wx:for="{{set}}">
-
-    <view>{{item.whole_question.question}}</view>
-    <view>A.{{item.whole_question.options[0]}}</view>
-    <view>B.{{item.whole_question.options[1]}}</view>
-    <view>C.{{item.whole_question.options[2]}}</view>
-    <view>D{{item.whole_question.options[3]}}</view>
-
-    <text>我的答案：{{item.user_answer}}</text>
-    <text>正确答案：{{item.whole_question.res}}</text>
+<wxs src="./tools.wxs" module="tools" />
+<wxs src="../exam/tools.wxs" module="tools1" />
+<view wx:for="{{list}}" wx:for-item='whole' wx:for-index='i' class="containner">
+    <view wx:if="{{i==0}}" class="type">单选题</view>
+    <view wx:if="{{i==5}}" class="type">多选题</view>
+    <view wx:if="{{i==10}}" class="type">判断题</view>
+    <view class="question">
+        {{whole.question}}
+    </view>
+    <view class="option_containner" wx:if="{{i<10}}">
+        <view wx:for="{{whole.items}}" wx:for-index='j' wx:for-item='item'>
+            <view class="option_item">
+                <image src="{{tools.alterImage(j,whole.res,archives[i],i)}}"></image>
+                <text>{{tools1.letter(j)}}. {{item}}</text>
+            </view>
+        </view>
+    </view>
+    <view wx:else class="judge_containner">
+        <image src="{{tools.judge_image(0,whole.res,archives[i])}}"></image>
+        <image src="{{tools.judge_image(1,whole.res,archives[i])}}"></image>
+    </view>
+    <view class="ans">
+        <view>
+            正确答案:{{tools.ans(whole.res,i)}}
+        </view>
+        <view>
+            我的答案:{{tools.ans(archives[i],i)}}
+        </view>
+    </view>
 </view>

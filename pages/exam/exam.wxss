@@ -76,11 +76,6 @@
 }
 
 
-
-
-
-
-
 .choice_normal {
     width: 75rpx;
     height: 75rpx;
@@ -96,7 +91,7 @@
 .choice_onClick {
     width: 75rpx;
     height: 75rpx;
-    border: solid black 1rpx;
+    border: solid #4fbf8d 1rpx;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -128,7 +123,6 @@
     justify-content: center;
     align-items: center;
     margin-right: 30rpx;
-
     background-color: #4fbf8d;
     color: white;
 
