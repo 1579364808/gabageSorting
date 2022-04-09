@@ -41,14 +41,14 @@ Page({
                 }
             })
         })
-
-
     },
     onSearch(event) {
         wx.navigateTo({
             url: `../detail/detail?gabageName=${event.detail}`,
+            // url: `/pages/detail/detail`,
         })
     },
+   
     //语音识别    
     beginRecord(event) {
         console.log(event);

@@ -1,17 +1,48 @@
 <!--pages/detail/detail.wxml-->
+<view>
+     <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" value="{{gabageName}}" bindinput="getKey" />
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='goSearch'>搜索</view>
+        </view>
+    </view>
+</view>
 <!-- 显示搜索物品的类别 -->
 <text   wx:if="{{category}}">{{gabageName}}:{{category}}</text>
 
 <!-- 模糊搜索结果展示 -->
-<view wx:if="{{list&&list.length>0}}">
-    搜素结果如下
+<view wx:if="{{list&&list.length>0&&list.length!==0}}" class="boxx">
     <view wx:for="{{list}}" wx:key='index'>
         <view class="item">
-            <view>{{item.name}}</view>
-        </view>
+            <text class="class1">{{item.name}} </text>
+            <text class="class_one">{{item.category}}</text>
+        </view> 
+    </view>
+    <view class="boxn">
+            <text class="font_one">已经加载全部数据</text>
     </view>
 </view>
+<!-- class="herd==0?'class_3':'class_1'" -->
 
-<view wx:if="{{list&&list.length==0}}">
-    搜素内容为空
+<!-- 历史记录 -->
+<view class="history-box" wx:else=""> 
+         <!-- 标题 -->
+    <view class="history-title">
+        <text>搜索历史</text>
+        <van-icon name="delete-o" size="20px" bind:click="historyDelFn"/>
+    </view>
+         <!-- 列表 -->
+         <view class="list_list">
+            <view class="history-list" wx:for="{{historyList}}">
+                    <van-tag type="success" color="#E7E7E7" size="medium" round text-color="black"> {{historyList[index]}}</van-tag>
+                </view>
+        </view>
+        <view class='noHistory' wx:if="{{historyList.length==0}}">你还没有搜索记录</view>
 </view>

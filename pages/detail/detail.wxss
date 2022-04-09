@@ -6,7 +6,130 @@
     padding-left: 25rpx;
 }
 .item{
+    font-size: 34rpx;
+    width: 90%;
+    height: 50rpx;
     color: grey;
-    margin: 20rpx;
-    border-bottom: 1px solid rgb(180, 173, 173);
+    margin: 40rpx;
+    border-bottom: 1px solid rgb(204, 202, 202);
+}
+.class_one{
+    width: auto;
+    padding-left: 12rpx;
+    padding-right: 12rpx;
+    border-radius: 8%;
+    background-color: #09BB07;
+    color: white;
+    float:right;
+}
+/* .class_0{
+    background-color: rgb(58, 190, 58);
+}
+.class_1{
+    background-color: rgb(190, 58, 183);
+}
+.class_2{
+    background-color: rgb(58, 71, 190);
+}
+.class_3{
+    background-color: rgb(148, 31, 119);
+} */
+
+.font_one{
+    /* background-color: rgb(58, 190, 58); */
+    width: auto;
+    height: 60rpx;
+    color: grey;
+    font-size:32rpx;
+    float: center;
+    margin-left:32%;
+    
+}
+.boxn{
+    width: 100%;
+    height: 100rpx;
+    /* background-color: rgb(58, 89, 190); */
+}
+.boxm{
+    margin-left:50rpx;
+}
+.boxx{
+    margin-top:35rpx;
+}
+
+/* 搜索框 */
+
+.weui-search-bar {
+    position: relative;
+    padding: 8px 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #efefef;
+    border-top: 1rpx solid #D7D6DC;
+    border-bottom: 1rpx solid #D7D6DC;
+    border-radius: 2%;
+  }
+  .weui-icon-search_in-box {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+  }
+  .weui-search-bar__form {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+            flex: auto;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1rpx solid #E6E6EA;
+  }
+  .weui-search-bar__box {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .weui-search-bar__input {
+    height: 30px;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  .weui-search-bar__cancel-btn {
+    margin-left: 10px;
+    line-height: 28px;
+    color: #09BB07;
+    white-space: nowrap;
+  }
+
+
+  /* 历史记录 */
+  .history-box{
+     padding:20rpx 30rpx;
+  }  
+  .history-title{
+      margin-top:20rpx;
+     display: flex;
+     justify-content: space-between;
+     height: 80rpx;
+     align-items: center;
+     font-size: 32rpx;
+     /* border-bottom:2rpx solid #efefef; */
+}
+.list_list{
+    display:flex;
+    flex-wrap: wrap;
+}
+.van-tag{
+    margin-top:20rpx;
+    margin-right:20rpx;
+}
+.noHistory{
+    margin-top:15rpx;
+    color: gray;
+    font-size:32rpx;
+    text-align: center;
 }
