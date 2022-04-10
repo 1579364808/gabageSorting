@@ -1,0 +1,14 @@
+<view class="aboutus">
+     <view class="font_title">
+          垃圾分类
+     </view>
+     <view >
+         <view class="font_text">
+             小程序提供城市生活垃圾分类识别、知识宣传、考试等服务。可以通过搜索、拍照、语音的功能识别是什么垃圾，快速轻松帮您判断垃圾类别！
+        </view>
+     </view>
+     <view class="image1">
+           <image src="../../icons/wrong.png"> </image>  
+           <!--换成小程序二维码 !!可以增加点击图片后预览、保存、识别带参数二维码等功能-->
+     </view>
+</view>

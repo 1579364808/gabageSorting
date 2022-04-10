@@ -64,5 +64,13 @@ Page({
       },
     })
     //-------------------------------      
+  },
+
+  // 跳转到关于我们的界面
+  go_aboutus(){
+       console.log("跳转");
+      wx.navigateTo({
+        url: '../go_aboutus/go_aboutus',
+      })
   }
 })
