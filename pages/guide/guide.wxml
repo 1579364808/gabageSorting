@@ -30,11 +30,12 @@
                     <scroll-view scroll-y="true" style="height: 786rpx;margin-bottom:20rpx "
                     bindscrolltolower="scrolltolower">
                         <view class="box">
-                            <view wx:for="{{list0}}" class="item">
+                            <view wx:for="{{list0}}" class="item" wx:key='index'>
                                     <view>{{item.name}}</view>
                                 </view>
                         </view>
-                    </scroll-view>
+                       
+                    </scroll-view> 
                 </view>
             </swiper-item>
             <swiper-item id='1' catchtouchmove="stopTouchMove">
@@ -55,9 +56,9 @@
                         </view>
                 </view>
                 <view class="mbox">
-                    <scroll-view scroll-y="true" style="height: 612rpx;margin-bottom:20rpx ;">
+                    <scroll-view scroll-y="true" style="height: 612rpx;margin-bottom:20rpx ;"  bindscrolltolower="scrolltolower">
                         <view class="box">
-                            <view wx:for="{{list1}}" class="item">
+                            <view wx:for="{{list1}}" class="item" wx:key='index'>
                                     <view>{{item.name}}</view>
                                 </view>
                         </view>
@@ -84,9 +85,9 @@
                         </view>
                 </view>
                 <view class="mbox">
-                    <scroll-view scroll-y="true" style="height: 656rpx;margin-bottom:20rpx ;">
+                    <scroll-view scroll-y="true" style="height: 656rpx;margin-bottom:20rpx ;"  bindscrolltolower="scrolltolower">
                     <view class="box">
-                        <view wx:for="{{list2}}" class="item">
+                        <view wx:for="{{list2}}" class="item" wx:key='index'>
                                 <view>{{item.name}}</view>
                             </view>
                     </view>
@@ -113,9 +114,9 @@
                         </view>
                 </view>
                 <view class="mbox">
-                    <scroll-view scroll-y="true" style="height: 526rpx;margin-bottom:20rpx ;">
+                    <scroll-view scroll-y="true" style="height: 526rpx;margin-bottom:20rpx ;"  bindscrolltolower="scrolltolower">
                         <view class="box">
-                            <view wx:for="{{list3}}" class="item">
+                            <view wx:for="{{list3}}" class="item" wx:key='index'>
                                     <view>{{item.name}}</view>
                                 </view>
                         </view>
