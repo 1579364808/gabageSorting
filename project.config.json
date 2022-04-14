@@ -21,7 +21,7 @@
         "checkInvalidKey": true,
         "checkSiteMap": true,
         "uploadWithSourceMap": true,
-        "compileHotReLoad": false,
+        "compileHotReLoad": true,
         "lazyloadPlaceholderEnable": false,
         "useMultiFrameRuntime": true,
         "useApiHook": true,
@@ -40,8 +40,7 @@
         "minifyWXML": true,
         "showES6CompileOption": false,
         "useCompilerPlugins": false,
-        "ignoreUploadUnusedFiles": true,
-        "useStaticServer": true
+        "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
     "libVersion": "2.22.0",
@@ -49,6 +48,10 @@
     "cloudfunctionRoot": "cloud/",
     "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
     "appid": "wxa5a8425bc40b7f7c",
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    },
     "condition": {
         "search": {
             "list": []
@@ -68,9 +71,5 @@
         "miniprogram": {
             "list": []
         }
-    },
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 4
     }
 }

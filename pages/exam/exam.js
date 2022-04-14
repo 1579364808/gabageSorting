@@ -26,11 +26,12 @@ class UserAnswer {
 //选择题类
 class Choice {
     //构造方法 
-    constructor(question, items, res) {
+    constructor(question, items, res,onlyId) {
         this.question = question
         this.items = items;
         this.res = res;
         this.Class = ["choice_normal", "choice_normal", "choice_normal", "choice_normal"]
+        this.onlyId=onlyId
     }
     //点击改变样式的方法
     alterStyle = function (type, id) {
@@ -62,11 +63,12 @@ class Choice {
 class Judge {
     //构造方法 
 
-    constructor(question, res) {
+    constructor(question, res,onlyId) {
         this.question = question
         this.items = ['对', '错']
         this.res = res
         this.Class = ["judge_normal", "judge_normal"]
+           this.onlyId=onlyId
     }
     //点击改变样式的方法
     alterStyle = function (id) {
@@ -133,7 +135,7 @@ Page({
                 
                 let choices = new Array(5)
                 for (let i = 0; i < 5; i++) {
-                    let choice = new Choice(temp[i].question, temp[i].options, temp[i].res)
+                    let choice = new Choice(temp[i].question, temp[i].options, temp[i].res,temp[i].onlyId)
                     choices[i] = choice
                 }
                 this.setData({
@@ -155,7 +157,7 @@ Page({
                         console.log(temp)
                         let choices = new Array(5)
                         for (let i = 0; i < 5; i++) {
-                            let choice = new Choice(temp[i].question, temp[i].options, temp[i].res)
+                            let choice = new Choice(temp[i].question, temp[i].options, temp[i].res,temp[i].onlyId)
                             choices[i] = choice
                         }
                         this.setData({
@@ -175,7 +177,7 @@ Page({
                                 let temp = res.result.list
                                 let choices = new Array(5)
                                 for (let i = 0; i < 5; i++) {
-                                    let choice = new Judge(temp[i].question, temp[i].res)
+                                    let choice = new Judge(temp[i].question, temp[i].res,temp[i].onlyId)
                                     choices[i] = choice
                                 }
                                 this.setData({

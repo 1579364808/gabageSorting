@@ -2,7 +2,8 @@
 Page({
     data: {
         list: [],
-        archives:[]
+        archives:[],
+        img_star:'../../icons/star_o.png'
     },
     onLoad() {
         wx.getStorage({
@@ -15,4 +16,9 @@ Page({
                 })
             })
     },
+    star(event){
+        this.setData({
+            img_star:'../../icons/star_y.png'
+        })
+    }
 })

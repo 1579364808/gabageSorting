@@ -19,7 +19,7 @@
                     <!-- 选择题 -->
                     <block wx:if="{{currentIndex<10}}">
                         <view class="{{i.Class[id]}}">{{tools.letter(id)}}</view>
-                        <view>{{j}}</view>
+                        <view >{{j}}</view>
                     </block>
                     <!-- 判断题 -->
                     <block wx:else>
@@ -36,6 +36,3 @@
         <van-button icon="arrow" type="primary" bind:click="onSubmmit" wx:if="{{currentIndex==14}}">提交</van-button>
     </view>
 </view>
-<view class="myBox">
-		<image src="" mode="aspectFill"></image>
-	</view>

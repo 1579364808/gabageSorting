@@ -46,23 +46,30 @@
     top: 160rpx;
     left: 100rpx;
     width: 600rpx;
-    height: 420rpx;
+    height: 550rpx;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.choice_option view {
+.choice_option > view {
+    height: 150rpx;
+    width: 600rpx;
     display: flex;
     align-items: center;
 }
-
+.choice_option > view :nth-child(2){
+    height: 100rpx;
+    width: 470rpx;
+    display: flex;
+    align-items: center;
+}
 .judge_option {
     display: flex;
     justify-content: space-around;
 }
 
-.judge_option view {
+.judge_option>view {
     position: relative;
     top: 200rpx;
 }
@@ -126,10 +133,4 @@
     background-color: #4fbf8d;
     color: white;
 
-}
-.myBox{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
 }
