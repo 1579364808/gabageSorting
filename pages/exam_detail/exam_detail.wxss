@@ -49,9 +49,17 @@ margin-right: 50rpx;
     justify-content: space-around;
 }
 .judge_containner image{
-
     width: 200rpx;
     height: 200rpx;
-
-   
+}
+.star {
+width: 80rpx;
+height: 104rpx;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-size:small;
+position: relative;
+left: 514rpx; 
+top: 0rpx;
 }

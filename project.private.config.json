@@ -20,12 +20,6 @@
                     "scene": null
                 },
                 {
-                    "name": "答题",
-                    "pathName": "pages/answer/answer",
-                    "query": "",
-                    "scene": null
-                },
-                {
                     "name": "",
                     "pathName": "pages/mine/mine",
                     "query": "",
@@ -64,12 +58,6 @@
                 {
                     "name": "",
                     "pathName": "pages/index/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "",
-                    "pathName": "pages/mine1/mine1",
                     "query": "",
                     "scene": null
                 }

@@ -7,9 +7,11 @@
     <view class="question">
         {{whole.question}}
     </view>
+
     <view class="option_containner" wx:if="{{i<10}}">
+       
         <view wx:for="{{whole.items}}" wx:for-index='j' wx:for-item='item'>
-            <view class="option_item">
+            <view class="option_item" style="position: relative; left: 2rpx; top: 0rpx">
                 <image src="{{tools.alterImage(j,whole.res,archives[i],i)}}"></image>
                 <text>{{tools1.letter(j)}}. {{item}}</text>
             </view>
@@ -19,6 +21,11 @@
         <image src="{{tools.judge_image(0,whole.res,archives[i])}}"></image>
         <image src="{{tools.judge_image(1,whole.res,archives[i])}}"></image>
     </view>
+    <view class="star" bindtap="star">
+        <image style="height: 60rpx;width: 60rpx;" src="../../icons/star_o.png" ></image>
+        <text>收藏</text>
+    </view>
+
     <view class="ans">
         <view>
             正确答案:{{tools.ans(whole.res,i)}}

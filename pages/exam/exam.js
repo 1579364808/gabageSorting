@@ -112,7 +112,11 @@ Page({
         userAnswer: new UserAnswer() //用户答案
     },
     onLoad: function (options) {
+        wx.showLoading({
+          title: '题目加载中',
+        })
         this.getList()
+        
     },
     //获取题目
     getList() {
@@ -121,12 +125,12 @@ Page({
                 name: "questionPool",
                 data: {
                     type: '单选题',
-                    page: 2, //第几页
-                    size: 5 //每页的条数
+                    size: 5 //随机请求的条数
                 }
             })
             .then(res => {
-                let temp = res.result.data
+                let temp = res.result.list
+                
                 let choices = new Array(5)
                 for (let i = 0; i < 5; i++) {
                     let choice = new Choice(temp[i].question, temp[i].options, temp[i].res)
@@ -135,6 +139,7 @@ Page({
                 this.setData({
                     list: this.data.list.concat(choices)
                 })
+                wx.hideLoading()
             })
             .then(() => {
                 wx.cloud
@@ -142,13 +147,11 @@ Page({
                         name: "questionPool",
                         data: {
                             type: '多选题',
-                            page: 2, //第几页
-                            size: 5 //每页的条数
+                            size: 5//随机请求的条数
                         }
                     })
                     .then(res => {
-                        let temp = res.result.data
-
+                        let temp = res.result.list
                         console.log(temp)
                         let choices = new Array(5)
                         for (let i = 0; i < 5; i++) {
@@ -165,12 +168,11 @@ Page({
                                 name: "questionPool",
                                 data: {
                                     type: '判断题',
-                                    page: 2, //第几页
-                                    size: 5 //每页的条数
+                                    size: 5//随机请求的条数
                                 }
                             })
                             .then(res => {
-                                let temp = res.result.data
+                                let temp = res.result.list
                                 let choices = new Array(5)
                                 for (let i = 0; i < 5; i++) {
                                     let choice = new Judge(temp[i].question, temp[i].res)
@@ -179,6 +181,7 @@ Page({
                                 this.setData({
                                     list: this.data.list.concat(choices)
                                 })
+                               
                             })
                     })
             })

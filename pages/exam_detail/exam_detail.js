@@ -14,5 +14,5 @@ Page({
                     archives:res.data.archives
                 })
             })
-    }
+    },
 })

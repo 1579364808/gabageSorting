@@ -65,6 +65,7 @@ var judge_image = function(id,res,userAns){
         return '../../icons/judge_wrong.png'
     }
 }
+
 module.exports = {
     ans: ans,
     alterImage:alterImage,

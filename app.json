@@ -11,7 +11,6 @@
         "pages/exam_detail/exam_detail",
         "pages/mine/mine",
         "pages/guide/guide",
-        "pages/mine1/mine1",
         "pages/go_aboutus/go_aboutus"
     ],
     "window": {
