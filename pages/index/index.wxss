@@ -3,10 +3,12 @@
     border-radius:  30rpx;
     padding-top: 10rpx;
     padding-bottom: 10rpx;
-    padding-left: 40rpx;
-    margin: 20rpx 20rpx;
-    
+    margin: 20rpx 20rpx;  
 }
+.radioContainer > radio{
+  font-weight: bold;
+}
+
 #container{
 
     display: flex;
@@ -14,6 +16,18 @@
     align-items: center;
     padding-top: 30rpx;
     padding-bottom: 30rpx;
+}
+#container > text{
+    font-weight: bolder;
+    font-size: larger;
+}
+#container > view{
+    border: gray solid 5rpx;border-radius: 35rpx;
+    margin-top: 25rpx;margin-bottom: 25rpx;
+    padding: 50rpx;
+    background-color: rgb(235,255,240);
+    width:550rpx ;
+
 }
 #container button{
     font-weight: bold;

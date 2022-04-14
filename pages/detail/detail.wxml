@@ -14,14 +14,13 @@
         </view>
     </view>
 </view>
-<!-- 显示搜索物品的类别 -->
-<text   wx:if="{{category}}">{{gabageName}}:{{category}}</text>
+
 
 <!-- 模糊搜索结果展示 -->
 <view wx:if="{{list&&list.length>0&&list.length!==0}}" class="boxx">
     <view wx:for="{{list}}" wx:key='index'>
         <view class="item">
-            <text class="class1">{{item.name}} </text>
+            <rich-text nodes="{{item.name}} "></rich-text>
             <text class="class_one">{{item.category}}</text>
         </view> 
     </view>
@@ -29,7 +28,7 @@
             <text class="font_one">已经加载全部数据</text>
     </view>
 </view>
-<!-- class="herd==0?'class_3':'class_1'" -->
+
 
 <!-- 历史记录 -->
 <view class="history-box" wx:else=""> 

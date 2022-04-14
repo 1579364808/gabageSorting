@@ -3,39 +3,39 @@
 </van-search>
 
 
-
-
 <van-uploader bind:after-read="img_recog_onClick">
-  <van-button icon="photo" color="#4fbf8d" type="primary" round >拍照识别</van-button>
+  <van-button icon="photo" color="#4fbf8d" type="primary" round>拍照识别</van-button>
 </van-uploader>
 
-<!--<button bindtouchstart="beginRecord" bindtouchend="endRecord" style="width: 300rpx;border-radius: 30rpx;font-size: small;background-color: #4fbf8d;color: white;">语音识别</button>-->
+
 
 <view class="item" bindtouchstart="beginRecord" bindtouchend="endRecord">
-<view class="main">
-        <image src="/icons/video.png" mode="widthFix" ></image>
-      <!--  <text>语音识别</text>-->
-        </view>
-        <view class="text">语音识别</view>
+  <view class="main">
+    <image src="/icons/video.png" mode="widthFix"></image>
+    <!--  <text>语音识别</text>-->
+  </view>
+  <view class="text">语音识别</view>
 </view>
 <!-- 图片识别成功后选择一个物品 -->
-<page-container show="{{showRadio}}" round >
+<page-container show="{{showRadio}}" round>
   <view id="container">
-    <text style="font-weight: bolder;font-size: larger;">请选择一个物品</text>
-    <view style="border: gray solid 5rpx;border-radius: 35rpx;margin-top: 25rpx;margin-bottom: 25rpx;padding: 50rpx;background-color: rgb(235,255,240);">
-      <radio-group  bindchange ="ridio_event">
-        <view wx:for="{{gabages}}" wx:key="{{item.id}}" class="radioContainer" style="margin: 100rpx,50rpx;">
-          <radio value="{{item.name}}" style="font-weight: bold;" bind>{{item.name}}</radio>
+    <text>请选择一个物品</text>
+    <view>
+      <view>
+        <text style="position: absolute;left: 150rpx;top:120rpx;font-weight: bold;">物品</text>
+        <text style="position: absolute;right:150rpx;top:120rpx;font-weight: bold">可信度</text>
+      </view>
+      <radio-group bindchange="ridio_event">
+        <view wx:for="{{gabages}}" wx:key="{{item.id}}" class="radioContainer">
+
+          <radio value="{{item.name}}" bind>
+            <text>{{item.name}}</text>
+            <text style="position: absolute;right: 170rpx;font-size: 80%;font-weight: lighter;">{{item.score}}</text>
+          </radio>
         </view>
       </radio-group>
     </view>
     <button bindtap="pick_confirm" disabled="{{buttonDisable}}">确定</button>
   </view>
-  
+
 </page-container>
-
-
-
-
-
-<!-- <van-button round type="info" bind:click="onClick">拍照识别</van-button> -->

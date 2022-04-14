@@ -45,7 +45,6 @@ Page({
     onSearch(event) {
         wx.navigateTo({
             url: `../detail/detail?gabageName=${event.detail}`,
-            // url: `/pages/detail/detail`,
         })
     },
    
@@ -156,15 +155,17 @@ Page({
             success(res) {
                 wx.hideLoading()
                 let items = [];
+                console.log(items)
                 for (let i = 0; i < res.data.result.length; i++) {
                     let temp = {
                         name: res.data.result[i].keyword,
-                        id: i
+                        id: i,
+                        score: parseInt(res.data.result[i].score*100) +'%' 
                     }
                     //对象数组
                     items.push(temp)
                 }
-                console.log(items)
+          
                 that.setData({
                     showRadio: true,
                     gabages: items //获取物品集
