@@ -30,10 +30,11 @@
 }
 
 .option_item>text {
-    height: 120rpx;
+    height: 150rpx;
     width: 500rpx;
     display: flex;
     align-items: center;
+    font-size: 90%;
 }
 
 .ans {

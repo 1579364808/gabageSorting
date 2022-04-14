@@ -43,13 +43,13 @@
 
 .choice_option {
     position: relative;
-    top: 160rpx;
-    left: 100rpx;
+    top: 100rpx;
+    left: 60rpx;
     width: 600rpx;
     height: 550rpx;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .choice_option > view {
@@ -63,6 +63,7 @@
     width: 470rpx;
     display: flex;
     align-items: center;
+    font-size: 88%;
 }
 .judge_option {
     display: flex;
