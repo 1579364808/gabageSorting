@@ -21,17 +21,16 @@ class UserAnswer {
             this.archives[currentIndex] = id
         }
     }
-
 }
 //选择题类
 class Choice {
     //构造方法 
-    constructor(question, items, res,onlyId) {
+    constructor(question, items, res, onlyId) {
         this.question = question
         this.items = items;
         this.res = res;
         this.Class = ["choice_normal", "choice_normal", "choice_normal", "choice_normal"]
-        this.onlyId=onlyId
+        this.onlyId = onlyId
     }
     //点击改变样式的方法
     alterStyle = function (type, id) {
@@ -63,12 +62,12 @@ class Choice {
 class Judge {
     //构造方法 
 
-    constructor(question, res,onlyId) {
+    constructor(question, res, onlyId) {
         this.question = question
         this.items = ['对', '错']
         this.res = res
         this.Class = ["judge_normal", "judge_normal"]
-           this.onlyId=onlyId
+        this.onlyId = onlyId
     }
     //点击改变样式的方法
     alterStyle = function (id) {
@@ -115,10 +114,10 @@ Page({
     },
     onLoad: function (options) {
         wx.showLoading({
-          title: '题目加载中',
+            title: '题目加载中',
         })
         this.getList()
-        
+
     },
     //获取题目
     getList() {
@@ -132,10 +131,10 @@ Page({
             })
             .then(res => {
                 let temp = res.result.list
-                
+
                 let choices = new Array(5)
                 for (let i = 0; i < 5; i++) {
-                    let choice = new Choice(temp[i].question, temp[i].options, temp[i].res,temp[i].onlyId)
+                    let choice = new Choice(temp[i].question, temp[i].options, temp[i].res, temp[i].onlyId)
                     choices[i] = choice
                 }
                 this.setData({
@@ -149,7 +148,7 @@ Page({
                         name: "questionPool",
                         data: {
                             type: '多选题',
-                            size: 5//随机请求的条数
+                            size: 5 //随机请求的条数
                         }
                     })
                     .then(res => {
@@ -157,7 +156,7 @@ Page({
                         console.log(temp)
                         let choices = new Array(5)
                         for (let i = 0; i < 5; i++) {
-                            let choice = new Choice(temp[i].question, temp[i].options, temp[i].res,temp[i].onlyId)
+                            let choice = new Choice(temp[i].question, temp[i].options, temp[i].res, temp[i].onlyId)
                             choices[i] = choice
                         }
                         this.setData({
@@ -170,20 +169,20 @@ Page({
                                 name: "questionPool",
                                 data: {
                                     type: '判断题',
-                                    size: 5//随机请求的条数
+                                    size: 5 //随机请求的条数
                                 }
                             })
                             .then(res => {
                                 let temp = res.result.list
                                 let choices = new Array(5)
                                 for (let i = 0; i < 5; i++) {
-                                    let choice = new Judge(temp[i].question, temp[i].res,temp[i].onlyId)
+                                    let choice = new Judge(temp[i].question, temp[i].res, temp[i].onlyId)
                                     choices[i] = choice
                                 }
                                 this.setData({
                                     list: this.data.list.concat(choices)
                                 })
-                               
+
                             })
                     })
             })
@@ -265,7 +264,7 @@ Page({
                     })
                     return
                 }
-               
+
             } else {
                 let flag = true
                 for (let j = 0; j < 4; j++) {
@@ -274,7 +273,7 @@ Page({
                         break
                     }
                 }
-                if (flag==true) {
+                if (flag == true) {
                     wx.showModal({
                         showCancel: false,
                         title: "提示",
@@ -292,6 +291,20 @@ Page({
                 archives: userAns.archives
             }
         })
+        let openId = wx.getStorageSync('openId')
+        wx.cloud.database().collection('users')
+            .where({
+                _openid: openId
+            })
+            .update({
+                data: {
+                    test: {
+                        list: list,
+                        archives: userAns.archives,
+                        date: new Date()
+                    }
+                }
+            })
 
         wx.redirectTo({
             url: `../exam_detail/exam_detail`,

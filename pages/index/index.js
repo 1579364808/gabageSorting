@@ -114,7 +114,7 @@ Page({
             },
             success(res) {
                 wx.hideLoading()
-                console.log(res);
+                console.log(res.data.result);
             }
         })
 

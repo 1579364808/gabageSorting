@@ -79,13 +79,14 @@
     width: 470rpx;
     display: flex;
     align-items: center;
+    font-size: 88%;
 }
 .judge_option {
     display: flex;
     justify-content: space-around;
 }
 
-.judge_option>view {
+.judge_option > view {
     position: relative;
     top: 200rpx;
 }

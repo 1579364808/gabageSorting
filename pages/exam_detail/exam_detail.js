@@ -3,7 +3,6 @@ const db = wx.cloud.database();
 const users = db.collection('users');
 const _ = db.command
 const $ = db.command.aggregate
-
 var openId
 class Img_star {
     constructor(list) {
@@ -47,17 +46,14 @@ class Img_star {
                     if (this.multiple[i % 5] == multiple[j]) {
                         this.stars[i] = "../../icons/star_y.png"
                     }
-
                 }
             } else {
                 for (let j = 0; j < judge.length; j++) {
                     if (this.judge[i % 5] == judge[j]) {
                         this.stars[i] = "../../icons/star_y.png"
                     }
-
                 }
             }
-
         }
     }
 }
@@ -88,7 +84,8 @@ Page({
         archives: [],
         img_star: null
     },
-    onLoad() {
+    onLoad(event) {
+       
         wx.getStorage({
                 key: "record"
             })
@@ -103,7 +100,6 @@ Page({
             .then(res => {
                 this.initStar()
             })
-
     },
     initStar() {
         openId = wx.getStorageSync('openId')
@@ -148,7 +144,6 @@ Page({
         let temp = 'stars.'+type
         let img_star = this.data.img_star
         if(img_star.stars[id]=="../../icons/star_y.png"){
-            
             users.where({
                 _openid:openId
             })
@@ -170,7 +165,6 @@ Page({
             .update({
                 data:{
                     [temp]:_.push(this.data.list[id].onlyId)
-                  
                 }
             })
             .then(res=>{
@@ -181,9 +175,4 @@ Page({
             })
         }
     }
-
-
-
-
-
 })

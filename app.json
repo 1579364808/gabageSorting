@@ -11,7 +11,8 @@
         "pages/exam_detail/exam_detail",
         "pages/mine/mine",
         "pages/guide/guide",
-        "pages/go_aboutus/go_aboutus"
+        "pages/go_aboutus/go_aboutus",
+        "pages/userStar/userStar"
     ],
     "window": {
         "backgroundTextStyle": "light",
