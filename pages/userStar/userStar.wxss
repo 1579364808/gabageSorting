@@ -1,1 +1,17 @@
 /* pages/userStar/userStar.wxss */
+.box{
+    border: solid 3rpx;
+    height: 150rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bottom{
+    display: flex;
+    justify-content: space-around;
+}

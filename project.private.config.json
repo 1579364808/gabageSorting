@@ -65,6 +65,13 @@
                     "name": "添加",
                     "pathName": "pages/question1/question1",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "用户收藏",
+                    "pathName": "pages/userStar/userStar",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }
