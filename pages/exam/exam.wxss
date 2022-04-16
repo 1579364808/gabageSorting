@@ -25,7 +25,6 @@
 .choice_containner {
     height: 900rpx;
     position: relative;
-
 }
 
 .judge_containner {
@@ -39,11 +38,13 @@
     position: relative;
     top: 120rpx;
     left: 50rpx;
+    font-size: large
 }
+
 
 .choice_option {
     position: relative;
-    top: 100rpx;
+    top: 130rpx;
     left: 60rpx;
     width: 600rpx;
     height: 550rpx;
@@ -63,7 +64,6 @@
     width: 470rpx;
     display: flex;
     align-items: center;
-    font-size: 88%;
 }
 .judge_option {
     display: flex;

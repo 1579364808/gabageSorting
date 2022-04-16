@@ -48,7 +48,7 @@ Page({
                 if (!res.confirm) {
                     return
                 }
-                wx.clearStorageSync('historyList')
+               wx.removeStorageSync('historyList')
                 this.setData({
                     historyList: []
                 })
@@ -62,7 +62,6 @@ Page({
         })
         this.openHistorySearch() //
         this.goSearch()
-        this.saveSearchHistory() // 
     },
 
     //搜索

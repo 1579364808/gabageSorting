@@ -1,7 +1,7 @@
 <wxs src="./tools.wxs" module="tools" />
 
 <view id="Page">
-    <view id="containner" style="font-size: larger;">
+    <view id="containner">
         <!-- 题目说明 -->
         <view id="title">
             <text style="color: #4fbf8d;">{{currentIndex+1}}</text>
@@ -12,14 +12,16 @@
         </view>
         <!-- 题目主体  不同题型是不同的containner -->
         <view wx:for="{{list}}" wx:if="{{index==currentIndex}}" wx:for-item="i" class="{{tools.sub_containner(currentIndex)}}">
-            <view id="question">{{i.question}}</view>
+            <view id="question">
+                    {{i.question}}
+            </view>
             <!-- 选项 -->
             <view class="{{tools.option(currentIndex)}}">
                 <view wx:for="{{i.items}}" wx:for-item="j" wx:for-index="id" bindtap="onTap" id="{{id}}">
                     <!-- 选择题 -->
                     <block wx:if="{{currentIndex<10}}">
                         <view class="{{i.Class[id]}}">{{tools.letter(id)}}</view>
-                        <view >{{j}}</view>
+                        <view>{{j}}</view>
                     </block>
                     <!-- 判断题 -->
                     <block wx:else>

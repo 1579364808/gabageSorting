@@ -57,6 +57,16 @@ Page({
                 data: {
                   gravatar: avatarUrl,
                   nickName: nickName,
+                  stars:{
+                    single:[],
+                    multiple:[],
+                    judge:[]
+                  },
+                  falseQuestion:{
+                    single:[],
+                    multiple:[],
+                    judge:[]
+                  },
                 }
               })
             }
