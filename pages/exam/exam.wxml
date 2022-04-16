@@ -1,6 +1,11 @@
 <wxs src="./tools.wxs" module="tools" />
 
 <view id="Page">
+    <view class="box1">
+       <image src="../../icons/test_image.jpg"></image>
+    </view>
+    <view class="box2">
+    </view>
     <view id="containner" style="font-size: larger;">
         <!-- 题目说明 -->
         <view id="title">
@@ -31,9 +36,9 @@
     </view>
     <!-- 操作 -->
     <view id="operation">
-        <van-button icon="arrow-left" type="primary" bind:click="goPrev">上一题</van-button>
-        <van-button icon="arrow" type="primary" bind:click="goNext" wx:if="{{currentIndex!=14}}">下一题</van-button>
-        <van-button icon="arrow" type="primary" bind:click="onSubmmit" wx:if="{{currentIndex==14}}">提交</van-button>
+        <van-button icon="arrow-left" type="primary" bind:click="goPrev" round="true">上一题</van-button>
+        <van-button icon="arrow" type="primary" bind:click="goNext"  round="true" wx:if="{{currentIndex!=14}}">下一题</van-button>
+        <van-button icon="arrow" type="primary" bind:click="onSubmmit"  round="true" wx:if="{{currentIndex==14}}">提交</van-button>
     </view>
 </view>
 <view class="myBox">

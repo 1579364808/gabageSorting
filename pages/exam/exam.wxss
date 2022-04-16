@@ -1,18 +1,33 @@
 /* pages/exam/exam.wxss */
 #Page {
-    background-color: #4fbf8d;
+    /* background-color: #4fbf8d; */
     height: 1400rpx;
 }
-
+.box1{
+    height: 300rpx;
+    /* background-color: #4fbf8d; */
+    border-radius: 0px 0px 38rpx 38rpx
+}
+.box2{
+    height: 1100rpx;
+   
+}
+.box1 image{
+    height:350rpx;
+    width: 100%;
+    margin-top:-122rpx;
+}
 #containner {
+    margin-left: 25rpx;
     height: 1000rpx;
-    width: 750rpx;
+    width: 700rpx;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 200rpx;
+    top: 230rpx;
     background-color: white;
-    border-radius: 50rpx;
+    border-radius: 20rpx;
+    box-shadow:0px 1px 2px 1px #ecebeb;
 }
 
 #title {
