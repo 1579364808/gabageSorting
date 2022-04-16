@@ -1,0 +1,10 @@
+<!--pages/index123/index123.wxml-->
+<view class="myRecode">
+  <view class="recode" bindtouchstart='recodeClick' bindtouchend='recodeEnd'>
+    <text>语音</text>
+    <view class="ripple"></view>
+    <view class="ripple {{animationStatus?'rippleAnimation1':''}}"></view>
+    <view class="ripple {{animationStatus?'rippleAnimation2':''}}"></view>
+    <view class="ripple {{animationStatus?'rippleAnimation3':''}}"></view>
+  </view>
+</view>

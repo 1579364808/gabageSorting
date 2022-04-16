@@ -1,38 +1,49 @@
 <!--index.wxml-->
+<view class="banner">
+    <swiper indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" circular autoplay interval="2000">
+        <swiper-item>
+            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one5.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one1.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one2.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one3.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one4.png"></image>
+        </swiper-item>
 
-<van-search value="苹果" label="垃圾" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="onSearch" >
+    </swiper>
+</view>
+<van-search value=" " label="垃圾" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="onSearch">
+
 </van-search>
 <van-uploader bind:after-read="img_recog_onClick">
-  <van-button icon="photo" color="#4fbf8d" type="primary" round >拍照识别</van-button>
+    <image src="/icons/photo.png" style="width: 166rpx; height: 136rpx; display: inline-block; box-sizing: border-box; position: relative; left: 75rpx; top: 4rpx"></image>
+    <view class="text1">拍照识别</view>
 </van-uploader>
 
-<!--<button bindtouchstart="beginRecord" bindtouchend="endRecord" style="width: 300rpx;border-radius: 30rpx;font-size: small;background-color: #4fbf8d;color: white;">语音识别</button>-->
-
-<view class="item" bindtouchstart="beginRecord" bindtouchend="endRecord">
-<view class="main">
-        <image src="/icons/video.png" mode="widthFix" ></image>
-      <!--  <text>语音识别</text>-->
-        </view>
-        <view class="text">语音识别</view>
-</view>
-<!-- 图片识别成功后选择一个物品 -->
-<page-container show="{{showRadio}}" round>
-  <view id="container">
-    <text style="font-weight: bolder;font-size: larger;">请选择一个物品</text>
-    <view style="border: gray solid 5rpx;border-radius: 35rpx;margin-top: 25rpx;margin-bottom: 25rpx;padding: 50rpx;background-color: ivory;">
-      <radio-group  bindchange ="ridio_event">
-        <view wx:for="{{gabages}}" wx:key="{{item.id}}" class="radioContainer" style="margin: 100rpx,50rpx;">
-          <radio value="{{item.name}}" style="font-weight: bold;" bind>{{item.name}}</radio>
-        </view>
-      </radio-group>
+<view class="myRecode">
+    <view class="recode" bindtouchstart="beginRecord" bindtouchend="endRecord">
+        <image src="/icons/mkf.png" mode="widthFix"></image>
+        <view class="ripple"></view>
+        <view class="ripple {{animationStatus?'rippleAnimation1':''}}"></view>
+        <view class="ripple {{animationStatus?'rippleAnimation2':''}}"></view>
+        <view class="ripple {{animationStatus?'rippleAnimation3':''}}"></view>
     </view>
-    <button bindtap="pick_confirm" disabled="{{buttonDisable}}">确定</button>
-  </view>
-  
-</page-container>
+</view>
+<view class="text">语音识别</view>
+<view class="schoollist">
+    <block wx:for="{{items}}" wx:key="item">
+        <view class="school-list">
+            <view class="school-list-info" >
+                    <image class="school-list-photo" id="{{index}}" bindtap="redirect" src="{{item.imageUrl}}"></image>
+            </view>
+        </view>
+    </block>
 
-
-
-
-
-<!-- <van-button round type="info" bind:click="onClick">拍照识别</van-button> -->
+</view>

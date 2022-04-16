@@ -1,0 +1,48 @@
+/* pages/index123/index123.wxss */
+.myRecode{
+  padding-top:500rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+.myRecode .recode{
+    
+  display: inline-block;
+  width:100rpx;
+  height:100rpx;
+  background: #EBB128;
+  border-radius: 50%;
+  text-align: center;
+  color:#fff;
+  line-height: 200rpx;
+  position: relative;
+}
+.ripple{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  border-radius: 50%;
+  border:2px solid #F6F1CC;
+}
+.rippleAnimation1{
+  animation: ripple 1s infinite linear;
+} 
+.rippleAnimation2{
+  animation: ripple 1s infinite linear;
+  animation-delay:0.3s;
+} 
+.rippleAnimation3{
+  animation: ripple 1s infinite linear;
+  animation-delay:0.6s;
+} 
+@keyframes ripple{
+  from{
+    opacity: 1;
+    transform: scale(1,1)
+  }
+  to{
+    opacity: 0;
+    transform: scale(2,2)
+  }
+}

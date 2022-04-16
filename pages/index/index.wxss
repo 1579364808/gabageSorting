@@ -1,3 +1,16 @@
+.banner{
+    width:100%;
+    height:350rpx;
+    }
+    .banner swiper{
+    height:100%;
+    width:100%;
+    }
+    .banner image{
+    width:100%;
+    height:350rpx;
+    }
+    
 .radioContainer{
     width:450rpx ;
     /* border: gray solid 3rpx; */
@@ -23,7 +36,7 @@
     background-color: rgb(9, 209, 35);
     color: white;
 }
-.item .main{
+/*.item .main{
     display: flex;
    justify-content: center;
    align-items: center;
@@ -33,9 +46,119 @@
     width:400rpx;
     height: 400rpx;
 }
+.item .main .ripple{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:50%;
+    border:2px solid #F6F1CC;
+}*/
 .text{
     display: flex;
    justify-content: center;
    align-items: center;
    text-align: center;
+   position:absolute;
+   left: 500rpx; 
+   top: 603rpx;
 }
+.text1{
+    position: relative;
+    left: 100rpx;
+    top: -4rpx;
+}
+
+.myRecode{
+    display: flex;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    align-items:center;
+    margin-right: 10px;
+
+  }
+.myRecode .recode {
+    display: flex;
+    width:160rpx;
+    height:160rpx;
+    background: darkgrey;
+    border-radius: 50%;
+    text-align: center;
+    color:#fff;
+    line-height: 200rpx;
+    justify-content: center;
+    top:450rpx;
+    position: absolute;
+right:100rpx;
+   
+  }
+  .ripple{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius: 50%;
+    border:2px solid #4fbf8d;
+  }
+  .rippleAnimation1{
+    animation: ripple 1s infinite linear;
+  } 
+  .rippleAnimation2{
+    animation: ripple 1s infinite linear;
+    animation-delay:0.3s;
+  } 
+  .rippleAnimation3{
+    animation: ripple 1s infinite linear;
+    animation-delay:0.6s;
+  } 
+  @keyframes ripple{
+    from{
+      opacity: 1;
+      transform: scale(1,1)
+    }
+    to{
+      opacity: 0;
+      transform: scale(2,2)
+    }
+  }
+ 
+  .schoollist-head-img{
+    width: 750rpx;
+    height: 180rpx;
+    padding: 20rpx;
+    }   
+    .schoollist{
+    margin-top: 20rpx;
+    }
+    
+    .school-list-info{
+    float: left;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    position: relative;
+    }
+    .school-list-photo{
+     display: flex;
+    border-radius:10%;
+    overflow: hidden;
+    width: 250rpx;
+    height: 250rpx;
+    margin-left: 50rpx;
+    margin-right:50rpx;
+    margin-top: 40rpx;
+    justify-content: center;
+    text-align: center;
+position: relative;
+left: -8rpx;
+ top: 6rpx;
+
+    }
+    
+    
+    .hover{
+ background-color: white;
+    }
+    

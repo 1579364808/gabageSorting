@@ -8,8 +8,9 @@ Page({
       list0:[],
       list1:[],
       list2:[],
-      list3:[]
-
+      list3:[],
+      
+  
     },
     switchNav: function(e) {
       var page = this;
@@ -28,7 +29,12 @@ Page({
     catchTouchMove: function (res) {
       return false
     },
-    onLoad(){
+    onLoad(options){
+        console.log(options.id)
+        this.setData({
+            currentTab:options.id,
+            flag:options.id,
+        })
        this.getList()
        this.getList1()
        this.getList2()
@@ -122,4 +128,5 @@ Page({
         }
       }
   })
+  
   

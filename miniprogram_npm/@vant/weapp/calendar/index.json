@@ -6,5 +6,6 @@
     "van-button": "../button/index",
     "van-popup": "../popup/index",
     "van-toast": "../toast/index"
+    
   }
 }
