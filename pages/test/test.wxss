@@ -1,20 +1,30 @@
 /* pages/test/test.wxss */
 .test{
     background-color:white;
-    color: turquoise;
+    color: rgb(114, 187, 168);
     text-align: center;
 }
 page{
     background-color:white ;
     height:100%;
 }
-.imgsize{
+ .imgsize{
     display:flex; 
-     justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+.hover{
+    background-color: white;
 }
 .img{
-    
     width:200rpx;  
     height:200rpx;
+}
+.imgs{
+    display:flex; 
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    margin-top:100rpx;
 }
