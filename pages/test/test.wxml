@@ -3,12 +3,10 @@
    <view class="imgs">
        <image src='/icons/test1.png' ></image>
   </view>
-  <view class="box">
-      <view class='test' style="font-size: {{fontSize}}pt">刷题</view>
-      <navigator url="/pages/exam/exam" hover-class="hover">
+  <view class="box" bindtap="go">
+      <view class='test' style="font-size: {{fontSize}}pt" >刷题</view>
         <view class='imgsize'>
             <image class="img" src='/icons/test2.png'></image>
         </view>
-      </navigator>
     </view>
 </view>

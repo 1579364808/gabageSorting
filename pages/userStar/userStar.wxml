@@ -1,11 +1,18 @@
 <!-- pages/userStar/userStar.wxml -->
+
+<view id="Page">
 <view class="box" bindtap="onTap" wx:for="{{cnt}}" wx:if="{{item}}" wx:for-index='i' id="{{i}}">
     <view class="top">
         <view>测试时间:</view>
         <text>{{item.time}}</text>
     </view>
     <view class="bottom">
-        <view>对：{{item.t}}</view>
-        <view>错：{{item.f}}</view>
+        <view>
+        <image src="../../icons/right_green.png"></image>
+        对：{{item.t}}</view>
+        <view>
+            <image src="../../icons/wrong.png"></image>
+        错：{{item.f}}</view>
     </view>
+</view>
 </view>
