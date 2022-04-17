@@ -19,6 +19,11 @@
         <image src="{{tools.judge_image(0,whole.res,archives[i])}}"></image>
         <image src="{{tools.judge_image(1,whole.res,archives[i])}}"></image>
     </view>
+    <view class="star" bindtap="star" id="{{i}}">
+        <image  src="{{img_star.stars[i]}}"></image>
+        <text >收藏</text>
+    </view>
+
     <view class="ans">
         <view>
             正确答案:{{tools.ans(whole.res,i)}}

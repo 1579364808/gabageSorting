@@ -1,4 +1,5 @@
 let db= wx.cloud.database()
+let _=db.command
 Page({
     data :{
         key:null
@@ -12,12 +13,20 @@ Page({
         if(this.data.key){
             console.log('可以执行搜索')
             db.collection('gabage')
-            .where({
-                name: db.RegExp({
-                regexp:this.data.key,//要搜素的词
+            .where(_.or([
+                {
+                   name: db.RegExp({
+                   regexp:this.data.key,//要搜素的词
                    options: 'i',//不区分大小写
+                }),
+            },
+            {
+                category:db.RegExp({
+                    regexp:this.data.key,
+                    options:'i',
                 })
-              })
+            }
+             ]))
             .get ()
             .then (res=>{
                 console.log("成功",res)

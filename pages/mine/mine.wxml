@@ -11,34 +11,34 @@
 <!--设置列元素间距-->
 <van-row custom-class="icons">
   <van-col span="8" custom-class="icons_col">
-    <image src="/icons/false.png"></image>
-    <view>错题本</view>
+    <van-icon name="todo-list-o" size="30px" color="#4fbf8d"/>
+    <view class="chracter">错题本</view>
+  </van-col>
+  <van-col span="8" custom-class="icons_col" >
+    <van-icon name="star-o" size="30px" color="#4fbf8d"/>
+    <view class="chracter">收藏夹</view>
   </van-col>
   <van-col span="8" custom-class="icons_col">
-    <image src="/icons/collection.png"></image>
-    <view>收藏夹</view>
-  </van-col>
-  <van-col span="8" custom-class="icons_col">
-    <image src="/icons/introduce.png"></image>
-    <view>关于我们</view>
+    <van-icon name="chat-o" size="30px" color="#4fbf8d" bindtap="go_aboutus"/>
+    <view class="chracter">关于我们</view>
   </van-col>
   
   <van-col span="8" custom-class="icons_col">
-   <image src="/icons/contact.png"></image> 
-<navigator url="/" >  <view>联系客服</view></navigator>
-  </van-col>
-
-  <van-col span="8" custom-class="icons_col">
-    <image src="/icons/help.png"></image>
-    <view>帮助与反馈</view>
+    <van-icon name="service-o" size="30px" color="#4fbf8d" />
+    <view class="chracter">联系客服</view>
   </van-col>
   <van-col span="8" custom-class="icons_col">
-    <image src="/icons/share.png"></image>
-    <view>分享</view>
+    <van-icon name="envelop-o" size="30px" color="#4fbf8d"/>
+    <view class="chracter">帮助与反馈</view>
   </van-col>
   <van-col span="8" custom-class="icons_col">
-    <image src="/icons/test4.png"></image>
-    <view>测试记录</view>
+    <van-icon name="share-o" size="30px" color="#4fbf8d"/>
+    <view class="chracter">分享</view>
+  </van-col>
+  <van-col span="8" custom-class="icons_col">
+    <van-icon name="records" size="30px" color="#4fbf8d" bindtap="go_testRec"/>
+    <view class="chracter">测试记录</view>
   </van-col>
 </van-row>
 </view>
+

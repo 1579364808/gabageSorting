@@ -49,28 +49,9 @@
     "cloudfunctionRoot": "cloud/",
     "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
     "appid": "wxa5a8425bc40b7f7c",
-    "condition": {
-        "search": {
-            "list": []
-        },
-        "conversation": {
-            "list": []
-        },
-        "game": {
-            "list": []
-        },
-        "plugin": {
-            "list": []
-        },
-        "gamePlugin": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": []
-        }
-    },
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
-    }
+    },
+    "condition": {}
 }

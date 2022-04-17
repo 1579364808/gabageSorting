@@ -13,27 +13,41 @@
     
 .radioContainer{
     width:450rpx ;
-    /* border: gray solid 3rpx; */
     border-radius:  30rpx;
     padding-top: 10rpx;
     padding-bottom: 10rpx;
-    padding-left: 40rpx;
-    margin: 20rpx 20rpx;
-    
+    margin: 20rpx 20rpx;  
 }
+.radioContainer > radio{
+  font-weight: bold;
+}
+
 #container{
-    /* border: red solid 10rpx; */
+
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 30rpx;
     padding-bottom: 30rpx;
 }
+#container > text{
+    font-weight: bolder;
+    font-size: larger;
+}
+#container > view{
+    border: gray solid 5rpx;border-radius: 35rpx;
+    margin-top: 25rpx;margin-bottom: 25rpx;
+    padding: 50rpx;
+    background-color: rgb(235,255,240);
+    width:550rpx ;
+
+}
 #container button{
     font-weight: bold;
+    font-size: large;
     width: 250rpx;
     border-radius: 30rpx;
-    background-color: rgb(9, 209, 35);
+    background-color: #4fbf8d;
     color: white;
 }
 /*.item .main{

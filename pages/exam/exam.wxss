@@ -1,18 +1,33 @@
 /* pages/exam/exam.wxss */
 #Page {
-    background-color: #4fbf8d;
+    /* background-color: #4fbf8d; */
     height: 1400rpx;
 }
-
+.box1{
+    height: 300rpx;
+    /* background-color: #4fbf8d; */
+    border-radius: 0px 0px 38rpx 38rpx
+}
+.box2{
+    height: 1100rpx;
+   
+}
+.box1 image{
+    height:350rpx;
+    width: 100%;
+    margin-top:-122rpx;
+}
 #containner {
+    margin-left: 25rpx;
     height: 1000rpx;
-    width: 750rpx;
+    width: 700rpx;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 200rpx;
-    background-color: white;
-    border-radius: 50rpx;
+    top: 230rpx;
+    background-color: rgb(246,246,246);
+    border-radius: 20rpx;
+    box-shadow:0px 1px 2px 1px #ecebeb;
 }
 
 #title {
@@ -25,7 +40,6 @@
 .choice_containner {
     height: 900rpx;
     position: relative;
-
 }
 
 .judge_containner {
@@ -38,31 +52,41 @@
     height: 160rpx;
     position: relative;
     top: 120rpx;
-    left: 50rpx;
+    left: 25rpx;
+    font-size: large
 }
+
 
 .choice_option {
     position: relative;
-    top: 160rpx;
-    left: 100rpx;
+    top: 130rpx;
+    left: 60rpx;
     width: 600rpx;
-    height: 420rpx;
+    height: 550rpx;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.choice_option view {
+.choice_option > view {
+    height: 150rpx;
+    width: 600rpx;
     display: flex;
     align-items: center;
 }
-
+.choice_option > view :nth-child(2){
+    height: 100rpx;
+    width: 470rpx;
+    display: flex;
+    align-items: center;
+    font-size: 88%;
+}
 .judge_option {
     display: flex;
     justify-content: space-around;
 }
 
-.judge_option view {
+.judge_option > view {
     position: relative;
     top: 200rpx;
 }
@@ -126,10 +150,4 @@
     background-color: #4fbf8d;
     color: white;
 
-}
-.myBox{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
 }

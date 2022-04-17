@@ -6,7 +6,8 @@
     搜素结果如下
     <view wx:for="{{list}}" wx:key='index'>
         <view class="item">
-            <view>{{item.name}}</view>
+            <text>{{item.name}} </text>
+            <text>{{item.category}}</text>
         </view>
     </view>
 </view>

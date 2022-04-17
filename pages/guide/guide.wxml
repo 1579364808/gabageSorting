@@ -14,7 +14,7 @@
             <swiper-item id='0' catchtouchmove="stopTouchMove">
                 <view class="container1">
                         <view>
-                         <image src="../../icons/ResidualWaste.png"></image>
+                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/ResidualWaste.png"></image>
                         </view>
                         <view class="text_container1">
                             <view class="text_1" >
@@ -32,17 +32,18 @@
                     <scroll-view scroll-y="true" style="height: 786rpx;margin-bottom:20rpx "
                     bindscrolltolower="scrolltolower">
                         <view class="box">
-                            <view wx:for="{{list0}}" class="item">
+                            <view wx:for="{{list0}}" class="item" wx:key='index'>
                                     <view>{{item.name}}</view>
                                 </view>
                         </view>
-                    </scroll-view>
+                       
+                    </scroll-view> 
                 </view>
             </swiper-item>
             <swiper-item id='1' catchtouchmove="stopTouchMove">
                 <view class="container2">
                         <view>
-                         <image src="../../icons/HouseholdfoodWaste.jpg"></image>
+                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HouseholdfoodWaste.jpg"></image>
                         </view>
                         <view class="text_container2">
                             <view class="text_2" >
@@ -57,9 +58,9 @@
                         </view>
                 </view>
                 <view class="mbox">
-                    <scroll-view scroll-y="true" style="height: 612rpx;margin-bottom:20rpx ;">
+                    <scroll-view scroll-y="true" style="height: 612rpx;margin-bottom:20rpx ;"  bindscrolltolower="scrolltolower">
                         <view class="box">
-                            <view wx:for="{{list1}}" class="item">
+                            <view wx:for="{{list1}}" class="item" wx:key='index'>
                                     <view>{{item.name}}</view>
                                 </view>
                         </view>
@@ -69,7 +70,7 @@
             <swiper-item id='2' catchtouchmove="stopTouchMove">
                 <view class="container3">
                         <view>
-                         <image src="../../icons/RecycleableWaste.jpg"></image>
+                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/RecycleableWaste.jpg"></image>
                         </view>
                         <view class="text_container3">
                             <view class="text_3" >
@@ -86,9 +87,9 @@
                         </view>
                 </view>
                 <view class="mbox">
-                    <scroll-view scroll-y="true" style="height: 656rpx;margin-bottom:20rpx ;">
+                    <scroll-view scroll-y="true" style="height: 656rpx;margin-bottom:20rpx ;"  bindscrolltolower="scrolltolower">
                     <view class="box">
-                        <view wx:for="{{list2}}" class="item">
+                        <view wx:for="{{list2}}" class="item" wx:key='index'>
                                 <view>{{item.name}}</view>
                             </view>
                     </view>
@@ -98,7 +99,7 @@
             <swiper-item id='3' catchtouchmove="stopTouchMove">
                 <view class="container4">
                         <view>
-                         <image src="../../icons/HazardouAwaste.jpg"></image>
+                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HazardouAwaste.jpg"></image>
                         </view>
                         <view class="text_container4">
                             <view class="text_4" >
@@ -115,9 +116,9 @@
                         </view>
                 </view>
                 <view class="mbox">
-                    <scroll-view scroll-y="true" style="height: 526rpx;margin-bottom:20rpx ;">
+                    <scroll-view scroll-y="true" style="height: 526rpx;margin-bottom:20rpx ;"  bindscrolltolower="scrolltolower">
                         <view class="box">
-                            <view wx:for="{{list3}}" class="item">
+                            <view wx:for="{{list3}}" class="item" wx:key='index'>
                                     <view>{{item.name}}</view>
                                 </view>
                         </view>

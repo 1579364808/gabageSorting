@@ -57,6 +57,12 @@ Page({
                 data: {
                   gravatar: avatarUrl,
                   nickName: nickName,
+                  stars:{
+                    single:[],
+                    multiple:[],
+                    judge:[]
+                  },
+                  test:[]
                 }
               })
             }
@@ -64,5 +70,20 @@ Page({
       },
     })
     //-------------------------------      
+  },
+
+  // 跳转到关于我们的界面
+  go_aboutus(){
+       console.log("跳转");
+      wx.redirectTo({
+        url: '../go_aboutus/go_aboutus',
+      })
+  },
+
+  //测试记录
+  go_testRec(){
+    wx.redirectTo({
+      url: '../userStar/userStar',
+    })
   }
 })

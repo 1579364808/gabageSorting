@@ -1,0 +1,32 @@
+.aboutus{
+    width: 650rpx;
+    height: 900rpx;
+    margin-left:50rpx;
+    margin-top:40rpx;
+    box-shadow:0px 2px 4px 2px #ecebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.font_title{
+    text-align: center;
+    padding-top:40rpx;
+    font-size:36rpx;
+    color:rgb(50, 68, 47)
+}
+.font_text{
+    margin-top:38rpx;
+    padding-left: 34rpx;
+    padding-right:40rpx;
+    font-size:32rpx; 
+    text-align: center;
+}
+image{
+    width: 500rpx;
+    height: 500rpx;
+    border-radius: 8%;
+   margin-top: 40rpx;
+    margin-bottom: 20rpx;
+}
+

@@ -30,7 +30,6 @@
     mix-blend-mode: screen;
     height: 120rpx;
   }
-  
   .tubiao{
     width: 100%;
   }
@@ -46,4 +45,8 @@
   .icons_col image{
     width: 80rpx;
     height: 80rpx;
+  }
+  .chracter{
+    margin-top:20rpx;
+    font-size:32rpx;
   }
