@@ -219,9 +219,10 @@ Page({
     },
     redirect(event) {
         let id = event.currentTarget.id
+        wx.setStorageSync('id', id)
         console.log(id)
-        wx.redirectTo({
-            url: `../guide/guide?id=${id}`
+        wx.switchTab({
+         url: `../guide/guide`
         })
     }
 })
