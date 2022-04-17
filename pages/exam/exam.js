@@ -99,10 +99,6 @@ class Judge {
 
 
 
-
-
-
-
 const db = wx.cloud.database();
 const users = db.collection('users');
 const _ = db.command
@@ -294,7 +290,7 @@ Page({
             }
         })
         let openId = wx.getStorageSync('openId')
-     users
+        users
             .where({
                 _openid: openId
             })
@@ -311,6 +307,7 @@ Page({
         wx.redirectTo({
             url: `../exam_detail/exam_detail`,
         })
+
     }
 
 })

@@ -1,4 +1,4 @@
-/* pages/userStar/userStar.wxss */
+/* pages/test_detail/test_detail.wxss *//* pages/userStar/userStar.wxss */
 .box{
     border: solid 3rpx;
     height: 150rpx;
