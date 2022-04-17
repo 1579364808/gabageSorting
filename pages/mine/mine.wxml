@@ -16,7 +16,7 @@
   </van-col>
   <van-col span="8" custom-class="icons_col" >
     <van-icon name="star-o" size="30px" color="#4fbf8d"/>
-    <view class="chracter">收藏夹</view>
+  <view class="chracter">收藏夹</view>
   </van-col>
   <van-col span="8" custom-class="icons_col">
     <van-icon name="chat-o" size="30px" color="#4fbf8d" bindtap="go_aboutus"/>

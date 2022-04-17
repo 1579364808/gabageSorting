@@ -66,7 +66,7 @@ Page({
     },
     onSearch(event) {
         wx.navigateTo({
-            url: `../detail/detail?gabageName=${event.detail}`,
+            url: '/pages/detail/detail'
         })
     },
    

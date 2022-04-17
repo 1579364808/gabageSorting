@@ -47,3 +47,26 @@
     </block>
 
 </view>
+
+<page-container show="{{showRadio}}" round>
+  <view id="container">
+    <text>请选择一个物品</text>
+    <view>
+      <view>
+        <text style="position: absolute;left: 150rpx;top:120rpx;font-weight: bold;">物品</text>
+        <text style="position: absolute;right:150rpx;top:120rpx;font-weight: bold">可信度</text>
+      </view>
+      <radio-group bindchange="ridio_event">
+        <view wx:for="{{gabages}}" wx:key="{{item.id}}" class="radioContainer">
+
+          <radio value="{{item.name}}" bind>
+            <text>{{item.name}}</text>
+            <text style="position: absolute;right: 170rpx;font-size: 80%;font-weight: lighter;">{{item.score}}</text>
+          </radio>
+        </view>
+      </radio-group>
+    </view>
+    <button bindtap="pick_confirm" disabled="{{buttonDisable}}">确定</button>
+  </view>
+
+</page-container>

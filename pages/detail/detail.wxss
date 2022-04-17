@@ -46,51 +46,53 @@
 }
 
 /* 搜索框 */
-
 .weui-search-bar {
     position: relative;
-    padding: 8px 10px;
+    padding: 16rpx 20rpx;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
     box-sizing: border-box;
-    background-color: #efefef;
+    background-color: #4fc08d;
     border-top: 1rpx solid #D7D6DC;
     border-bottom: 1rpx solid #D7D6DC;
-    border-radius: 2%;
+   
   }
   .weui-icon-search_in-box {
     position: absolute;
-    left: 10px;
-    top: 7px;
+    left: 20rpx;
+    top: 22rpx;
   }
   .weui-search-bar__form {
     position: relative;
     -webkit-box-flex: 1;
     -webkit-flex: auto;
             flex: auto;
-    border-radius: 5px;
+    border-radius: 20rpx;
     background: #FFFFFF;
     border: 1rpx solid #E6E6EA;
   }
   .weui-search-bar__box {
     position: relative;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 60rpx;
+    padding-right: 60rpx;
     width: 100%;
     box-sizing: border-box;
     z-index: 1;
+    border-radius: 20%;
   }
   .weui-search-bar__input {
-    height: 30px;
+    height: 70rpx;
     line-height: 28px;
-    font-size: 14px;
+    font-size: 30rpx;
+    border-radius: 20%;
   }
   .weui-search-bar__cancel-btn {
-    margin-left: 10px;
-    line-height: 28px;
-    color: #09BB07;
+    margin-left: 20rpx;
+    line-height: 75rpx;
+    color: black;
     white-space: nowrap;
+    font-size: 38rpx;
   }
 
 
