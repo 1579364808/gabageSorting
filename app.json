@@ -12,7 +12,7 @@
         "pages/mine/mine",
         "pages/guide/guide",
         "pages/go_aboutus/go_aboutus",
-        "pages/userStar/userStar"
+        "pages/test_detail/test_detail"
     ],
     "window": {
         "backgroundTextStyle": "light",

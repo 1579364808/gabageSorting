@@ -36,7 +36,7 @@
     <view class="chracter">分享</view>
   </van-col>
   <van-col span="8" custom-class="icons_col">
-    <van-icon name="records" size="30px" color="#4fbf8d" bindtap="go_testRec"/>
+    <van-icon name="records" size="30px" color="#4fbf8d"/>
     <view class="chracter">测试记录</view>
   </van-col>
 </van-row>

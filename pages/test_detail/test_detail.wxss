@@ -1,0 +1,24 @@
+/* pages/test_detail/test_detail.wxss *//* pages/userStar/userStar.wxss */
+.box{
+    border: solid 3rpx;
+    height: 150rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom:25rpx;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color:forestgreen;
+}
+.bottom{
+    display: flex;
+    justify-content: space-around;
+    color: rgb(99, 91, 91);
+}
+.bottom image{
+    width: 25rpx;
+    height: 25rpx;
+}
