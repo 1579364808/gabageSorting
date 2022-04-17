@@ -1,14 +1,15 @@
-<!--index.wxml -->
-<van-search label="垃圾" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="onSearch">
-</van-search>
+<!-- 搜索 -->
+<view class="search1">
+     <image src="../../icons/serarch.png" bindtap="onSearch"> </image>
+</view>
 
-
+<!-- 拍照 -->
 <van-uploader bind:after-read="img_recog_onClick">
   <van-button icon="photo" color="#4fbf8d" type="primary" round>拍照识别</van-button>
 </van-uploader>
 
 
-
+<!-- 语音 -->
 <view class="item" bindtouchstart="beginRecord" bindtouchend="endRecord">
   <view class="main">
     <image src="/icons/video.png" mode="widthFix"></image>
@@ -27,7 +28,6 @@
       </view>
       <radio-group bindchange="ridio_event">
         <view wx:for="{{gabages}}" wx:key="{{item.id}}" class="radioContainer">
-
           <radio value="{{item.name}}" bind>
             <text>{{item.name}}</text>
             <text style="position: absolute;right: 170rpx;font-size: 80%;font-weight: lighter;">{{item.score}}</text>

@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "van-icon": "@vant/weapp/icon/index",
-    "van-tag": "@vant/weapp/tag/index"
+    "van-tag": "@vant/weapp/tag/index",
+    "van-search": "@vant/weapp/search/index"
   }
  
 }

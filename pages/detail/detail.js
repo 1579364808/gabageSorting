@@ -52,6 +52,10 @@ Page({
                 this.setData({
                     historyList: []
                 })
+                wx.showToast({
+                  icon:'none',
+                  title: '删除历史记录成功',
+                })
             }
         })
     },
@@ -60,8 +64,7 @@ Page({
         this.setData({
             gabageName: event.gabageName
         })
-        this.openHistorySearch() //
-        this.goSearch()
+        this.openHistorySearch() 
     },
 
     //搜索

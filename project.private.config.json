@@ -21,7 +21,7 @@
                 },
                 {
                     "name": "",
-                    "pathName": "pages/test/test",
+                    "pathName": "pages/go_collection/go_collection",
                     "query": "",
                     "scene": null
                 },
@@ -65,8 +65,13 @@
                     "name": "添加",
                     "pathName": "pages/question1/question1",
                     "query": "",
-                    "scene": null,
-                    "launchMode": "default"
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/detail/detail",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
