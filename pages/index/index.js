@@ -8,7 +8,29 @@ Page({
         gabages: [],
         selectedItem: null,
         buttonDisable: false,
+        animationStatus: false,
+        "items": [
+
+            {
+                 "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/ResidualWaste.png",
+            },
+
+            {
+                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HouseholdfoodWaste.jpg",
+            },
+
+            {
+                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/RecycleableWaste.jpg",
+            },
+            
+            {
+               
+                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HazardouAwaste.jpg",
+            }
+        ]
     },
+
+
     onLoad(event) {
         this.setData({
             showDialog: false,
@@ -59,11 +81,14 @@ Page({
             encodeBitRate: 48000,
             format: 'pcm'
         }
-        recorderManager.start(options);
-        wx.showLoading({
-            title: '录音中',
-        })
 
+        recorderManager.start(options);
+        //wx.showLoading({
+        //title: '录音中',
+        // })
+        this.setData({
+            animationStatus: true
+        })
     },
     endRecord(event) {
         console.log(event);
@@ -73,41 +98,45 @@ Page({
             console.log(res);
             let path = res.tempFilePath;
             console.log(path)
-          fs.getFileInfo({
-                filePath:path,
-                success:res=>{
+            fs.getFileInfo({
+                filePath: path,
+                success: res => {
                     let len = res.size
                     let audio = fs.readFileSync(path, 'base64')
                     let token = wx.getStorageSync('audioToken').token
-                    this.audio_rq(audio,token,len)
+                    this.audio_rq(audio, token, len)
                 }
             })
+
             wx.hideLoading()
-           // 显示加载
+            // 显示加载
             wx.showLoading({
                 title: '正在识别中',
             })
         })
+        this.setData({
+            animationStatus: false
+        })
     },
-    
+
     // //语音识别请求
-    audio_rq(audio,token,fileSize) {
+    audio_rq(audio, token, fileSize) {
         let that = this
         wx.request({
             //进行post请求
             method: 'post',
             url: 'https://vop.baidu.com/pro_api',
-            
+
             //请求的参数
             data: {
                 format: 'pcm', //语音格式
                 rate: 16000, //采样率
                 channel: 1, //声道数
                 cuid: "MelodyOfTears", //用户唯一标识  
-                token:token,
-                speech:audio,
-                len:fileSize,
-                dev_pid:80001
+                token: token,
+                speech: audio,
+                len: fileSize,
+                dev_pid: 80001
             },
             header: {
                 'content-type': 'application/json'
@@ -119,16 +148,16 @@ Page({
         })
 
     },
-    
+
     //图片识别    
     img_recog_onClick(event) {
 
         let path = event.detail.file.url
         let image = fs.readFileSync(path, 'base64') //将图片转换成base64
-     
+
         //请求
         let token = wx.getStorageSync('imgToken').token
-      
+
         console.log(token)
         this.img_rq(image, token)
         //显示加载
@@ -187,5 +216,13 @@ Page({
                 url: `../detail/detail?gabageName=${this.data.selectedItem}`,
             })
         }
+    },
+    redirect(event) {
+        let id = event.currentTarget.id
+        wx.setStorageSync('id', id)
+        console.log(id)
+        wx.switchTab({
+         url: `../guide/guide`
+        })
     }
 })

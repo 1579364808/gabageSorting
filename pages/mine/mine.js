@@ -1,5 +1,6 @@
 const db = wx.cloud.database();
 const users = db.collection('users')
+let openId;
 Page({
   data: {
     gravatar: "../../icons/login.png",
@@ -9,13 +10,13 @@ Page({
   onLoad(options) {
     //进来先获取openId
     wx.cloud.callFunction({
-        name: 'getOpenId'
-      })
-      .then(res => {
-        console.log(res)
-        let openId = res.result.openid
-        wx.setStorageSync('openId', openId)
-      })
+      name: 'getOpenId'
+    })
+    .then(res => {
+      console.log(res)
+       openId = res.result.openid
+   
+    })
     let userInfo = wx.getStorageSync('userInfo')
     console.log(userInfo)
     if (userInfo != "" && userInfo != null) {
@@ -28,17 +29,18 @@ Page({
 
   },
   login() {
+
     //已登录就返回
     if (this.data.isLogin) {
       return
     }
-    let openId = wx.getStorageSync('openId')
     console.log(openId)
     //-------------获取用户头像昵称---------------------    
     wx.getUserProfile({
       desc: '只有授权才能登陆',
       success: res => {
         console.log("授权成功", res)
+        wx.setStorageSync('openId', openId)
         wx.setStorageSync('userInfo', res.userInfo)
         let avatarUrl = res.userInfo.avatarUrl
         let nickName = res.userInfo.nickName
@@ -62,11 +64,7 @@ Page({
                     multiple:[],
                     judge:[]
                   },
-                  falseQuestion:{
-                    single:[],
-                    multiple:[],
-                    judge:[]
-                  },
+                  test:[]
                 }
               })
             }
@@ -82,6 +80,13 @@ Page({
       wx.navigateTo({
         url: '../go_aboutus/go_aboutus',
       })
-  }
+    },
+
+    //测试记录
+    go_testRec(){
+      wx.redirectTo({
+        url: '../test_detail/test_detail',
+      })
+    }
   
 })

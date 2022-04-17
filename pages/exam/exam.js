@@ -99,12 +99,10 @@ class Judge {
 
 
 
-
-
-
-
-
-
+const db = wx.cloud.database();
+const users = db.collection('users');
+const _ = db.command
+const $ = db.command.aggregate
 
 Page({
     data: {
@@ -292,17 +290,17 @@ Page({
             }
         })
         let openId = wx.getStorageSync('openId')
-        wx.cloud.database().collection('users')
+        users
             .where({
                 _openid: openId
             })
             .update({
                 data: {
-                    test: {
+                    test: _.push({
                         list: list,
                         archives: userAns.archives,
                         date: new Date()
-                    }
+                    })
                 }
             })
 
