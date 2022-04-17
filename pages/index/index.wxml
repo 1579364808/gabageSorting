@@ -58,7 +58,6 @@
       </view>
       <radio-group bindchange="ridio_event">
         <view wx:for="{{gabages}}" wx:key="{{item.id}}" class="radioContainer">
-
           <radio value="{{item.name}}" bind>
             <text>{{item.name}}</text>
             <text style="position: absolute;right: 170rpx;font-size: 80%;font-weight: lighter;">{{item.score}}</text>
