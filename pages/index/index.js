@@ -12,20 +12,20 @@ Page({
         "items": [
 
             {
-                 "imageUrl": "/icons/ResidualWaste.png",
+                 "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/ResidualWaste.png",
             },
 
             {
-                "imageUrl": "/icons/HouseholdfoodWaste.jpg",
+                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HouseholdfoodWaste.jpg",
             },
 
             {
-                "imageUrl": "/icons/RecycleableWaste.jpg",
+                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/RecycleableWaste.jpg",
             },
             
             {
                
-                "imageUrl": "/icons/HazardouAwaste.jpg",
+                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HazardouAwaste.jpg",
             }
         ]
     },
