@@ -62,11 +62,7 @@ Page({
                     multiple:[],
                     judge:[]
                   },
-                  falseQuestion:{
-                    single:[],
-                    multiple:[],
-                    judge:[]
-                  },
+                  test:[]
                 }
               })
             }
@@ -82,5 +78,13 @@ Page({
       wx.navigateTo({
         url: '../go_aboutus/go_aboutus',
       })
-  }
+    },
+
+    //测试记录
+    go_testRec(){
+      wx.redirectTo({
+        url: '../test_detail/test_detail',
+      })
+    }
+  
 })
