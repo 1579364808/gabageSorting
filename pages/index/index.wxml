@@ -19,12 +19,14 @@
 
     </swiper>
 </view>
-<van-search value=" " label="垃圾" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="onSearch">
+<view class="image_index" bindtap="onSearch">
+      <image src="../../icons/serarch.png" style="position: relative; left: 52rpx; top: 57rpx"></image>
+      <view class="font" style="position: relative; left: 74rpx; top: 44rpx">文字搜索</view>
+</view>
 
-</van-search>
 <van-uploader bind:after-read="img_recog_onClick">
-    <image src="/icons/photo.png" style="width: 166rpx; height: 136rpx; display: inline-block; box-sizing: border-box; position: relative; left: 75rpx; top: 4rpx"></image>
-    <view class="text1">拍照识别</view>
+    <image src="/icons/photo.png" style="width: 166rpx; height: 136rpx; display: inline-block; box-sizing: border-box; position: relative; left: 292rpx; top: -145rpx"></image>
+    <view class="text1" style="position: relative; left: 310rpx; top: -145rpx">拍照识别</view>
 </van-uploader>
 
 <view class="myRecode">
@@ -33,15 +35,15 @@
         <view class="ripple"></view>
         <view class="ripple {{animationStatus?'rippleAnimation1':''}}"></view>
         <view class="ripple {{animationStatus?'rippleAnimation2':''}}"></view>
-        <view class="ripple {{animationStatus?'rippleAnimation3':''}}"></view>
+        <view class="ripple {{animationStatus?'rippleAnimation3':''}}" style="position: absolute; left: 0rpx; top: 2rpx"></view>
     </view>
 </view>
-<view class="text">语音识别</view>
+<view class="text" style="position: absolute; left: 532rpx; top: 580rpx">语音识别</view>
 <view class="schoollist">
     <block wx:for="{{items}}" wx:key="item">
         <view class="school-list">
             <view class="school-list-info" >
-                    <image class="school-list-photo" id="{{index}}" bindtap="redirect" src="{{item.imageUrl}}"></image>
+                    <image class="school-list-photo" id="{{index}}" bindtap="redirect" src="{{item.imageUrl}}" style="position: relative; left: -5rpx; margin-top: 25rpx; top: -115rpx"></image>
             </view>
         </view>
     </block>
