@@ -57,7 +57,7 @@
                 {{whole.question}}
             </view>
             <view class="bottom">
-                <view>正确答案:{{tool.letter[whole.res]}}</view>
+                <view>正确答案:{{tool.letter1[whole.res]}}</view>
                     <view class="cancle" id="{{whole.onlyId}}" data-num="{{i}}" bindtap="star2" >{{text3[i]}}</view>
             </view>
             <van-divider />

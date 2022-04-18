@@ -83,9 +83,9 @@ Page({
         }
 
         recorderManager.start(options);
-        //wx.showLoading({
-        //title: '录音中',
-        // })
+        wx.showLoading({
+        title: '松开停止录音',
+        })
         this.setData({
             animationStatus: true
         })
@@ -107,16 +107,16 @@ Page({
                     this.audio_rq(audio, token, len)
                 }
             })
-
+            this.setData({
+                animationStatus: false
+            })
             wx.hideLoading()
             // 显示加载
             wx.showLoading({
                 title: '正在识别中',
             })
         })
-        this.setData({
-            animationStatus: false
-        })
+
     },
 
     // //语音识别请求
@@ -143,7 +143,12 @@ Page({
             },
             success(res) {
                 wx.hideLoading()
-                console.log(res.data.result);
+                let str = res.data.result[0].slice(0,-1);
+                console.log(str)
+                         
+                wx.redirectTo({
+                  url: `../detail/detail?gabageName=${str}`,
+                })
             }
         })
 
