@@ -1,0 +1,31 @@
+.star {
+    width: 80rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+    position: relative;
+    left: 514rpx;
+}
+
+.star>image {
+    height: 60rpx;
+    width: 60rpx;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cancle{
+    border: solid 3rpx greenyellow;
+    border-radius: 10rpx;
+    background-color: greenyellow;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20rpx;
+}

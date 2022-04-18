@@ -87,6 +87,12 @@ Page({
       wx.redirectTo({
         url: '../test_detail/test_detail',
       })
+    },
+    //收藏
+    go(){
+      wx.navigateTo({
+        url: '../star/star',
+      })
     }
   
 })
