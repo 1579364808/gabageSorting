@@ -15,7 +15,7 @@
     <view class="chracter">错题本</view>
   </van-col>
   <van-col span="8" custom-class="icons_col" >
-    <van-icon name="star-o" size="30px" color="#4fbf8d"/>
+    <van-icon name="star-o" size="30px" color="#4fbf8d" bindtap="go"/>
   <view class="chracter">收藏夹</view>
   </van-col>
   <van-col span="8" custom-class="icons_col">
