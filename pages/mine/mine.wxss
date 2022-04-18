@@ -50,3 +50,9 @@
     margin-top:20rpx;
     font-size:32rpx;
   }
+  .btn1{
+      background-color:transparent;
+  }
+  button::after{
+      border: none;
+  }
