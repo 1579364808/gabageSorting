@@ -35,8 +35,9 @@
   <van-col span="8" custom-class="icons_col">
   <button class="btn1" open-type="share">
   <van-icon name="share-o" size="30px" color="#4fbf8d"/> 
+  <view class="chracter" style="position: relative;bottom: 50rpx;">分享</view>
   </button>
-   <view class="chracter">分享</view>
+
   </van-col>
   <van-col span="8" custom-class="icons_col">
     <van-icon name="records" size="30px" color="#4fbf8d" bindtap="go_testRec"/>

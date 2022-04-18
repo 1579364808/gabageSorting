@@ -41,16 +41,6 @@
             <van-divider />
         </view>
     </van-collapse-item>
-
-
-
-
-
-
-
-
-
-
     <van-collapse-item title="判断" name="3">
         <view wx:for="{{judge}}" wx:for-item='whole' wx:for-index='i'>
             <view class="question">

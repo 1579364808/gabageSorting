@@ -19,9 +19,11 @@
     justify-content: space-around;
 }
 .cancle{
-    border: solid 3rpx greenyellow;
+    border: solid 3rpx grey;
     border-radius: 10rpx;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
+     background-color: rgb(231, 219, 219); 
+    padding: 2rpx 20rpx;
 }
 .box{
     display: flex;
