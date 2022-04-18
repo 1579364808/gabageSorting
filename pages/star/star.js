@@ -19,7 +19,7 @@ Page({
         single: null,
         multiple: null,
         judge: null,
-        activeNames: ['1'],
+        activeNames: [],
     },
     onLoad() {
         openId = wx.getStorageSync('openId')

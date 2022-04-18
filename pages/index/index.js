@@ -12,7 +12,7 @@ Page({
         "items": [
 
             {
-                 "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/ResidualWaste.png",
+                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/ResidualWaste.png",
             },
 
             {
@@ -22,9 +22,9 @@ Page({
             {
                 "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/RecycleableWaste.jpg",
             },
-            
+
             {
-               
+
                 "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HazardouAwaste.jpg",
             }
         ]
@@ -69,28 +69,55 @@ Page({
             url: '/pages/detail/detail'
         })
     },
-   
+
     //语音识别    
     beginRecord(event) {
-        console.log(event);
-        //录音的参数
-        const options = {
-            duration: 3000, //录音时间，默认是3s，提前松手会触发button的bindtouchend事件，执行停止函数并上传录音文件。
-            sampleRate: 16000,
-            numberOfChannels: 1,
-            encodeBitRate: 48000,
-            format: 'pcm'
-        }
 
-        recorderManager.start(options);
-        wx.showLoading({
-        title: '松开停止录音',
+        let that = this
+        //判断用户知否授权
+        wx.getSetting({
+            success(res) {
+                if (!res.authSetting['scope.record']) {
+                    wx.showModal({
+                        showCancel: false,
+                        title: '未授权',
+                        content: '请先在设置中授予小程序录音功能',
+                    })           
+                }
+                console.log(event);
+                //录音的参数
+                const options = {
+                    duration: 3000, //录音时间，默认是3s，提前松手会触发button的bindtouchend事件，执行停止函数并上传录音文件。
+                    sampleRate: 16000,
+                    numberOfChannels: 1,
+                    encodeBitRate: 48000,
+                    format: 'pcm'
+                }
+
+                recorderManager.start(options);
+                recorderManager.onStart(() => {
+                    wx.showLoading({
+                        title: '松开停止录音',
+                    })
+                    that.setData({
+                        animationStatus: true
+                    })
+                })
+            }
         })
-        this.setData({
-            animationStatus: true
-        })
+
+
+
+
+
+
+
+
+
+
     },
     endRecord(event) {
+        wx.hideLoading()
         console.log(event);
         recorderManager.stop();
         //监听录音结束
@@ -110,8 +137,7 @@ Page({
             this.setData({
                 animationStatus: false
             })
-            wx.hideLoading()
-            // 显示加载
+           // 显示加载
             wx.showLoading({
                 title: '正在识别中',
             })
@@ -121,7 +147,6 @@ Page({
 
     // //语音识别请求
     audio_rq(audio, token, fileSize) {
-        let that = this
         wx.request({
             //进行post请求
             method: 'post',
@@ -143,11 +168,15 @@ Page({
             },
             success(res) {
                 wx.hideLoading()
-                let str = res.data.result[0].slice(0,-1);
+                let str = ''
+                if (res.data.result[0].length != 0) {
+
+                    str = res.data.result[0].slice(0, -1);
+                }
+
                 console.log(str)
-                         
                 wx.redirectTo({
-                  url: `../detail/detail?gabageName=${str}`,
+                    url: `../detail/detail?gabageName=${str}`,
                 })
             }
         })
@@ -194,12 +223,12 @@ Page({
                     let temp = {
                         name: res.data.result[i].keyword,
                         id: i,
-                        score: parseInt(res.data.result[i].score*100) +'%' 
+                        score: parseInt(res.data.result[i].score * 100) + '%'
                     }
                     //对象数组
                     items.push(temp)
                 }
-          
+
                 that.setData({
                     showRadio: true,
                     gabages: items //获取物品集
@@ -227,7 +256,7 @@ Page({
         wx.setStorageSync('id', id)
         console.log(id)
         wx.switchTab({
-         url: `../guide/guide`
+            url: `../guide/guide`
         })
     }
 })
