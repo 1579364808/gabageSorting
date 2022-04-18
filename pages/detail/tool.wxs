@@ -1,0 +1,11 @@
+var sty = {
+
+'可回收垃圾':'class_1',
+'湿垃圾':'class_2',
+'干垃圾':'class_3',
+'有害垃圾':'class_4',
+}
+module.exports = {
+    sty: sty,
+
+};

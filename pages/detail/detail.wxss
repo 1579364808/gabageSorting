@@ -13,7 +13,7 @@
     margin: 40rpx;
     border-bottom: 1px solid rgb(204, 202, 202);
 }
-.class_one{
+.class_1{
     position: relative;
     left: 450rpx ;
     bottom: 50rpx;
@@ -22,7 +22,36 @@
     border-radius: 8%;
     background-color: #09BB07;
     color: white;
-    
+}
+.class_2{
+  position: relative;
+  left: 450rpx ;
+  bottom: 50rpx;
+  padding-left: 12rpx;
+  padding-right: 12rpx;
+  border-radius: 8%;
+  background-color: rgb(62,147,210);
+  color: white;
+}
+.class_3{
+  position: relative;
+  left: 450rpx ;
+  bottom: 50rpx;
+  padding-left: 12rpx;
+  padding-right: 12rpx;
+  border-radius: 8%;
+  background-color:rgb(113,120,130) ;
+  color: white;
+}
+.class_4{
+  position: relative;
+  left: 450rpx ;
+  bottom: 50rpx;
+  padding-left: 12rpx;
+  padding-right: 12rpx;
+  border-radius: 8%;
+  background-color: rgb(219,103,115);
+  color: white;
 }
 
 .font_one{

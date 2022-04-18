@@ -1,4 +1,5 @@
 <!--pages/detail/detail.wxml-->
+<wxs src="./tool.wxs" module="tool" />
 <view>
      <view>
         <view class="weui-search-bar">
@@ -18,7 +19,7 @@
     <view wx:for="{{list}}" wx:key='index'>
         <view class="item">
             <rich-text nodes="{{item.name}} "></rich-text>
-            <text class="class_one">{{item.category}}</text>
+            <text class="{{tool.sty[item.category]}}">{{item.category}}</text>
         </view> 
     </view>
     <view class="boxn">
