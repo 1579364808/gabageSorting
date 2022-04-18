@@ -10,10 +10,6 @@
 <view class="tubiao">
 <!--设置列元素间距-->
 <van-row custom-class="icons">
-  <van-col span="8" custom-class="icons_col">
-    <van-icon name="todo-list-o" size="30px" color="#4fbf8d"/>
-    <view class="chracter">错题本</view>
-  </van-col>
   <van-col span="8" custom-class="icons_col" >
     <van-icon name="star-o" size="30px" color="#4fbf8d" bindtap="go"/>
   <view class="chracter">收藏夹</view>
