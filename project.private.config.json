@@ -50,8 +50,8 @@
                     "name": "添加",
                     "pathName": "pages/question/question",
                     "query": "",
-                    "scene": null,
-                    "launchMode": "default"
+                    "launchMode": "default",
+                    "scene": null
                 },
                 {
                     "name": "收藏",
