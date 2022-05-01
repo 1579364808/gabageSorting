@@ -95,10 +95,9 @@
     width: 750rpx;
     display: flex;
     justify-content: space-around;
-    position: absolute;
-    bottom: 100rpx;
+    position: relative;
+    bottom: 120rpx;
 }
-
 
 .choice_normal {
     width: 75rpx;

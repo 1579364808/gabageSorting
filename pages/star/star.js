@@ -6,23 +6,20 @@ const judge = db.collection('judge');
 const _ = db.command
 const $ = db.command.aggregate
 let openId;
-
 var del2 = new Set()
-
-
-
 var del1 = new Set()
-
 var del3 = new Set()
 Page({
     data: {
         single: null,
         multiple: null,
         judge: null,
-        activeNames: ['1'],
     },
     onLoad() {
         openId = wx.getStorageSync('openId')
+        wx.showLoading({
+            title: '数据加载中',
+        });
         users.aggregate()
             .match({
                 _openid: openId
@@ -42,7 +39,6 @@ Page({
                         data: {
                             type: 'single',
                             list: list.single
-
                         }
                     }).then(res => {
                         console.log(res)
@@ -51,7 +47,7 @@ Page({
                             text1.push('取消收藏')
                         }
                         this.setData({
-                            single: res.result.list,
+                            single: res.result.list.reverse(),
                             text1: text1
                         })
                     })
@@ -69,7 +65,7 @@ Page({
                             text2.push('取消收藏')
                         }
                         this.setData({
-                            multiple: res.result.list,
+                            multiple: res.result.list.reverse(),
                             text2: text2
                         })
                     })
@@ -87,10 +83,10 @@ Page({
                             text3.push('取消收藏')
                         }
                         this.setData({
-                            judge: res.result.list,
+                            judge: res.result.list.reverse(),
                             text3: text3
                         })
-
+                        wx.hideLoading()
                     })
                 }
             })
@@ -100,56 +96,45 @@ Page({
         let temp = 'stars.single'
         console.log(Array.from(del1))
         users.where({
-            _openid:openId
-        })
-        .update({
-            data:{
-               [temp]:_.pull(_.in(Array.from(del1)))
-            }
-        })
-        .then(res=>{
-          console.log(res)
-        })
-
-
-
+                _openid: openId
+            })
+            .update({
+                data: {
+                    [temp]: _.pull(_.in(Array.from(del1)))
+                }
+            })
+            .then(res => {
+                console.log(res)
+            })
         let temp1 = 'stars.multiple'
         console.log(Array.from(del2))
         users.where({
-            _openid:openId
-        })
-        .update({
-            data:{
-               [temp1]:_.pull(_.in(Array.from(del2)))
-            }
-        })
-        .then(res=>{
-          console.log(res)
-        })
-
-
+                _openid: openId
+            })
+            .update({
+                data: {
+                    [temp1]: _.pull(_.in(Array.from(del2)))
+                }
+            })
+            .then(res => {
+                console.log(res)
+            })
         let temp2 = 'stars.judge'
         console.log(Array.from(del3))
         users.where({
-            _openid:openId
-        })
-        .update({
-            data:{
-               [temp2]:_.pull(_.in(Array.from(del3)))
-            }
-        })
-        .then(res=>{
-          console.log(res)
-        })
-
-    },
-    onChange(event) {
-        this.setData({
-            activeNames: event.detail,
-        });
+                _openid: openId
+            })
+            .update({
+                data: {
+                    [temp2]: _.pull(_.in(Array.from(del3)))
+                }
+            })
+            .then(res => {
+                console.log(res)
+            })
     },
     star(event) {
-        let id =   parseInt(event.currentTarget.id) 
+        let id = parseInt(event.currentTarget.id)
         let num = event.target.dataset.num
         let text1 = this.data.text1
         console.log(event)
@@ -169,7 +154,7 @@ Page({
         })
     },
     star1(event) {
-        let id =   parseInt(event.currentTarget.id) 
+        let id = parseInt(event.currentTarget.id)
         let num = event.target.dataset.num
         let text2 = this.data.text2
         console.log(id)
@@ -189,7 +174,7 @@ Page({
         })
     },
     star2(event) {
-        let id =   parseInt(event.currentTarget.id) 
+        let id = parseInt(event.currentTarget.id)
         let num = event.target.dataset.num
         let text3 = this.data.text3
         console.log(id)

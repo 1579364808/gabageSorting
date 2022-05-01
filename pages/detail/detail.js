@@ -48,23 +48,26 @@ Page({
                 if (!res.confirm) {
                     return
                 }
-               wx.removeStorageSync('historyList')
+                wx.removeStorageSync('historyList')
                 this.setData({
                     historyList: []
                 })
                 wx.showToast({
-                  icon:'none',
-                  title: '删除历史记录成功',
+                    icon: 'none',
+                    title: '删除历史记录成功',
                 })
             }
         })
     },
 
     onLoad: function (event) {
-        this.setData({
-            gabageName: event.gabageName
-        })
-        this.openHistorySearch() 
+        if (event.gabageName) {
+            this.setData({
+                gabageName: event.gabageName
+            })
+            this.goSearch()
+        }
+        this.openHistorySearch()
     },
 
     //搜索
@@ -92,10 +95,10 @@ Page({
             .get()
             .then(res => {
                 console.log(res.data);
-                res.data.map((item) =>{
-                    item.name = item.name.replace(this.data.gabageName,//替换输入框的内容
-                      `<span style="color:skyblue;">${this.data.gabageName}</span>`)//模板字符串使用span标签设置高亮颜色
-                  })
+                res.data.map((item) => {
+                    item.name = item.name.replace(this.data.gabageName, //替换输入框的内容
+                        `<span style="color:skyblue;">${this.data.gabageName}</span>`) //模板字符串使用span标签设置高亮颜色
+                })
                 this.setData({
                     list: res.data
                 })

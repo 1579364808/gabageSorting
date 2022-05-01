@@ -6,54 +6,54 @@ Page({
     gravatar: "../../icons/login.png",
     nickName: "点击登录",
     isLogin: false,
-    
-  },    
+
+  },
   onLoad: function (e) {
     wx.showShareMenu({
       withShareTicket: true,
-    }); 
+    });
   },
   onShareAppMessage: function (res) {
-      if(res.form==='button'){
-       console.log(res.form)
+    if (res.form === 'button') {
+      console.log(res.form)
+    }
+    return {
+      title: '分享',
+      imageUrl: "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/QR code.jpg",
+      path: '/pages/mine/mine',
+      success: function (res) {
+        console.log("分享成功")
+      },
+      fail: function (res) {
+        console.log("分享失败")
       }
-   return{
-       title:'分享',
-       imageUrl:"cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/QR code.jpg",
-       path:'/pages/mine/mine',
-       success:function(res){
-    console.log("分享成功")
-       },
-       fail:function(res){
-           console.log("分享失败")
-       }
-   }
-    },
-    
-onLoad:function(){
-    var that=this;
-    qrcode({
-        width:100,
-        height:100,
-        canvasId:'myQrcode',
-        text:'',
-        
-        callback:function(){
+    }
+  },
 
-        }
+  onLoad: function () {
+    var that = this;
+    qrcode({
+      width: 100,
+      height: 100,
+      canvasId: 'myQrcode',
+      text: '',
+
+      callback: function () {
+
+      }
 
     });
-},
+  },
   onLoad(options) {
     //进来先获取openId
     wx.cloud.callFunction({
-      name: 'getOpenId'
-    })
-    .then(res => {
-      console.log(res)
-       openId = res.result.openid
-   
-    })
+        name: 'getOpenId'
+      })
+      .then(res => {
+        console.log(res)
+        openId = res.result.openid
+
+      })
     let userInfo = wx.getStorageSync('userInfo')
     console.log(userInfo)
     if (userInfo != "" && userInfo != null) {
@@ -96,12 +96,12 @@ onLoad:function(){
                 data: {
                   gravatar: avatarUrl,
                   nickName: nickName,
-                  stars:{
-                    single:[],
-                    multiple:[],
-                    judge:[]
+                  stars: {
+                    single: [],
+                    multiple: [],
+                    judge: []
                   },
-                  test:[]
+                  test: []
                 }
               })
             }
@@ -112,12 +112,12 @@ onLoad:function(){
   },
 
   // 跳转到关于我们的界面
-  go_aboutus(){
-       console.log("跳转");
-      wx.navigateTo({
-        url: '../go_aboutus/go_aboutus',
-      })
-    },
+  go_aboutus() {
+    console.log("跳转");
+    wx.navigateTo({
+      url: '../go_aboutus/go_aboutus',
+    })
+  },
 
     //测试记录
     go_testRec(){
@@ -138,3 +138,4 @@ onLoad:function(){
     }
   
 })
+

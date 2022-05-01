@@ -1,47 +1,55 @@
 <view class="header">
-  <view id="login" bindtap="login">
-    <image src="{{gravatar}}" id="gravatar"></image>
-    <text style="color: white;font-size: small;">{{nickName}}</text>
-  </view>
-  <!-- 水波纹 -->
-  <image class="wave" src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/bg_wave.gif"></image>
+    <view id="login" bindtap="login">
+        <image src="{{gravatar}}" id="gravatar"></image>
+        <text style="color: white;font-size: small;">{{nickName}}</text>
+    </view>
+    <!-- 水波纹 -->
+    <image class="wave" src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/bg_wave.gif"></image>
 </view>
 <!--Layout布局_页面小按钮-->
 <view class="tubiao">
-<!--设置列元素间距-->
-<van-row custom-class="icons">
-  <van-col span="8" custom-class="icons_col" >
-    <van-icon name="star-o" size="30px" color="#4fbf8d" bindtap="go"/>
-  <view class="chracter">收藏夹</view>
-  </van-col>
+    <!--设置列元素间距-->
+    <van-row custom-class="icons">
+        <van-col span="8" custom-class="icons_col">
+            <view bindtap="go">
+                <van-icon name="star-o" size="30px" color="#4fbf8d" />
+                <view class="chracter">收藏夹</view>
+            </view>
+            </van-col>
 
-  <van-col span="8" custom-class="icons_col">
-    <van-icon name="records" size="30px" color="#4fbf8d" bindtap="go_testRec"/>
-    <view class="chracter">测试记录</view>
-  </van-col>
-  <van-col span="8" custom-class="icons_col">
-    <van-icon name="chat-o" size="30px" color="#4fbf8d" bindtap="go_aboutus"/>
-    <view class="chracter">关于我们</view>
-  </van-col>
-  
-  <van-col span="8" custom-class="icons_col">
-    <button class="btn1" open-type="contact">
-    <van-icon name="service-o" size="30px" color="#4fbf8d" />
-    <view class="chracter"style="position: relative;bottom: 50rpx;">联系客服</view>
-    </button>
-  </van-col>
-  <van-col span="8" custom-class="icons_col">
-    <van-icon name="envelop-o" size="30px" color="#4fbf8d" bindtap="go1"/>
-    <view class="chracter">帮助与反馈</view>
-  </van-col>
-  <van-col span="8" custom-class="icons_col">
-  <button class="btn1" open-type="share">
-  <van-icon name="share-o" size="30px" color="#4fbf8d"/> 
-  <view class="chracter" style="position: relative;bottom: 50rpx;">分享</view>
-  </button>
+            <van-col span="8" custom-class="icons_col">
+                <view bindtap="go_testRec">
+                    <van-icon name="records" size="30px" color="#4fbf8d" />
+                    <view class="chracter">测试记录</view>
+                </view>
 
-  </van-col>
+            </van-col>
+            <van-col span="8" custom-class="icons_col">
+                <view bindtap="go_aboutus">
+                    <van-icon name="chat-o" size="30px" color="#4fbf8d" />
+                    <view class="chracter">关于我们</view>
+                </view>
+            </van-col>
+            <van-col span="8" custom-class="icons_col">
+                <view>
+                    <button class="btn1" open-type="contact">
+                        <van-icon name="service-o" size="30px" color="#4fbf8d" />
+                        <view class="chracter" style="position: relative;bottom: 50rpx;">联系客服</view>
+                    </button>
+                </view>
+            </van-col>
+            <van-col span="8" custom-class="icons_col">
+                <view bindtap="go1">
+                    <van-icon name="envelop-o" size="30px" color="#4fbf8d" />
+                    <view class="chracter">帮助与反馈</view>
+                </view>
+            </van-col>
+            <van-col span="8" custom-class="icons_col">
+                <button class="btn1" open-type="share">
+                    <van-icon name="share-o" size="30px" color="#4fbf8d" />
+                    <view class="chracter" style="position: relative;bottom: 50rpx;">分享</view>
+                </button>
+            </van-col>
 
-</van-row>
+    </van-row>
 </view>
-

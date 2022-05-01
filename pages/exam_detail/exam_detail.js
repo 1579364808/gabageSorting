@@ -24,9 +24,17 @@ class Img_star {
     alterImg = function (id) {
 
         if (this.stars[id] == "../../icons/star_o.png") {
+            wx.showToast({
+                title: '收藏成功',
+                duration: 500
+            })
             this.stars[id] = "../../icons/star_y.png"
         } else {
             this.stars[id] = "../../icons/star_o.png"
+            wx.showToast({
+                title: '取消收藏',
+                duration: 500
+            })
         }
     }
 
@@ -78,6 +86,12 @@ class Img_star {
 
 
 
+
+
+
+
+
+
 Page({
     data: {
         list: [],
@@ -85,7 +99,7 @@ Page({
         img_star: null
     },
     onLoad(event) {
-       
+
         wx.getStorage({
                 key: "record"
             })
@@ -120,7 +134,7 @@ Page({
                     console.log(list)
                     img_star.alterStarImg(list)
                     this.setData({
-                        img_star:img_star
+                        img_star: img_star
                     })
                 }
             })
@@ -131,48 +145,48 @@ Page({
         let id = event.currentTarget.id
 
         console.log(id)
-        if(id<5){
-            this.update(id,'single')
-        }else if(id<10){
-            this.update(id,'multiple')
-        }else{
-            this.update(id,'judge')
+        if (id < 5) {
+            this.update(id, 'single')
+        } else if (id < 10) {
+            this.update(id, 'multiple')
+        } else {
+            this.update(id, 'judge')
         }
     },
 
-    update(id,type){
-        let temp = 'stars.'+type
+    update(id, type) {
+        let temp = 'stars.' + type
         let img_star = this.data.img_star
-        if(img_star.stars[id]=="../../icons/star_y.png"){
+        if (img_star.stars[id] == "../../icons/star_y.png") {
             users.where({
-                _openid:openId
-            })
-            .update({
-                data:{
-                   [temp]:_.pull(this.data.list[id].onlyId)
-                }
-            })
-            .then(res=>{
-                img_star.alterImg(id)
-                this.setData({
-                    img_star:img_star 
+                    _openid: openId
                 })
-            })
-        }else{
+                .update({
+                    data: {
+                        [temp]: _.pull(this.data.list[id].onlyId)
+                    }
+                })
+                .then(res => {
+                    img_star.alterImg(id)
+                    this.setData({
+                        img_star: img_star
+                    })
+                })
+        } else {
             users.where({
-                _openid:openId
-            })
-            .update({
-                data:{
-                    [temp]:_.push(this.data.list[id].onlyId)
-                }
-            })
-            .then(res=>{
-                img_star.alterImg(id)
-                this.setData({
-                    img_star:img_star 
+                    _openid: openId
                 })
-            })
+                .update({
+                    data: {
+                        [temp]: _.push(this.data.list[id].onlyId)
+                    }
+                })
+                .then(res => {
+                    img_star.alterImg(id)
+                    this.setData({
+                        img_star: img_star
+                    })
+                })
         }
     }
 })

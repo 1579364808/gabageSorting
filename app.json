@@ -27,7 +27,13 @@
         "van-button": "@vant/weapp/button/index",
         "van-collapse": "@vant/weapp/collapse/index",
         "van-collapse-item": "@vant/weapp/collapse-item/index",
-        "van-divider": "@vant/weapp/divider/index"
+        "van-divider": "@vant/weapp/divider/index",
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-dialog": "@vant/weapp/dialog/index"
     },
     "tabBar": {
         "selectedColor": "#000000",
