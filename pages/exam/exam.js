@@ -299,7 +299,7 @@ Page({
                     test: _.push({
                         list: list,
                         archives: userAns.archives,
-                        date: new Date()
+                        date: new Date().getTime()
                     })
                 }
             })

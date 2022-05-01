@@ -1,16 +1,17 @@
 const db = wx.cloud.database();
 const users = db.collection('users');
+const $ = db.command.aggregate
+const _ = db.command
 import moment from 'moment'
-
-
-
 class Rec {
-    constructor(list, archives, time) {
+    constructor(list, archives, time,timeStamp) {
         this.t = 0,
         this.f = 15
-        this.time = time
+        this.time = time,
+        this.timeStamp = timeStamp
         for (let i = 0; i < 5; i++) {
-            if (archives[i] == list.res) {
+            if (archives[i] == list[i].res) {
+                console.log(i, "对了");
                 this.t++;
                 this.f--;
             }
@@ -18,18 +19,17 @@ class Rec {
         for (let i = 5; i < 10; i++) {
             let flag = new Array(4)
             for (let j = 0; j < list[i].res.length; j++) {
-                flag[list[i].res[j]] = list[i].res
+                flag[list[i].res[j]] = list[i].res[j]
             }
-            for (let j = 0; j < 4; j++) {
-                if (archives[i][j] != flag[j]) {
-                    this.t++;
-                    this.f--;
-                }
-                break;
+            if (archives[i][0] == flag[0] && archives[i][1] == flag[1] && archives[i][2] == flag[2] && archives[i][3] == flag[3]) {
+                console.log(i, "对了");
+                this.t++;
+                this.f--;
             }
         }
         for (let i = 10; i < 15; i++) {
-            if (archives[i] == list.res) {
+            if (archives[i] == list[i].res) {
+                console.log(i, "对了");
                 this.t++;
                 this.f--;
             }
@@ -51,50 +51,52 @@ class Rec {
 
 var list = new Array()
 var archives = new Array()
-
+var  openId 
 
 Page({
     data: {
         list: [],
-        date: '',
         cnt: null
     },
     onLoad: function (options) {
+        wx.showLoading({
+            title: '数据加载中'
+        })
         this.init()
 
     },
     init() {
-        let openId = wx.getStorageSync('openId')
+        openId= wx.getStorageSync('openId')
         let that = this
         users.aggregate()
             .match({
                 _openid: openId
             })
             .project({
-                test: 1
+                test: $.reverseArray('$test'),
             })
             .end({
                 success: res => {
-                    let cnt = new Array(15);
+                    let cnt = new Array();
                     for (let i = 0; i < res.list[0].test.length; i++) {
                         let test = res.list[0].test[i]
-                        console.log(test)
+                        console.log(test.list)
                         let date = new Date(test.date)
                         let time = moment(date).format("YYYY-MM-DD HH:mm:ss")
-                        let rec = new Rec(test.list, test.archives, time)
-                        cnt[i]=rec
+                        let rec = new Rec(test.list, test.archives, time,test.date)
+                        cnt.push(rec)
                         list.push(test.list),
-                        archives.push(test.archives)
+                            archives.push(test.archives)
                     }
                     that.setData({
-                        cnt: cnt
+                        cnt: cnt,
                     })
+                    wx.hideLoading();
                 }
             })
     },
     onTap(event) {
         let id = event.currentTarget.id
-        console.log(id)
         wx.setStorage({
             key: "record",
             data: {
@@ -105,5 +107,50 @@ Page({
         wx.navigateTo({
             url: `../exam_detail/exam_detail`,
         })
+    },
+    onClose(event) {
+
+        let cnt = this.data.cnt
+        let id = event.currentTarget.dataset.num
+        console.log(id)
+        const {
+            position,
+            instance
+        } = event.detail;
+        if (position == 'right') {
+            wx.showModal({
+                showCancel: true,
+                content: '确定删除吗？',
+            }).then((res) => {
+                if (res.confirm) {
+                    this.delItem(id)
+                    cnt.splice(id, 1);
+                    this.setData({
+                        cnt: cnt
+                    })
+                } else if (res.cancel) {
+                    instance.close();
+                }
+               
+            });
+        }
+    },
+    delItem(id) {
+        console.log(id)
+        let time = moment(this.data.cnt[id].timeStamp).valueOf()
+        console.log(time)
+        users.where({
+                _openid: openId
+            })
+            .update({
+                data: {
+                    test: _.pull({
+                        date: _.eq(time)
+                    })
+                }
+            })
+            .then(res => {
+                console.log(res)
+            })
     }
 })

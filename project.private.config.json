@@ -72,6 +72,13 @@
                     "pathName": "pages/guide/guide",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "测试详情",
+                    "pathName": "pages/test_detail/test_detail",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
                 }
             ]
         }

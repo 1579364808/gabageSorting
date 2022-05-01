@@ -43,7 +43,7 @@
         "useCompilerPlugins": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.22.0",
+    "libVersion": "2.24.1",
     "projectname": "gabageSorting",
     "cloudfunctionRoot": "cloud/",
     "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",

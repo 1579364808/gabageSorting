@@ -8,39 +8,49 @@
 </view>
 <!--Layout布局_页面小按钮-->
 <view class="tubiao">
-<!--设置列元素间距-->
-<van-row custom-class="icons">
-  <van-col span="8" custom-class="icons_col" >
-    <van-icon name="star-o" size="30px" color="#4fbf8d" bindtap="go"/>
-  <view class="chracter">收藏夹</view>
-  </van-col>
+  <!--设置列元素间距-->
+  <van-row custom-class="icons">
+    <van-col span="8" custom-class="icons_col">
+      <view bindtap="go">
+        <van-icon name="star-o" size="30px" color="#4fbf8d"  />
+        <view class="chracter">收藏夹</view>
+      </view>
 
-  <van-col span="8" custom-class="icons_col">
-    <van-icon name="records" size="30px" color="#4fbf8d" bindtap="go_testRec"/>
-    <view class="chracter">测试记录</view>
-  </van-col>
-  <van-col span="8" custom-class="icons_col">
-    <van-icon name="chat-o" size="30px" color="#4fbf8d" bindtap="go_aboutus"/>
-    <view class="chracter">关于我们</view>
-  </van-col>
-  
-  <van-col span="8" custom-class="icons_col">
-    <van-icon name="service-o" size="30px" color="#4fbf8d" />
-    <view class="chracter">联系客服</view>
-  </van-col>
-  <van-col span="8" custom-class="icons_col">
-    <van-icon name="envelop-o" size="30px" color="#4fbf8d"/>
-    <view class="chracter">帮助与反馈</view>
-  </van-col>
-  
-  <van-col span="8" custom-class="icons_col">
-  <button class="btn1" open-type="share">
-  <van-icon name="share-o" size="30px" color="#4fbf8d"/> 
-  <view class="chracter" style="position: relative;bottom: 50rpx;">分享</view>
-  </button>
+    </van-col>
 
-  </van-col>
+    <van-col span="8" custom-class="icons_col">
+      <view  bindtap="go_testRec" >
+        <van-icon name="records" size="30px" color="#4fbf8d"/>
+        <view class="chracter">测试记录</view>
+      </view>
+    </van-col>
+    <van-col span="8" custom-class="icons_col">
+      <view  bindtap="go_aboutus">
+        <van-icon name="chat-o" size="30px" color="#4fbf8d" />
+        <view class="chracter">关于我们</view>
+      </view>
 
-</van-row>
+    </van-col>
+
+    <van-col span="8" custom-class="icons_col">
+      <view>
+        <van-icon name="service-o" size="30px" color="#4fbf8d" />
+        <view class="chracter">联系客服</view>
+      </view>
+    </van-col>
+    <van-col span="8" custom-class="icons_col">
+      <view>
+        <van-icon name="envelop-o" size="30px" color="#4fbf8d" />
+        <view class="chracter">帮助与反馈</view>
+      </view>
+    </van-col>
+
+    <van-col span="8" custom-class="icons_col">
+        <button class="btn1" open-type="share">
+          <van-icon name="share-o" size="30px" color="#4fbf8d" />
+          <view class="chracter" style="position: relative;bottom: 50rpx;">分享</view>
+        </button>
+    </van-col>
+
+  </van-row>
 </view>
-
