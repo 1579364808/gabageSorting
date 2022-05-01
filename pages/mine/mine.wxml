@@ -14,6 +14,11 @@
     <van-icon name="star-o" size="30px" color="#4fbf8d" bindtap="go"/>
   <view class="chracter">收藏夹</view>
   </van-col>
+
+  <van-col span="8" custom-class="icons_col">
+    <van-icon name="records" size="30px" color="#4fbf8d" bindtap="go_testRec"/>
+    <view class="chracter">测试记录</view>
+  </van-col>
   <van-col span="8" custom-class="icons_col">
     <van-icon name="chat-o" size="30px" color="#4fbf8d" bindtap="go_aboutus"/>
     <view class="chracter">关于我们</view>
@@ -36,10 +41,7 @@
   </button>
 
   </van-col>
-  <van-col span="8" custom-class="icons_col">
-    <van-icon name="records" size="30px" color="#4fbf8d" bindtap="go_testRec"/>
-    <view class="chracter">测试记录</view>
-  </van-col>
+
 </van-row>
 </view>
 
