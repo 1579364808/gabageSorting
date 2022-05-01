@@ -44,4 +44,31 @@ exports.main = async (event, context) => {
     .limit(event.pageNum)
     .get()
   }
+
+  if(event.id==4){
+    return await cloud.database().collection("other_waste")
+    .where({
+      type:"大件垃圾"
+    })
+    .get()
+  }
+
+  if(event.id==5){
+    return await cloud.database().collection("other_waste")
+    .where({
+      type:"装修垃圾"
+    })
+    .get()
+  }
+
+  if(event.id==6){
+    return await cloud.database().collection("other_waste")
+    .where({
+      type:"电子废弃物"
+    })
+    .get()
+  }
+
+
+
 }

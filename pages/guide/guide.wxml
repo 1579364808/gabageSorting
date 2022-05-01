@@ -6,6 +6,10 @@
         <view class="{{flag==1?'select':'normal'}}" id='1' bindtap='switchNav'>湿垃圾</view>
         <view class="{{flag==2?'select':'normal'}}" id='2' bindtap='switchNav'>可回收物</view>
         <view class="{{flag==3?'select':'normal'}}" id='3' bindtap='switchNav'>有害垃圾</view>
+
+        <view class="{{flag==4?'select':'normal'}}" id='4' bindtap='switchNav'>大件垃圾</view>
+        <view class="{{flag==5?'select':'normal'}}" id='5' bindtap='switchNav'>装修垃圾</view>
+        <view class="{{flag==6?'select':'normal'}}" id='6' bindtap='switchNav'>电子废弃物</view>
       </view>
       
       <view class='right' >
@@ -125,6 +129,88 @@
                    </scroll-view>
                 </view>
             </swiper-item>
+
+            <swiper-item id='4' catchtouchmove="stopTouchMove">
+                <view class="container5">
+                        <view>
+                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/Large_waste.png"></image>
+                        </view>
+                        <view class="text_container5">
+                            <view class="text_5" >
+                                <text decode="{{true}}" space="{{true}}" style="font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大件垃圾</text>                           
+                                是指体积较大、整体性强，需要拆分再处理的废弃物品。包括废家用电器和家具等。
+                                <view>
+                                    <text style="font-weight:bold">投放要求:</text>  
+	                                    大件垃圾可以预约可回收物回收经营者或者大件垃圾收集运输单位上门回收，或者投放至管理责任人指定的场所。
+                                </view>  
+                            </view>
+                        </view>
+                </view>
+                <view class="mbox">
+                    <scroll-view scroll-y="true" style="height: 610rpx;margin-top:60rpx ;margin-bottom:2rpx ;"  bindscrolltolower="scrolltolower">
+                        <view class="box">
+                            <view wx:for="{{waste}}" class="item" wx:key='index'>
+                                    <view>{{item.name}}</view>
+                                </view>
+                        </view>
+                   </scroll-view>
+                </view>
+            </swiper-item>
+
+            <swiper-item id='4' catchtouchmove="stopTouchMove">
+                <view class="container5">
+                        <view>
+                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/Renovation_waste.png"></image>
+                        </view>
+                        <view class="text_container5">
+                            <view class="text_5" >
+                                <text decode="{{true}}" space="{{true}}" style="font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;装修垃圾</text>                           
+                                是指房子室内装饰装修，进而产生的各种垃圾。
+                                <view>
+                                    <text style="font-weight:bold">投放要求:</text>  
+	                                   装修垃圾和生活垃圾应分别收集，并将装修垃圾袋装后投放到指定的装修垃圾堆放场所。
+                                </view>  
+                            </view>
+                        </view>
+                </view>
+                <view class="mbox">
+                    <scroll-view scroll-y="true" style="height: 690rpx;margin-top:70rpx;"  bindscrolltolower="scrolltolower">
+                        <view class="box">
+                            <view wx:for="{{waste0}}" class="item" wx:key='index'>
+                                    <view>{{item.name}}</view>
+                                </view>
+                        </view>
+                   </scroll-view>
+                </view>
+            </swiper-item>
+            <swiper-item id='4' catchtouchmove="stopTouchMove">
+                <view class="container5">
+                        <view>
+                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/Electronic_waste .png"></image>
+                        </view>
+                        <view class="text_container5">
+                            <view class="text_5" >
+                                <text decode="{{true}}" space="{{true}}" style="font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子废弃物</text>                           
+                                是指被废弃不再使用的电器或电子设备，主要包括电冰箱、空调等家用电器和计算机等通讯电子产品等电子科技的淘汰品。
+                                <view>
+                                    <text style="font-weight:bold">投放要求:</text>  
+	                                  大型电器电子产品可联系规范的电子废弃物回收企业预约回收，或按大件垃圾管理要求投放。
+                                      小型电器电子产品可按照可回收物的投放方式进行投放。
+                                </view>  
+                            </view>
+                        </view>
+                </view>
+                <view class="mbox">
+                    <scroll-view scroll-y="true" style="height: 490rpx;margin-top:60rpx ;margin-bottom:2rpx ;"  bindscrolltolower="scrolltolower">
+                        <view class="box">
+                            <view wx:for="{{waste1}}" class="item" wx:key='index'>
+                                    <view>{{item.name}}</view>
+                                </view>
+                        </view>
+                   </scroll-view>
+                </view>
+            </swiper-item>
+
           </swiper>
         </view>
     </view>

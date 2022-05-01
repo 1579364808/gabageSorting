@@ -9,6 +9,9 @@ Page({
     list1: [],
     list2: [],
     list3: [],
+    waste : [],
+    waste0 : [],
+    waste1 : [],
 
 
   },
@@ -23,9 +26,6 @@ Page({
       });
     }
     console.log("idlala", this.data.currentTab)
-    // if(){
-
-    // }
     page.setData({
       flag: id
     });
@@ -38,6 +38,9 @@ Page({
     this.getList1()
     this.getList2()
     this.getList3()
+    this.getList4()
+    this.getList5()
+    this.getList6()
   },
   onShow() {
     let id = wx.getStorageSync('id')
@@ -152,10 +155,69 @@ Page({
         console.log("请求失败", err);
       })
   },
+  getList4() {
+    wx.cloud.callFunction({
+        name: 'getList01',
+        data: {
+          id: 4
+        }
+      })
+      .then(res => {
+        console.log("请求成功", res.result.data);
+        this.setData({
+          waste:  res.result.data,
+        })
+      })
+      .catch(err => {
+        wx.hideLoading({})
+        console.log("请求失败", err);
+      })
+  },
+  getList5() {
+    wx.cloud.callFunction({
+        name: 'getList01',
+        data: {
+          id: 5
+        }
+      })
+      .then(res => {
+        console.log("请求成功", res.result.data);
+        this.setData({
+          waste0:  res.result.data,
+        })
+      })
+      .catch(err => {
+        wx.hideLoading({})
+        console.log("请求失败", err);
+      })
+  },
+  getList6() {
+    wx.cloud.callFunction({
+        name: 'getList01',
+        data: {
+          id: 6
+        }
+      })
+      .then(res => {
+        console.log("请求成功", res.result.data);
+        this.setData({
+          waste1:  res.result.data,
+        })
+      })
+      .catch(err => {
+        wx.hideLoading({})
+        console.log("请求失败", err);
+      })
+  },
+  
   scrolltolower() {
     wx.showToast({
       icon: "none",
-      title: '没有更多数据啦'
+      title: '没有更多数据啦',
+      duration:500
     })
   }
+
+
+  
 })
