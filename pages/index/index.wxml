@@ -2,19 +2,19 @@
 <view class="banner">
     <swiper indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" circular autoplay interval="2000">
         <swiper-item>
-            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one5.png"></image>
+            <image src="../../icons/one5.png"></image>
         </swiper-item>
         <swiper-item>
-            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one1.png"></image>
+            <image src="../../icons/one1.png"></image>
         </swiper-item>
         <swiper-item>
-            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one2.png"></image>
+            <image src="../../icons/one2.png"></image>
         </swiper-item>
         <swiper-item>
-            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one3.png"></image>
+            <image src="../../icons/one3.png"></image>
         </swiper-item>
         <swiper-item>
-            <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/one4.png"></image>
+            <image src="../../icons/one4.png"></image>
         </swiper-item>
 
     </swiper>

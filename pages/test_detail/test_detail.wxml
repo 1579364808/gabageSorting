@@ -1,18 +1,42 @@
 <!-- pages/userStar/userStar.wxml -->
 
+<!-- <view class="box" bindtap="onTap" wx:for="{{cnt}}" wx:if="{{item}}" wx:for-index='i' id="{{i}}">
+        <view class="top">
+            <view>测试时间:</view>
+            <text>{{item.time}}</text>
+        </view>
+        <view class="bottom">
+            <view>
+                <image src="../../icons/right_green.png"></image>
+                对：{{item.t}}
+            </view>
+            <view>
+                <image src="../../icons/wrong.png"></image>
+                错：{{item.f}}
+            </view>
+        </view>
+    </view> -->
+
+
+
 <view id="Page">
-<view class="box" bindtap="onTap" wx:for="{{cnt}}" wx:if="{{item}}" wx:for-index='i' id="{{i}}">
-    <view class="top">
-        <view>测试时间:</view>
-        <text>{{item.time}}</text>
-    </view>
-    <view class="bottom">
-        <view>
-        <image src="../../icons/right_green.png"></image>
-        对：{{item.t}}</view>
-        <view>
-            <image src="../../icons/wrong.png"></image>
-        错：{{item.f}}</view>
-    </view>
-</view>
+    <van-swipe-cell id="swipe-cell" right-width="{{ 65 }}" async-close bind:close="onClose" wx:for="{{cnt}}" wx:if="{{item}}" wx:for-index='i' data-num="{{i}}">
+        <view class="box" bindtap="onTap" id="{{i}}" >
+            <view class="top">
+                <view>测试时间:</view>
+                <text>{{item.time}}</text>
+            </view>
+            <view class="bottom">
+                <view>
+                    <image src="../../icons/right_green.png"></image>
+                    对：{{item.t}}
+                </view>
+                <view>
+                    <image src="../../icons/wrong.png"></image>
+                    错：{{item.f}}
+                </view>
+            </view>
+        </view>
+        <view slot="right" class=".van-swipe-cell__right">删除</view>
+    </van-swipe-cell>
 </view>

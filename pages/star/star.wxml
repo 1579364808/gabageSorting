@@ -1,7 +1,9 @@
 <wxs src="./tools.wxs" module="tool" />
-<van-collapse value="{{ activeNames }}" bind:change="onChange">
-    <van-collapse-item title="单选" name="1">
-        
+<van-tabs animated title-active-color='#4fbf8d' color='#4fbf8d'>
+    <van-tab title="单选题">
+
+
+
         <view wx:for="{{single}}" wx:for-item='whole' wx:for-index='i'>
             <view class="question">
                 {{whole.question}}
@@ -10,21 +12,21 @@
                 <view wx:for="{{whole.options}}" wx:for-index='j' wx:for-item='item'>
                     <view>{{tool.letter[j]}}.{{item}}</view>
                 </view>
-
             </view>
             <view class="bottom">
                 <view>正确答案:{{tool.letter[whole.res]}}</view>
-                    <view class="cancle" id="{{whole.onlyId}}" data-num="{{i}}" bindtap="star" >{{text1[i]}}</view>
+                <view class="cancle" id="{{whole.onlyId}}" data-num="{{i}}" bindtap="star">{{text1[i]}}</view>
             </view>
             <van-divider />
         </view>
 
-    </van-collapse-item>
+
+
+    </van-tab>
+    <van-tab title="多选题">
 
 
 
-
-    <van-collapse-item title="多选" name="2">
         <view wx:for="{{multiple}}" wx:for-item='whole' wx:for-index='i'>
             <view class="question">
                 {{whole.question}}
@@ -36,21 +38,45 @@
             </view>
             <view class="bottom">
                 <view>正确答案:{{tool.helper(whole.res)}}</view>
-                <view class="cancle" id="{{whole.onlyId}}" data-num="{{i}}" bindtap="star1" >{{text2[i]}}</view>
+                <view class="cancle" id="{{whole.onlyId}}" data-num="{{i}}" bindtap="star1">{{text2[i]}}</view>
             </view>
             <van-divider />
         </view>
-    </van-collapse-item>
-    <van-collapse-item title="判断" name="3">
+
+
+
+    </van-tab>
+    <van-tab title="判断题">
+
+
+
         <view wx:for="{{judge}}" wx:for-item='whole' wx:for-index='i'>
             <view class="question">
                 {{whole.question}}
             </view>
             <view class="bottom">
                 <view>正确答案:{{tool.letter1[whole.res]}}</view>
-                    <view class="cancle" id="{{whole.onlyId}}" data-num="{{i}}" bindtap="star2" >{{text3[i]}}</view>
+                <view class="cancle" id="{{whole.onlyId}}" data-num="{{i}}" bindtap="star2">{{text3[i]}}</view>
             </view>
             <van-divider />
         </view>
-    </van-collapse-item>
-</van-collapse>
+
+
+
+    </van-tab>
+</van-tabs>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

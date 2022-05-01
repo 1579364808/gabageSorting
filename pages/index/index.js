@@ -1,4 +1,3 @@
-// index.js
 const recorderManager = wx.getRecorderManager() //这是录音功能的实例，必须的
 const fs = wx.getFileSystemManager() //文件管理系统
 Page({
@@ -12,20 +11,19 @@ Page({
         "items": [
 
             {
-                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/ResidualWaste.png",
+                "imageUrl": "../../icons/ResidualWaste.png",
             },
 
             {
-                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HouseholdfoodWaste.jpg",
+                "imageUrl": "../../icons/HouseholdfoodWaste.jpg",
             },
 
             {
-                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/RecycleableWaste.jpg",
+                "imageUrl": "../../icons/RecycleableWaste.jpg",
             },
 
             {
-
-                "imageUrl": "cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HazardouAwaste.jpg",
+                "imageUrl": "../../icons/HazardouAwaste.jpg",
             }
         ]
     },
@@ -105,16 +103,6 @@ Page({
                 })
             }
         })
-
-
-
-
-
-
-
-
-
-
     },
     endRecord(event) {
         wx.hideLoading()
@@ -188,10 +176,8 @@ Page({
 
         let path = event.detail.file.url
         let image = fs.readFileSync(path, 'base64') //将图片转换成base64
-
         //请求
         let token = wx.getStorageSync('imgToken').token
-
         console.log(token)
         this.img_rq(image, token)
         //显示加载
