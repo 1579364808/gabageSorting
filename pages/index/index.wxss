@@ -90,7 +90,7 @@
     box-sizing: border-box;
     justify-content: flex-end;
     align-items:center;
-    margin-right: 10px;
+    margin-right: 20px;
 
   }
 .myRecode .recode {

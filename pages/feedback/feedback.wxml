@@ -1,0 +1,26 @@
+<!--pages/feedback/feedback.wxml-->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <view class="fb_main">
+    <view class="fb_title">问题的种类</view>
+    <view class="fb_tips">
+      <text>功能异常</text>
+      <text>产品建议</text>
+      <text>性能问题</text>
+      <text>其他</text>
+    </view>
+    <view class="fb_content">
+      <textarea
+       value="{{textVal}}"
+     name="nameclick"
+       placeholder="请描述一下您的问题"
+      >
+      </textarea>
+    </view>
+    <view   class="form_btn_wrap">
+      <button bindtap="showToast" type="warn">
+        提交
+      </button>
+  </view>
+  </view>
+</Tabs>
+

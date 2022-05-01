@@ -1,0 +1,24 @@
+/* pages/feedback1/feedback1.wxss */
+image{
+    position: relative;
+     left: 283rpx; top: 379rpx; 
+     width: 218rpx;
+      height: 194rpx;
+       display: inline-block;
+        box-sizing: border-box;
+}
+text{
+    position: relative; 
+    left: 116rpx;
+     top: 459rpx;
+}
+.db{
+    position: relative; 
+    left: 87rpx; 
+    top: 520rpx;
+}
+.db1{
+    position: relative; 
+    left: 631rpx;
+     top: 483rpx;
+}

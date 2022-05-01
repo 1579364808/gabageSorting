@@ -13,7 +13,9 @@
         "pages/guide/guide",
         "pages/go_aboutus/go_aboutus",
         "pages/test_detail/test_detail",
-        "pages/star/star"
+        "pages/star/star",
+        "pages/feedback/feedback",
+        "pages/feedback1/feedback1"
     ],
     "window": {
         "backgroundTextStyle": "light",

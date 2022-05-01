@@ -59,6 +59,20 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/feedback/feedback",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/feedback1/feedback1",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

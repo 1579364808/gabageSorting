@@ -130,6 +130,11 @@ onLoad:function(){
       wx.navigateTo({
         url: '../star/star',
       })
+    },
+    go1(){
+        wx.redirectTo({
+          url: '../feedback/feedback',
+        })
     }
   
 })

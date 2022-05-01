@@ -1,0 +1,5 @@
+<!--pages/feedback1/feedback1.wxml-->
+<image src='/icons/tijiao.png'></image>
+<text>提交成功</text>
+<view class="db1" bindtap="click">关闭</view>
+
