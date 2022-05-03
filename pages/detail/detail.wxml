@@ -1,7 +1,7 @@
 <!--pages/detail/detail.wxml-->
 <wxs src="./tool.wxs" module="tool" />
 <view>
-     <view>
+    <view>
         <view class="weui-search-bar">
             <view class="weui-search-bar__form">
                 <view class="weui-search-bar__box">
@@ -9,7 +9,7 @@
                     <input type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" value="{{gabageName}}" bindinput="getKey" />
                 </view>
             </view>
-        <view class="weui-search-bar__cancel-btn" bindtap='goSearch' bind:search="getKey">搜索</view>
+            <view class="weui-search-bar__cancel-btn" bindtap='goSearch' bind:search="getKey">搜索</view>
         </view>
     </view>
 </view>
@@ -20,25 +20,25 @@
         <view class="item">
             <rich-text nodes="{{item.name}} "></rich-text>
             <text class="{{tool.sty[item.category]}}">{{item.category}}</text>
-        </view> 
+        </view>
     </view>
     <view class="boxn">
-            <text class="font_one">已经加载全部数据</text>
+        <text class="font_one">已经加载全部数据</text>
     </view>
 </view>
 
 <!-- 历史记录 -->
-<view class="history-box" wx:else=""> 
-         <!-- 标题 -->
+<view class="history-box" wx:else="">
+    <!-- 标题 -->
     <view class="history-title">
         <text>搜索历史</text>
-        <van-icon name="delete-o" size="20px" bind:click="historyDelFn"/>
+        <van-icon name="delete-o" size="20px" bind:click="historyDelFn" />
     </view>
-         <!-- 列表 -->
-         <view class="list_list">
-            <view class="history-list" wx:for="{{historyList}}">
-                    <van-tag type="success" color="#E7E7E7" size="medium" round text-color="black"> {{historyList[index]}}</van-tag>
-                </view>
+    <!-- 列表 -->
+    <view class="list_list">
+        <view class="history-list" wx:for="{{historyList}}" bindtap="onClick" data-value="{{historyList[index]}}">
+            <van-tag type="success" color="#E7E7E7" size="medium" round text-color="black"> {{historyList[index]}}</van-tag>
         </view>
-        <view class='noHistory' wx:if="{{historyList.length==0}}">你还没有搜索记录</view>
+    </view>
+    <view class='noHistory' wx:if="{{historyList.length==0}}">你还没有搜索记录</view>
 </view>

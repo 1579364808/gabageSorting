@@ -114,4 +114,10 @@ Page({
                 this.saveSearchHistory() //储存搜索记录
             })
     },
+    onClick(e){
+       let val=e.currentTarget.dataset.value
+        this.setData({
+            gabageName:val
+        })
+    }
 })
