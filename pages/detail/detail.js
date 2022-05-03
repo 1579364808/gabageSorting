@@ -13,6 +13,14 @@ Page({
 
     //获取输入的搜索词
     getKey(e) {
+        let keyCode = e.detail.keyCode
+        console.log(e.detail.keyCode);
+        if(keyCode==8){
+            this.setData({
+                list:null
+            })
+            this.openHistorySearch()
+        }
         this.setData({
             gabageName: e.detail.value
         })
