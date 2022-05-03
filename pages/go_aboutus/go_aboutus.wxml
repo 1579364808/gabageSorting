@@ -8,7 +8,7 @@
         </view>
      </view>
      <view class="image1">
-           <image src="/icons/QR code.jpg"> </image>  
+           <image src="/icons/QRcode.jpg"> </image>  
            <!--换成小程序二维码 !!可以增加点击图片后预览、保存、识别带参数二维码等功能-->
      </view>
 </view>

@@ -186,7 +186,7 @@
             <swiper-item id='4' catchtouchmove="stopTouchMove">
                 <view class="container5">
                         <view>
-                         <image src="/icons/Electronic_waste .png"></image>
+                         <image src="/icons/Electronic_waste.png"></image>
                         </view>
                         <view class="text_container5">
                             <view class="text_5" >
