@@ -1,17 +1,2 @@
-
-<van-search  shape="round" background="#4fc08d" placeholder="请输入搜索关键词" use-action-slot="true" bind:search="getKey">
-</van-search>
-
-<view wx:if="{{list&&list.length>0}}">
-    搜素结果如下
-    <view wx:for="{{list}}" wx:key='index'>
-        <view class="item">
-            <text>{{item.name}} </text>
-            <text>{{item.category}}</text>
-        </view>
-    </view>
-</view>
-
-<view wx:if="{{list&&list.length==0}}">
-    搜素内容为空
-</view>
+<!--pages/reserch/reserch.wxml-->
+<text>pages/reserch/reserch.wxml</text>

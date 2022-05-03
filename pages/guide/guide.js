@@ -69,7 +69,7 @@ Page({
       })
       .then(res => {
         wx.hideLoading({})
-        console.log("请求成功", res.result.data);
+
         this.setData({
           list0: this.data.list0.concat(res.result.data),
         })
@@ -95,7 +95,7 @@ Page({
       })
       .then(res => {
         wx.hideLoading({})
-        console.log("请求成功", res.result.data);
+
         this.setData({
           list1: this.data.list1.concat(res.result.data),
         })
@@ -120,7 +120,7 @@ Page({
       })
       .then(res => {
         wx.hideLoading({})
-        console.log("请求成功", res.result.data);
+
         this.setData({
           list2: this.data.list2.concat(res.result.data),
         })
@@ -145,7 +145,7 @@ Page({
       })
       .then(res => {
         wx.hideLoading({})
-        console.log("请求成功", res.result.data);
+
         this.setData({
           list3: this.data.list3.concat(res.result.data),
         })
@@ -163,7 +163,7 @@ Page({
         }
       })
       .then(res => {
-        console.log("请求成功", res.result.data);
+
         this.setData({
           waste:  res.result.data,
         })
@@ -181,7 +181,7 @@ Page({
         }
       })
       .then(res => {
-        console.log("请求成功", res.result.data);
+
         this.setData({
           waste0:  res.result.data,
         })
@@ -199,7 +199,7 @@ Page({
         }
       })
       .then(res => {
-        console.log("请求成功", res.result.data);
+
         this.setData({
           waste1:  res.result.data,
         })

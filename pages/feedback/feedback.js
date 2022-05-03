@@ -9,7 +9,7 @@ Page({
     },
     showToast(){
         wx.redirectTo({
-            url: '/pages/feedback_detail/feedback_detail',
+            url: '/pages/feedback_detail/feedback_detail.js',
           })
     }
 })

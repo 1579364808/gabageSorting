@@ -8,7 +8,7 @@
         </view>
      </view>
      <view class="image1">
-           <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/QR code.jpg"> </image>  
+           <image src="/icons/QR code.jpg"> </image>  
            <!--换成小程序二维码 !!可以增加点击图片后预览、保存、识别带参数二维码等功能-->
      </view>
 </view>

@@ -18,7 +18,7 @@
             <swiper-item id='0' catchtouchmove="stopTouchMove">
                 <view class="container1">
                         <view>
-                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/ResidualWaste.png"></image>
+                         <image src="/icons/ResidualWaste.png"></image>
                         </view>
                         <view class="text_container1">
                             <view class="text_1" >
@@ -47,7 +47,7 @@
             <swiper-item id='1' catchtouchmove="stopTouchMove">
                 <view class="container2">
                         <view>
-                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HouseholdfoodWaste.jpg"></image>
+                         <image src="/icons/HouseholdfoodWaste.jpg"></image>
                         </view>
                         <view class="text_container2">
                             <view class="text_2" >
@@ -74,7 +74,7 @@
             <swiper-item id='2' catchtouchmove="stopTouchMove">
                 <view class="container3">
                         <view>
-                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/RecycleableWaste.jpg"></image>
+                         <image src="/icons/RecycleableWaste.jpg"></image>
                         </view>
                         <view class="text_container3">
                             <view class="text_3" >
@@ -103,7 +103,7 @@
             <swiper-item id='3' catchtouchmove="stopTouchMove">
                 <view class="container4">
                         <view>
-                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/HazardouAwaste.jpg"></image>
+                         <image src="/icons/HazardouAwaste.jpg"></image>
                         </view>
                         <view class="text_container4">
                             <view class="text_4" >
@@ -133,7 +133,7 @@
             <swiper-item id='4' catchtouchmove="stopTouchMove">
                 <view class="container5">
                         <view>
-                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/Large_waste.png"></image>
+                         <image src="/icons/Large_waste.png"></image>
                         </view>
                         <view class="text_container5">
                             <view class="text_5" >
@@ -160,7 +160,7 @@
             <swiper-item id='4' catchtouchmove="stopTouchMove">
                 <view class="container5">
                         <view>
-                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/Renovation_waste.png"></image>
+                         <image src="/icons/Renovation_waste.png"></image>
                         </view>
                         <view class="text_container5">
                             <view class="text_5" >
@@ -186,7 +186,7 @@
             <swiper-item id='4' catchtouchmove="stopTouchMove">
                 <view class="container5">
                         <view>
-                         <image src="cloud://melody-of-tears-4gj3jgoa3c47c801.6d65-melody-of-tears-4gj3jgoa3c47c801-1309155074/img/Electronic_waste .png"></image>
+                         <image src="/icons/Electronic_waste .png"></image>
                         </view>
                         <view class="text_container5">
                             <view class="text_5" >
