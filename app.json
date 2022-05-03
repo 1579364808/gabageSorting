@@ -3,10 +3,7 @@
         "pages/index/index",
         "pages/detail/detail",
         "pages/test/test",
-        "pages/reserch01/reserch01",
-        "pages/question/question",
-        "pages/question1/question1",
-        "pages/question2/question2",
+        "pages/reserch/reserch",
         "pages/exam/exam",
         "pages/exam_detail/exam_detail",
         "pages/mine/mine",
@@ -15,7 +12,7 @@
         "pages/test_detail/test_detail",
         "pages/star/star",
         "pages/feedback/feedback",
-        "pages/feedback1/feedback1"
+        "pages/feedback_detail/feedback_detail"
     ],
     "window": {
         "backgroundTextStyle": "light",

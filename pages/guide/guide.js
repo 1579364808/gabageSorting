@@ -60,7 +60,7 @@ Page({
     })
     let len = this.data.list0.length
     wx.cloud.callFunction({
-        name: 'getList01',
+        name: 'getList',
         data: {
           id: 0,
           len: len,
@@ -86,7 +86,7 @@ Page({
     })
     let len1 = this.data.list1.length
     wx.cloud.callFunction({
-        name: 'getList01',
+        name: 'getList',
         data: {
           id: 1,
           len1: len1,
@@ -111,7 +111,7 @@ Page({
     })
     let len2 = this.data.list2.length
     wx.cloud.callFunction({
-        name: 'getList01',
+        name: 'getList',
         data: {
           id: 2,
           len2: len2,
@@ -136,7 +136,7 @@ Page({
     })
     let len3 = this.data.list3.length
     wx.cloud.callFunction({
-        name: 'getList01',
+        name: 'getList',
         data: {
           id: 3,
           len3: len3,
@@ -157,7 +157,7 @@ Page({
   },
   getList4() {
     wx.cloud.callFunction({
-        name: 'getList01',
+        name: 'getList',
         data: {
           id: 4
         }
@@ -175,7 +175,7 @@ Page({
   },
   getList5() {
     wx.cloud.callFunction({
-        name: 'getList01',
+        name: 'getList',
         data: {
           id: 5
         }
@@ -193,7 +193,7 @@ Page({
   },
   getList6() {
     wx.cloud.callFunction({
-        name: 'getList01',
+        name: 'getList',
         data: {
           id: 6
         }
