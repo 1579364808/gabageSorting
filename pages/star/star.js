@@ -145,9 +145,17 @@ Page({
         }
         console.log(del1)
         if (text1[num] == '取消收藏') {
+            wx.showToast({
+                title: '取消收藏',
+                duration:500
+            })
             text1[num] = '收藏'
         } else {
             text1[num] = '取消收藏'
+            wx.showToast({
+                title: '收藏成功',
+                duration:500
+            })
         }
         this.setData({
             text1: text1
@@ -165,8 +173,16 @@ Page({
         }
         console.log(del2)
         if (text2[num] == '取消收藏') {
+            wx.showToast({
+                title: '取消收藏',
+                duration:500
+            })
             text2[num] = '收藏'
         } else {
+            wx.showToast({
+                title: '收藏成功',
+                duration:500
+            })
             text2[num] = '取消收藏'
         }
         this.setData({
@@ -185,8 +201,16 @@ Page({
         }
         console.log(del3)
         if (text3[num] == '取消收藏') {
+            wx.showToast({
+                title: '取消收藏',
+                duration:500
+            })
             text3[num] = '收藏'
         } else {
+            wx.showToast({
+                title: '收藏成功',
+                duration:500
+            })
             text3[num] = '取消收藏'
         }
         this.setData({

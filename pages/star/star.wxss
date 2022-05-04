@@ -17,17 +17,31 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
 }
 .cancle{
     border: solid 3rpx grey;
     border-radius: 10rpx;
-    /* background-color: greenyellow; */
-     background-color: rgb(231, 219, 219); 
+    text-align: center;
+    color: rgba(53, 50, 50, 0.795);
+    width: 130rpx;
+  background-color: #e9dda6b7;
     padding: 2rpx 20rpx;
 }
+
+
 .box{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    align-items:flex-start;
     margin-bottom: 20rpx;
+}
+.question{
+    margin: 5rpx 20rpx;
+}
+.box>view{
+    /* border-bottom: thistle solid 5rpx; */
+    margin-left: 100rpx;
+    margin: 20rpx 50rpx;
 }
