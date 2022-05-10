@@ -4,11 +4,11 @@ const $ = db.command.aggregate
 const _ = db.command
 import moment from 'moment'
 class Rec {
-    constructor(list, archives, time,timeStamp) {
+    constructor(list, archives, time, timeStamp) {
         this.t = 0,
-        this.f = 15
+            this.f = 15
         this.time = time,
-        this.timeStamp = timeStamp
+            this.timeStamp = timeStamp
         for (let i = 0; i < 5; i++) {
             if (archives[i] == list[i].res) {
                 console.log(i, "对了");
@@ -49,16 +49,15 @@ class Rec {
 
 
 
-var list = new Array()
-var archives = new Array()
-var  openId 
+var list;
+var archives;
+var openId
 
 Page({
     data: {
-        list: [],
         cnt: null
     },
-    onLoad: function (options) {
+    onLoad: function () {
         wx.showLoading({
             title: '数据加载中'
         })
@@ -66,7 +65,9 @@ Page({
 
     },
     init() {
-        openId= wx.getStorageSync('openId')
+        openId = wx.getStorageSync('openId')
+        list= new Array()
+        archives=new Array()
         let that = this
         users.aggregate()
             .match({
@@ -83,10 +84,10 @@ Page({
                         console.log(test.list)
                         let date = new Date(test.date)
                         let time = moment(date).format("YYYY-MM-DD HH:mm:ss")
-                        let rec = new Rec(test.list, test.archives, time,test.date)
+                        let rec = new Rec(test.list, test.archives, time, test.date)
                         cnt.push(rec)
                         list.push(test.list),
-                            archives.push(test.archives)
+                        archives.push(test.archives)
                     }
                     that.setData({
                         cnt: cnt,
@@ -96,14 +97,10 @@ Page({
             })
     },
     onTap(event) {
+        console.log(list)
         let id = event.currentTarget.id
-        wx.setStorage({
-            key: "record",
-            data: {
-                list: list[id],
-                archives: archives[id]
-            }
-        })
+        console.log(id)
+      wx.setStorageSync('record', {list: list[id],archives: archives[id]} )
         wx.navigateTo({
             url: `../exam_detail/exam_detail`,
         })
@@ -125,13 +122,15 @@ Page({
                 if (res.confirm) {
                     this.delItem(id)
                     cnt.splice(id, 1);
+                    list.splice(id, 1)
+                    archives.splice(id,1)
                     this.setData({
                         cnt: cnt
                     })
                 } else if (res.cancel) {
                     instance.close();
                 }
-               
+
             });
         }
     },
@@ -139,6 +138,7 @@ Page({
         console.log(id)
         let time = moment(this.data.cnt[id].timeStamp).valueOf()
         console.log(time)
+        
         users.where({
                 _openid: openId
             })

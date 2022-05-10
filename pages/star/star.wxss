@@ -24,7 +24,7 @@
     border-radius: 10rpx;
     text-align: center;
     color: rgba(53, 50, 50, 0.795);
-    width: 130rpx;
+    width: 150rpx;
   background-color: #e9dda6b7;
     padding: 2rpx 20rpx;
 }

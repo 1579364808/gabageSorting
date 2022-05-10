@@ -12,7 +12,7 @@ Page({
   
             var userInfo = wx.getStorageSync('userInfo')
             if (userInfo) {
-                wx.redirectTo({
+                wx.navigateTo({
                   url: '../exam/exam',
                 })
             }else{

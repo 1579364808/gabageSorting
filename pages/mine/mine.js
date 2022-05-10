@@ -121,7 +121,7 @@ Page({
 
     //测试记录
     go_testRec(){
-      wx.redirectTo({
+      wx.navigateTo({
         url: '../test_detail/test_detail',
       })
     },
